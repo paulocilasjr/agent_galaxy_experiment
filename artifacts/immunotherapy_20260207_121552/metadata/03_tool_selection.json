@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-02-07T17:35:01Z",
+  "history_id": "bbd44e69cb8906b5818b2d41fc14f7a1",
+  "tool": {
+    "name": "Tabular Learner",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+    "version": "0.1.4",
+    "panel_section": "Machine Learning"
+  },
+  "selected_parameters": {
+    "input_file_hda_id": "f9cad7b01a47213515562d8d15c5db3d",
+    "has_test_file": "yes",
+    "test_file_hda_id": "f9cad7b01a4721353f443ce2cb15cd33",
+    "target_feature_column_index": 22,
+    "target_feature_label": "Response"
+  }
+}

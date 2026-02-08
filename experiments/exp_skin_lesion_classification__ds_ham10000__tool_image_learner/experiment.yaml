@@ -1,0 +1,6 @@
+experiment_id: exp_skin_lesion_classification__ds_ham10000__tool_image_learner
+created_utc: 2026-02-08T05:15:53Z
+objective: "Image Learner experiment for HAM10000 skin lesion classification"
+primary_tool: "image learner"
+dataset_name: "ham10000"
+status: active

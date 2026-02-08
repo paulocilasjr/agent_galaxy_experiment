@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-02-07T17:42:47Z",
+  "job": {
+    "id": "bbd44e69cb8906b54f799399bb524738",
+    "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+    "state": "ok",
+    "create_time": "2026-02-07T17:36:27.466792",
+    "update_time": "2026-02-07T17:41:02.225155"
+  },
+  "polling": {
+    "final_poll_index": 4,
+    "summary_log": "artifacts/immunotherapy_20260207_121552/metadata/05_execution_poll_summary.log"
+  },
+  "outputs": {
+    "model": {
+      "hda_id": "f9cad7b01a472135edd51b734f9f26c7",
+      "name": "Tabular Learner best model on dataset 1",
+      "state": "ok",
+      "extension": "h5",
+      "file_size": 3727
+    },
+    "best_model_csv": {
+      "hda_id": "f9cad7b01a472135e0acbd1fd03a08b3",
+      "name": "Tabular Learner The parameters of the best model on dataset 1",
+      "state": "ok",
+      "extension": "csv",
+      "file_size": 213,
+      "rows": 15,
+      "columns": 2
+    },
+    "comparison_result": {
+      "hda_id": "f9cad7b01a472135db7d0d78fc5b6000",
+      "name": "Tabular Learner analysis report on dataset 1",
+      "state": "ok",
+      "extension": "html",
+      "file_size": 1261978
+    }
+  }
+}

@@ -1,0 +1,3 @@
+dataset_alias	source_type	source	notes
+chowell_train	url	https://zenodo.org/records/17781688/files/Chowell_train.tsv	Tabular Learner training dataset
+chowell_test	url	https://zenodo.org/records/17781688/files/Chowell_test.tsv	Tabular Learner test dataset

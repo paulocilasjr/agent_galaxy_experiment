@@ -1,0 +1,14 @@
+experiment_id: exp_skin_lesion_classification__ds_ham10000__tool_image_learner
+run_id: run_20260208_051553Z_setup
+created_utc: 2026-02-08T05:15:53Z
+status: in_progress
+dataset_alias: "ham10000_v1"
+tool_name: ""
+tool_id: ""
+tool_version: ""
+history_name: ""
+history_id: ""
+base_run_id: ""
+inputs: {}
+outputs: {}
+notes: ""

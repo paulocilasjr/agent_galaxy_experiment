@@ -1,0 +1,32 @@
+{
+  "history_id": "bbd44e69cb8906b5818b2d41fc14f7a1",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+  "inputs": {
+    "input_file": {
+      "src": "hda",
+      "id": "f9cad7b01a47213515562d8d15c5db3d"
+    },
+    "test_data_choice|has_test_file": "yes",
+    "test_data_choice|test_file": {
+      "src": "hda",
+      "id": "f9cad7b01a4721353f443ce2cb15cd33"
+    },
+    "target_feature": "22",
+    "sample_id_selector|use_sample_id": "no",
+    "model_selection|model_type": "classification",
+    "model_selection|best_model_metric": "Accuracy",
+    "tune_model": false,
+    "random_seed": 42,
+    "advanced_settings|customize_defaults": "true",
+    "advanced_settings|train_size": 0.7,
+    "advanced_settings|normalize": false,
+    "advanced_settings|feature_selection": false,
+    "advanced_settings|cross_validation|enable_cross_validation": "true",
+    "advanced_settings|cross_validation|cross_validation_folds": 10,
+    "advanced_settings|remove_outliers": false,
+    "advanced_settings|remove_multicollinearity": false,
+    "advanced_settings|polynomial_features": false,
+    "advanced_settings|fix_imbalance": false,
+    "advanced_settings|probability_threshold": 0.25
+  }
+}

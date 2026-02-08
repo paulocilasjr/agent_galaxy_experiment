@@ -1,0 +1,10 @@
+{
+  "job_id": "bbd44e69cb8906b54f799399bb524738",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+  "history_id": "bbd44e69cb8906b5818b2d41fc14f7a1",
+  "output_datasets": {
+    "model": "f9cad7b01a472135edd51b734f9f26c7",
+    "best_model_csv": "f9cad7b01a472135e0acbd1fd03a08b3",
+    "comparison_result": "f9cad7b01a472135db7d0d78fc5b6000"
+  }
+}
