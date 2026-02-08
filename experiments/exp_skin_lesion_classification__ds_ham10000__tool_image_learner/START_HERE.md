@@ -4,15 +4,22 @@
 - Isolated experiment scaffold for HAM10000 using Image Learner.
 - Intended as the clean starting point for new runs.
 
+## Primary Navigation
+1. `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/REPRODUCE.md`
+2. `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/summaries/run_index.tsv`
+3. `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/runs/run_20260208_051553Z_setup/journal.md`
+
 ## Step 0: Confirm Dataset Mapping
 Open and finalize:
 - `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/datasets/manifest.tsv`
 
-Replace placeholders with exact source locations/paths used in your environment.
+Required aliases in the manifest:
+- `ham10000_selected_metadata_aug_v1` (local metadata CSV)
+- `ham10000_selected_images_96_zip_v1` (Zenodo ZIP URL for Galaxy upload)
 
 ## Step 1: Create a New Run
 ```bash
-sh scripts/init_run.sh exp_skin_lesion_classification__ds_ham10000__tool_image_learner baseline ham10000_v1
+sh scripts/init_run.sh exp_skin_lesion_classification__ds_ham10000__tool_image_learner baseline ham10000_selected_metadata_aug_v1
 ```
 
 Then set:
@@ -31,6 +38,10 @@ Required folders/files are already scaffolded:
 - `$RUN_ROOT/commands/`
 - `$RUN_ROOT/api/`
 - `$RUN_ROOT/outputs/`
+
+## Step 2a: Upload Source ZIP To Galaxy
+Use dataset alias `ham10000_selected_images_96_zip_v1` from the dataset manifest:
+- `https://zenodo.org/records/18284218/files/selected_HAM10000_img_96_size.zip`
 
 ## Step 3: Reproducibility Rule
 - Record every prompt/action/error/fix in `$RUN_ROOT/journal.md`.

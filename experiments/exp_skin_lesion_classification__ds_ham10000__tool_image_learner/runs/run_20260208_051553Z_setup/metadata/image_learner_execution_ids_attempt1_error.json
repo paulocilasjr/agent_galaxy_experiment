@@ -1,0 +1,31 @@
+{
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5",
+  "job": {
+    "model_class": "Job",
+    "id": "bbd44e69cb8906b576626b2d900d1a0c",
+    "state": "new",
+    "exit_code": null,
+    "update_time": "2026-02-08T15:42:48.378090",
+    "create_time": "2026-02-08T15:42:48.328628",
+    "galaxy_version": "25.1",
+    "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5",
+    "tool_version": "0.1.5",
+    "history_id": "bbd44e69cb8906b564fe30d18ba75f5b"
+  },
+  "outputs": [
+    {
+      "name": "Image Learner trained model on dataset 1 and 2",
+      "id": "f9cad7b01a472135ead6369b69544b82",
+      "hid": 4,
+      "state": "new",
+      "file_ext": "ludwig_model"
+    },
+    {
+      "name": "Image Learner report on dataset 1 and 2",
+      "id": "f9cad7b01a4721353c092b14507dab30",
+      "hid": 5,
+      "state": "new",
+      "file_ext": "html"
+    }
+  ]
+}

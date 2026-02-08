@@ -1,0 +1,48 @@
+{
+  "history_id": "bbd44e69cb8906b564fe30d18ba75f5b",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5",
+  "inputs": {
+    "input_csv": {
+      "src": "hda",
+      "id": "f9cad7b01a4721356f89ac2d0ba55d36"
+    },
+    "image_zip": {
+      "src": "hda",
+      "id": "f9cad7b01a4721353cdecbe582bebf01"
+    },
+    "task_selection": {
+      "__current_case__": 1,
+      "task": "classification",
+      "validation_metric_multiclass": ""
+    },
+    "column_override": {
+      "__current_case__": 0,
+      "override_columns": "true",
+      "target_column": "3",
+      "image_column": "8"
+    },
+    "sample_id_column": "1",
+    "model_name": "caformer_s18_384",
+    "scratch_fine_tune": {
+      "__current_case__": 0,
+      "use_pretrained": "true",
+      "fine_tune": "true"
+    },
+    "image_resize": "384x384",
+    "augmentation": [
+      "random_horizontal_flip",
+      "random_vertical_flip",
+      "random_rotate",
+      "random_blur",
+      "random_brightness",
+      "random_contrast"
+    ],
+    "random_seed": 42,
+    "advanced_settings": {
+      "__current_case__": 0,
+      "customize_defaults": "true",
+      "epochs": 30,
+      "early_stop": 30
+    }
+  }
+}

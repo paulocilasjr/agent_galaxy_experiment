@@ -1,2 +1,2 @@
 run_id	created_utc	status	tool_id	dataset_alias	notes
-run_20260208_051553Z_setup	2026-02-08T05:15:53Z	in_progress		ham10000_v1	setup
+run_20260208_051553Z_setup	2026-02-08T05:15:53Z	in_progress	toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5	ham10000_selected_metadata_aug_v1	setup + history created + csv/zip uploaded + attempt1 failed + attempt2 failed + attempt3 override_yes running

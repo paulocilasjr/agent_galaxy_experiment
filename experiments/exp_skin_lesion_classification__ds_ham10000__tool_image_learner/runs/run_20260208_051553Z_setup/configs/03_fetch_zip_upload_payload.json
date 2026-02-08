@@ -1,0 +1,15 @@
+{
+  "history_id": "bbd44e69cb8906b564fe30d18ba75f5b",
+  "targets": [
+    {
+      "destination": {"type": "hdas", "id": "bbd44e69cb8906b564fe30d18ba75f5b"},
+      "elements": [
+        {
+          "src": "url",
+          "url": "https://zenodo.org/records/18284218/files/selected_HAM10000_img_96_size.zip",
+          "name": "selected_HAM10000_img_96_size.zip"
+        }
+      ]
+    }
+  ]
+}

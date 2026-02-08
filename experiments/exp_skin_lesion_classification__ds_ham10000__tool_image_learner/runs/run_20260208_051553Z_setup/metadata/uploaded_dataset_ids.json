@@ -1,0 +1,16 @@
+{
+  "history_name": "agent-image_learner",
+  "history_id": "bbd44e69cb8906b564fe30d18ba75f5b",
+  "uploads": {
+    "metadata_csv": {
+      "id": "f9cad7b01a4721356f89ac2d0ba55d36",
+      "hid": 1,
+      "state": "ok"
+    },
+    "image_zip_from_url": {
+      "id": "f9cad7b01a4721353cdecbe582bebf01",
+      "hid": 2,
+      "state": "ok"
+    }
+  }
+}

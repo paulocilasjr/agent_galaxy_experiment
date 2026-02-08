@@ -1,2 +1,4 @@
 dataset_alias	source_type	source	notes
-ham10000_v1	kaggle	https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000	replace with exact local/source path used in your environment
+ham10000_source	kaggle	https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000	Original dataset source reference
+ham10000_selected_metadata_aug_v1	local_csv	experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/datasets/selected_HAM10000_img_metadata_aug.csv	Local metadata CSV added for Image Learner runs
+ham10000_selected_images_96_zip_v1	zenodo_url	https://zenodo.org/records/18284218/files/selected_HAM10000_img_96_size.zip	ZIP source to upload into Galaxy history for Image Learner

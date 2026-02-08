@@ -1,0 +1,34 @@
+{
+  "attempt_1": {
+    "job_id": "bbd44e69cb8906b576626b2d900d1a0c",
+    "job_state": "error",
+    "error_excerpt": " \"/jetstream2/scratch/main/jobs/74479122/tool_files/image_workflow.py\", line 181, in _prepare_data\n    raise ValueError(\nValueError: Missing required column(s) in metadata: label. Update the XML selections or rename your columns.\nCleaning up temp directory: gleam_image_work_6et5rraa\nMain script failed.Missing required column(s) in metadata: label. Update the XML selections or rename your columns.\n",
+    "model_dataset_id": "f9cad7b01a472135ead6369b69544b82",
+    "report_dataset_id": "f9cad7b01a4721353c092b14507dab30"
+  },
+  "attempt_2_fixed_conditionals": {
+    "job_id": "bbd44e69cb8906b5ed7e6b1cc9fdf426",
+    "job_state": "error",
+    "resolved_params": {
+      "task_selection": "{\"__current_case__\": 3, \"task\": \"auto\", \"validation_metric_auto\": \"\"}",
+      "column_override": "{\"__current_case__\": 1, \"override_columns\": \"false\"}",
+      "advanced_settings": "{\"__current_case__\": 1, \"customize_defaults\": \"false\"}"
+    },
+    "error_excerpt": " \"/jetstream2/scratch/main/jobs/74484070/tool_files/image_workflow.py\", line 181, in _prepare_data\n    raise ValueError(\nValueError: Missing required column(s) in metadata: label. Update the XML selections or rename your columns.\nCleaning up temp directory: gleam_image_work_7z2v6c1x\nMain script failed.Missing required column(s) in metadata: label. Update the XML selections or rename your columns.\n",
+    "model_dataset_id": "f9cad7b01a4721354e624e71d47b3b36",
+    "report_dataset_id": "f9cad7b01a472135fa0c16ba798ee6e9",
+    "predictions_collection_id": "6c1ee092b7c2977f"
+  },
+  "attempt_3_flattened_override_yes": {
+    "job_id": "bbd44e69cb8906b5cb776f6840f2d71d",
+    "job_state": "running",
+    "resolved_params": {
+      "task_selection": "{\"__current_case__\": 1, \"task\": \"classification\", \"validation_metric_multiclass\": \"\"}",
+      "column_override": "{\"__current_case__\": 0, \"image_column\": \"8\", \"override_columns\": \"true\", \"target_column\": \"3\"}",
+      "advanced_settings": "{\"__current_case__\": 0, \"batch_size_condition\": {\"__current_case__\": 1, \"batch_size_define\": \"false\"}, \"customize_defaults\": \"true\", \"early_stop\": \"30\", \"epochs\": \"30\", \"learning_rate_condition\": {\"__current_case__\": 1, \"learning_rate_define\": \"false\"}, \"test_split\": \"0.2\", \"threshold\": \"0.5\", \"train_split\": \"0.7\", \"val_split\": \"0.1\"}"
+    },
+    "model_dataset_id": "f9cad7b01a472135bb403bfe62baf57d",
+    "report_dataset_id": "f9cad7b01a4721352fae0b179f1e19a9",
+    "predictions_collection_id": "58b62ff8b158e75a"
+  }
+}

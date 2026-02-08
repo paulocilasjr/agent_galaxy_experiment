@@ -3,6 +3,13 @@
 ## Goal
 Keep multiple datasets, tools, and parameter configurations in one repository without ambiguity about ownership of files.
 
+## Navigation Contract
+- repository entrypoint: `START_HERE.md`
+- experiment catalog: `experiments/README.md`
+- per experiment:
+  - `START_HERE.md` for execution flow
+  - `REPRODUCE.md` for linear read/reproduce order
+
 ## Canonical Layout
 
 ```text

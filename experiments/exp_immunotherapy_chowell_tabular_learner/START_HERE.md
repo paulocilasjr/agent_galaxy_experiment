@@ -4,13 +4,19 @@
 - Completed reproduction trail for the Chowell dataset using Tabular Learner.
 - Four runs showing configuration adjustments and final corrected setup.
 
+## Primary Navigation
+1. `experiments/exp_immunotherapy_chowell_tabular_learner/REPRODUCE.md`
+2. `experiments/exp_immunotherapy_chowell_tabular_learner/runs/run_20260207_121552_legacy/run_manifest.yaml`
+3. `experiments/exp_immunotherapy_chowell_tabular_learner/runs/run_20260207_121552_legacy/journal.md`
+
 ## Read In This Order
 1. `experiments/exp_immunotherapy_chowell_tabular_learner/README.md`
 2. `experiments/exp_immunotherapy_chowell_tabular_learner/datasets/manifest.tsv`
-3. `artifacts/immunotherapy_20260207_121552/journal.md`
-4. `artifacts/immunotherapy_20260207_121552/prompts/`
-5. `artifacts/immunotherapy_20260207_121552/configs/`
-6. `artifacts/immunotherapy_20260207_121552/metadata/`
+3. `experiments/exp_immunotherapy_chowell_tabular_learner/runs/run_20260207_121552_legacy/journal.md`
+4. `artifacts/immunotherapy_20260207_121552/journal.md`
+5. `artifacts/immunotherapy_20260207_121552/prompts/`
+6. `artifacts/immunotherapy_20260207_121552/configs/`
+7. `artifacts/immunotherapy_20260207_121552/metadata/`
 
 ## Key Run Result Files
 - Run 1 summary: `artifacts/immunotherapy_20260207_121552/metadata/05_execution_result.json`

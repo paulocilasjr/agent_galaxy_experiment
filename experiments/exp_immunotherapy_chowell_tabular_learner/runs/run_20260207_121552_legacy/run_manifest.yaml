@@ -1,0 +1,12 @@
+experiment_id: exp_immunotherapy_chowell_tabular_learner
+run_id: run_20260207_121552_legacy
+created_utc: 2026-02-07T12:15:52Z
+status: completed
+dataset_alias: "chowell_v1"
+tool_name: "Tabular Learner"
+tool_id: "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4"
+tool_version: "0.1.4"
+history_name: "agent-tabular_learner"
+history_id: "bbd44e69cb8906b5818b2d41fc14f7a1"
+legacy_artifacts_root: "artifacts/immunotherapy_20260207_121552"
+notes: "Legacy run wrapper so this experiment can be navigated fully from experiments/ without mixing with HAM10000 files."

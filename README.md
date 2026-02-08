@@ -3,6 +3,7 @@ Running galaxy experiment using agent
 
 ## Quick Entrypoint
 Open `START_HERE.md` and choose a use case.
+For experiment-level navigation, use `experiments/README.md`.
 
 ## Recommended Organization
 Use experiment-scoped folders to avoid mixing datasets/tools/runs:
@@ -27,3 +28,7 @@ sh scripts/init_run.sh exp_histopathology_response__ds_tcga_tiles__tool_image_le
 
 Details:
 - `docs/EXPERIMENT_ORGANIZATION.md`
+
+## Tracked Use Cases
+- `exp_immunotherapy_chowell_tabular_learner` (Tabular Learner)
+- `exp_skin_lesion_classification__ds_ham10000__tool_image_learner` (Image Learner)
