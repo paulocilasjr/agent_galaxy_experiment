@@ -1,0 +1,2 @@
+dataset_alias	source_type	source	notes
+ham10000_v1	kaggle	https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000	replace with exact local/source path used in your environment

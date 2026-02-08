@@ -1,0 +1,35 @@
+{
+  "history_id": "bbd44e69cb8906b5818b2d41fc14f7a1",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+  "inputs": {
+    "input_file": {
+      "src": "hda",
+      "id": "f9cad7b01a47213515562d8d15c5db3d"
+    },
+    "test_data_choice": {
+      "__current_case__": 0,
+      "has_test_file": "yes",
+      "test_file": {
+        "src": "hda",
+        "id": "f9cad7b01a4721353f443ce2cb15cd33"
+      }
+    },
+    "target_feature": "22",
+    "sample_id_selector": {
+      "__current_case__": 1,
+      "use_sample_id": "no"
+    },
+    "model_selection": {
+      "__current_case__": 0,
+      "model_type": "classification",
+      "best_model_metric": "Accuracy",
+      "classification_models": null
+    },
+    "tune_model": false,
+    "random_seed": 42,
+    "advanced_settings": {
+      "__current_case__": 1,
+      "customize_defaults": "false"
+    }
+  }
+}

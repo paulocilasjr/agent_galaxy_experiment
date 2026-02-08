@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-02-08T04:59:24Z",
+  "input_reports": [
+    "artifacts/immunotherapy_20260207_121552/outputs/reports/run1_Chowell_train_only.html",
+    "artifacts/immunotherapy_20260207_121552/outputs/reports/run2_Chowell_train_only.html",
+    "artifacts/immunotherapy_20260207_121552/outputs/reports/run3_Chowell_train_test.html",
+    "artifacts/immunotherapy_20260207_121552/outputs/reports/run4_Chowell_train_test_ProbThres.html"
+  ],
+  "metrics_compared": [
+    "Accuracy",
+    "ROC-AUC",
+    "Precision",
+    "Recall",
+    "F1-score"
+  ],
+  "run_columns_requested": [
+    "Chowell_train_only",
+    "Chowell_train_only",
+    "Chowell_train_test",
+    "Chowell_train_test_ProbThres"
+  ],
+  "output_files": {
+    "png": "artifacts/immunotherapy_20260207_121552/outputs/reports/test_split_metrics_comparison.png",
+    "csv": "artifacts/immunotherapy_20260207_121552/outputs/reports/test_split_metrics_by_run.csv",
+    "json": "artifacts/immunotherapy_20260207_121552/outputs/reports/test_split_metrics_by_run.json"
+  },
+  "implementation_note": "Report outputs were zip containers containing embedded HTML; metrics extracted from the split metrics table (Metric/Train/Validation/Test).",
+  "environment_note": "matplotlib unavailable; PNG table rendered with Pillow."
+}

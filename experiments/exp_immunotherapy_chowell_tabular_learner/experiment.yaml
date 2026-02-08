@@ -1,0 +1,6 @@
+experiment_id: exp_immunotherapy_chowell_tabular_learner
+created_utc: 2026-02-08T05:06:32Z
+objective: "Immunotherapy response prediction"
+primary_tool: "Tabular Learner"
+dataset_name: "chowell"
+status: active

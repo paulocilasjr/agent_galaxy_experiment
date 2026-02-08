@@ -1,0 +1,38 @@
+[
+  {
+    "run_index": 1,
+    "run_label": "Chowell_train_only",
+    "Accuracy": 0.728,
+    "ROC-AUC": 0.713,
+    "Precision": 0.607,
+    "Recall": 0.2,
+    "F1-score": 0.301
+  },
+  {
+    "run_index": 2,
+    "run_label": "Chowell_train_only",
+    "Accuracy": 0.728,
+    "ROC-AUC": 0.713,
+    "Precision": 0.607,
+    "Recall": 0.2,
+    "F1-score": 0.301
+  },
+  {
+    "run_index": 3,
+    "run_label": "Chowell_train_test",
+    "Accuracy": 0.796,
+    "ROC-AUC": 0.76,
+    "Precision": 0.712,
+    "Recall": 0.291,
+    "F1-score": 0.413
+  },
+  {
+    "run_index": 4,
+    "run_label": "Chowell_train_test_ProbThres",
+    "Accuracy": 0.674,
+    "ROC-AUC": 0.76,
+    "Precision": 0.407,
+    "Recall": 0.709,
+    "F1-score": 0.517
+  }
+]

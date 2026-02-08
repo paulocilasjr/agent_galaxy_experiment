@@ -1,0 +1,19 @@
+project: immunotherapy_tabular_learner
+run_id: immunotherapy_20260207_121552
+date_utc: 2026-02-07T17:35:01Z
+operator: 4475918
+galaxy_url: https://usegalaxy.org
+history_name: agent-tabular_learner
+history_id: bbd44e69cb8906b5818b2d41fc14f7a1
+tool_name: Tabular Learner
+tool_id: toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4
+inputs:
+  training_table_url: https://zenodo.org/records/17781688/files/Chowell_train.tsv
+  test_table_url: https://zenodo.org/records/17781688/files/Chowell_test.tsv
+  training_dataset_hda_id: f9cad7b01a47213515562d8d15c5db3d
+  test_dataset_hda_id: f9cad7b01a4721353f443ce2cb15cd33
+  response_label_column: Response
+outputs:
+  model_summary: f9cad7b01a47213526f7e6ae60c97438
+  predictions_table: f9cad7b01a4721355f32b3a3a11aecd4
+status: in_progress

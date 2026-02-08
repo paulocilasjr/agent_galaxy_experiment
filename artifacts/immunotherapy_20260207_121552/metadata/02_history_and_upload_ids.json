@@ -1,0 +1,33 @@
+{
+  "history": {
+    "id": "bbd44e69cb8906b5818b2d41fc14f7a1",
+    "name": "agent-tabular_learner"
+  },
+  "upload_job": {
+    "id": "bbd44e69cb8906b505199c42d6fad4ef",
+    "tool_id": "__DATA_FETCH__"
+  },
+  "datasets": {
+    "Chowell_train.tsv": {
+      "hda_id": "f9cad7b01a47213515562d8d15c5db3d",
+      "dataset_id": "f9cad7b01a472135ab02c5027c28d58f",
+      "hid": 1,
+      "state": "ok",
+      "extension": "tabular",
+      "rows": 965,
+      "columns": 22,
+      "source_url": "https://zenodo.org/records/17781688/files/Chowell_train.tsv"
+    },
+    "Chowell_test.tsv": {
+      "hda_id": "f9cad7b01a4721353f443ce2cb15cd33",
+      "dataset_id": "f9cad7b01a472135a141a68060103886",
+      "hid": 2,
+      "state": "ok",
+      "extension": "tabular",
+      "rows": 516,
+      "columns": 22,
+      "source_url": "https://zenodo.org/records/17781688/files/Chowell_test.tsv"
+    }
+  },
+  "captured_at_utc": "2026-02-07T17:26:18Z"
+}
