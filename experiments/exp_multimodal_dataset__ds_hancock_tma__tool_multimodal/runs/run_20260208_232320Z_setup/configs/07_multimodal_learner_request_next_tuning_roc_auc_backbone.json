@@ -1,0 +1,44 @@
+{
+  "history_id": "bbd44e69cb8906b5ce223e9a81174ae0",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5",
+  "inputs": {
+    "input_csv": {
+      "src": "hda",
+      "id": "f9cad7b01a472135214deb0f5acedc0b"
+    },
+    "target_column": "3",
+    "sample_id_selector|__current_case__": 0,
+    "sample_id_selector|use_sample_id": "yes",
+    "sample_id_selector|sample_id_column": "1",
+    "test_dataset_conditional|__current_case__": 0,
+    "test_dataset_conditional|has_test_dataset": true,
+    "test_dataset_conditional|input_test": {
+      "src": "hda",
+      "id": "f9cad7b01a4721356b6decc42b7e78f0"
+    },
+    "backbone_text": "microsoft/deberta-v3-base",
+    "use_images_conditional|__current_case__": 0,
+    "use_images_conditional|use_images": true,
+    "use_images_conditional|images_zip_repeat": [
+      {
+        "images_zip": {
+          "src": "hda",
+          "id": "f9cad7b01a4721357c0e9f7ba4c68487"
+        }
+      }
+    ],
+    "use_images_conditional|images_zip_repeat_0|images_zip": {
+      "src": "hda",
+      "id": "f9cad7b01a4721357c0e9f7ba4c68487"
+    },
+    "use_images_conditional|backbone_image": "caformer_b36.sail_in22k_ft_in1k_384",
+    "use_images_conditional|missing_image_strategy": false,
+    "preset": "best_quality",
+    "eval_metric": "roc_auc",
+    "random_seed": 42,
+    "time_limit": 43200,
+    "deterministic": false,
+    "customize_defaults_conditional|__current_case__": 1,
+    "customize_defaults_conditional|customize_defaults": false
+  }
+}

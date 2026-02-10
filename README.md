@@ -32,3 +32,4 @@ Details:
 ## Tracked Use Cases
 - `exp_immunotherapy_chowell_tabular_learner` (Tabular Learner)
 - `exp_skin_lesion_classification__ds_ham10000__tool_image_learner` (Image Learner)
+- `exp_multimodal_dataset__ds_hancock_tma__tool_multimodal` (Multimodal setup)

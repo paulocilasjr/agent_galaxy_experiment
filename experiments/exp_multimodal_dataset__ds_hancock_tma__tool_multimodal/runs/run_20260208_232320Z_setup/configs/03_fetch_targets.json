@@ -1,0 +1,14 @@
+{
+  "history_name": "Agent-Multimodal",
+  "history_id": "bbd44e69cb8906b5ce223e9a81174ae0",
+  "targets": [
+    {
+      "destination": {"type": "hdas", "id": "bbd44e69cb8906b5ce223e9a81174ae0"},
+      "elements": [
+        {"src": "url", "url": "https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv", "name": "HANCOCK_train_split.csv"},
+        {"src": "url", "url": "https://zenodo.org/records/17933596/files/HANCOCK_test_split.csv", "name": "HANCOCK_test_split.csv"},
+        {"src": "url", "url": "https://zenodo.org/records/17727354/files/tma_cores_cd3_cd8_images.zip", "name": "tma_cores_cd3_cd8_images.zip"}
+      ]
+    }
+  ]
+}

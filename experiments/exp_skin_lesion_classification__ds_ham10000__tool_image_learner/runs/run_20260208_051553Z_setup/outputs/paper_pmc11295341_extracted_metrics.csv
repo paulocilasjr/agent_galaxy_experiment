@@ -1,0 +1,9 @@
+paper_metric,paper_value,paper_unit,paper_source
+Accuracy,97.78,percent,Abstract (PMC11295341): proposed model achieved 97.78% accuracy.
+Precision,97.9,percent,Abstract (PMC11295341): precision rate 97.9%.
+Recall,97.9,percent,Abstract (PMC11295341): recall rate 97.9%.
+F2-score,97.8,percent,Abstract (PMC11295341): F2 score 97.8%.
+Test Accuracy,97.858,percent,Results text (PMC11295341): test accuracy measured at 97.858%.
+MSE,0.375,raw,Results text (PMC11295341): MSE measured at 0.375.
+RMSE,0.612,raw,Results text (PMC11295341): RMSE measured at 0.612.
+MAE,0.5,raw,Results text (PMC11295341): MAE measured at 0.5.

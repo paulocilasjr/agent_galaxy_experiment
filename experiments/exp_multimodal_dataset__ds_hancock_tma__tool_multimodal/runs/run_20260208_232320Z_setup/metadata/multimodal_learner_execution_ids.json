@@ -1,0 +1,123 @@
+{
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5",
+  "latest_attempt": "attempt_4_tuning_backbone_b36",
+  "attempt_1": {
+    "job_id": "bbd44e69cb8906b538f7c3278b60f690",
+    "job_state_latest": "error",
+    "job_exit_code": 1,
+    "outputs": [
+      {
+        "name": "Multimodal Learner analysis report on data dataset 1-3",
+        "id": "f9cad7b01a47213546171c21fba899da",
+        "hid": 4,
+        "state": "error",
+        "file_ext": "html"
+      },
+      {
+        "name": "Multimodal Learner training config on data dataset 1-3",
+        "id": "f9cad7b01a4721356b71632e40b6d137",
+        "hid": 5,
+        "state": "error",
+        "file_ext": "yaml"
+      },
+      {
+        "name": "Multimodal Learner metric results on data dataset 1-3",
+        "id": "f9cad7b01a472135b851449cf8da2447",
+        "hid": 6,
+        "state": "error",
+        "file_ext": "json"
+      }
+    ]
+  },
+  "attempt_2_deterministic_no": {
+    "job_id": "bbd44e69cb8906b536a90951f82b13c5",
+    "job_state_latest": "error",
+    "job_exit_code": 1,
+    "status_snapshot_path": "api/53_multimodal_job_status_attempt2_terminal_check.json",
+    "outputs": [
+      {
+        "name": "Multimodal Learner analysis report on data dataset 1-3",
+        "id": "f9cad7b01a472135da2e30b3affd024e",
+        "hid": 7,
+        "state": "error",
+        "file_ext": "html"
+      },
+      {
+        "name": "Multimodal Learner training config on data dataset 1-3",
+        "id": "f9cad7b01a472135503f3085178bebec",
+        "hid": 8,
+        "state": "error",
+        "file_ext": "yaml"
+      },
+      {
+        "name": "Multimodal Learner metric results on data dataset 1-3",
+        "id": "f9cad7b01a47213537262ec32615686a",
+        "hid": 9,
+        "state": "error",
+        "file_ext": "json"
+      }
+    ]
+  },
+  "attempt_3_fix_optimization_override": {
+    "job_id": "bbd44e69cb8906b5fbd5ff2ad8f177dd",
+    "job_state_latest": "ok",
+    "job_exit_code": 0,
+    "status_snapshot_path": "api/60_multimodal_job_status_attempt_3_fix_optimization_override_poll_1.json",
+    "config_path": "configs/06_multimodal_learner_request_fix_optimization_override.json",
+    "download_summary_path": "metadata/multimodal_outputs_download_summary_attempt_3_fix_optimization_override.json",
+    "outputs": [
+      {
+        "name": "Multimodal Learner analysis report on data dataset 1-3",
+        "id": "f9cad7b01a47213556bb211dbf607a26",
+        "hid": 10,
+        "state": "ok",
+        "file_ext": "html"
+      },
+      {
+        "name": "Multimodal Learner training config on data dataset 1-3",
+        "id": "f9cad7b01a472135c8b9337d98ad4e06",
+        "hid": 11,
+        "state": "ok",
+        "file_ext": "yaml"
+      },
+      {
+        "name": "Multimodal Learner metric results on data dataset 1-3",
+        "id": "f9cad7b01a472135d6130d4a14671260",
+        "hid": 12,
+        "state": "ok",
+        "file_ext": "json"
+      }
+    ]
+  },
+  "attempt_4_tuning_backbone_b36": {
+    "job_id": "bbd44e69cb8906b5349dbb08e34ca0d8",
+    "job_state_latest": "ok",
+    "job_exit_code": 0,
+    "status_snapshot_path": "api/60_multimodal_job_status_attempt_4_tuning_backbone_b36_poll_1.json",
+    "config_path": "configs/07_multimodal_learner_request_next_tuning_roc_auc_backbone.json",
+    "outputs": [
+      {
+        "name": "Multimodal Learner analysis report on data dataset 1-3",
+        "id": "f9cad7b01a4721355f6f864ae9ccad3e",
+        "hid": 13,
+        "state": "ok",
+        "file_ext": "html"
+      },
+      {
+        "name": "Multimodal Learner training config on data dataset 1-3",
+        "id": "f9cad7b01a4721353052fd3908a6acba",
+        "hid": 14,
+        "state": "ok",
+        "file_ext": "yaml"
+      },
+      {
+        "name": "Multimodal Learner metric results on data dataset 1-3",
+        "id": "f9cad7b01a4721352e5935f8ae5b943a",
+        "hid": 15,
+        "state": "ok",
+        "file_ext": "json"
+      }
+    ],
+    "download_summary_path": "metadata/multimodal_outputs_download_summary_attempt_4_tuning_backbone_b36.json"
+  }
+}

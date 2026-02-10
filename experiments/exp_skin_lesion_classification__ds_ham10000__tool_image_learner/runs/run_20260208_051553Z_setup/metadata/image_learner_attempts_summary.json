@@ -21,7 +21,7 @@
   },
   "attempt_3_flattened_override_yes": {
     "job_id": "bbd44e69cb8906b5cb776f6840f2d71d",
-    "job_state": "running",
+    "job_state": "ok",
     "resolved_params": {
       "task_selection": "{\"__current_case__\": 1, \"task\": \"classification\", \"validation_metric_multiclass\": \"\"}",
       "column_override": "{\"__current_case__\": 0, \"image_column\": \"8\", \"override_columns\": \"true\", \"target_column\": \"3\"}",

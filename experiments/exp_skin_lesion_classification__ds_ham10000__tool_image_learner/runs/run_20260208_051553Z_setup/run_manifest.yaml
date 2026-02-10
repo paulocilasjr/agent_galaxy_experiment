@@ -1,7 +1,7 @@
 experiment_id: exp_skin_lesion_classification__ds_ham10000__tool_image_learner
 run_id: run_20260208_051553Z_setup
 created_utc: 2026-02-08T05:15:53Z
-status: in_progress
+status: completed
 dataset_alias: "ham10000_selected_metadata_aug_v1"
 tool_name: "Image Learner"
 tool_id: "toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5"
@@ -29,20 +29,20 @@ outputs:
     galaxy_dataset_id: "f9cad7b01a472135bb403bfe62baf57d"
     galaxy_hid: 10
     file_ext: "ludwig_model"
-    state: "running"
+    state: "ok"
   report_html:
     galaxy_dataset_id: "f9cad7b01a4721352fae0b179f1e19a9"
     galaxy_hid: 11
     file_ext: "html"
-    state: "running"
+    state: "ok"
   predictions_collection:
     galaxy_collection_id: "58b62ff8b158e75a"
     galaxy_hid: 9
     collection_type: "list"
-    populated_state: "new"
+    populated_state: "ok"
 execution:
   job_id: "bbd44e69cb8906b5cb776f6840f2d71d"
-  job_state: "running"
+  job_state: "ok"
 failed_attempts:
   attempt_1:
     job_id: "bbd44e69cb8906b576626b2d900d1a0c"
@@ -50,4 +50,4 @@ failed_attempts:
   attempt_2:
     job_id: "bbd44e69cb8906b5ed7e6b1cc9fdf426"
     reason: "Still resolved to column_override=false and default label handling."
-notes: "Image Learner configured with dx target, image_path mapping, lesion_id split key, CAFormer S18 384, all augmentations, epochs=30, early_stop=30; flattened override=yes submission running."
+notes: "Image Learner configured with dx target, image_path mapping, lesion_id split key, CAFormer S18 384, all augmentations, epochs=30, early_stop=30; flattened override=yes attempt completed successfully and outputs downloaded."

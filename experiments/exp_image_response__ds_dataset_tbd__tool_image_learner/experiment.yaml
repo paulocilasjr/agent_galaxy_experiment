@@ -1,6 +1,0 @@
-experiment_id: exp_image_response__ds_dataset_tbd__tool_image_learner
-created_utc: 2026-02-08T05:11:05Z
-objective: "Image Learner experiment on a new dataset"
-primary_tool: "image learner"
-dataset_name: "dataset tbd"
-status: archived

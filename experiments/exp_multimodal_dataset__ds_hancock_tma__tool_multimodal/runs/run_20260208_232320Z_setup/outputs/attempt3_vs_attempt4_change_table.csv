@@ -1,0 +1,30 @@
+Category,Field,Attempt 3,Attempt 4,Change/Note
+Config,backbone_image,caformer_s18.sail_in22k_ft_in1k,caformer_b36.sail_in22k_ft_in1k_384,Changed
+Config,missing_image_strategy,True,False,Changed
+Config,time_limit (sec),21600,43200,Changed
+Config,preset,best_quality,best_quality,Same
+Config,eval_metric,roc_auc,roc_auc,Same
+Config,random_seed,42,42,Same
+Data Prep,cleanup train rows,520,533,After image-missing handling
+Data Prep,cleanup test rows,133,134,After image-missing handling
+Data Prep,train rows dropped (missing images),13,0,A4 filled placeholders instead of dropping
+Data Prep,test rows dropped (missing images),1,0,A4 filled placeholders instead of dropping
+Data Prep,train rows filled with placeholder,0,13,A3 drops missing rows
+Data Prep,test rows filled with placeholder,0,1,A3 drops missing rows
+Runtime,final train split size,415,426,Train rows used by model
+Runtime,final val split size,105,107,Validation rows used by model
+Runtime,trainable parameters (M),210.0,282.0,Model capacity
+Metrics,fit_summary val_roc_auc,0.7725344300270081,0.5748662948608398,Validation summary score
+Metrics,fit_summary training_time (sec),1520.979107618332,1253.1980438232422,Training wall-time
+Metrics (train),ROC-AUC,0.874543323912594,0.7590236921609158,
+Metrics (train),PR-AUC,0.7271284566783014,0.5099805928304911,
+Metrics (val),ROC-AUC,0.8085896076352068,0.661764705882353,
+Metrics (val),PR-AUC,0.548320021533651,0.3259805224080813,
+Metrics (test),ROC-AUC,0.7693939393939394,0.6507650765076507,
+Metrics (test),PR-AUC,0.5859232921106323,0.3904788712518046,
+Metrics (test),Accuracy,0.7894736842105263,0.753731343283582,
+Metrics (test),Precision,0.8571428571428571,0.0,
+Metrics (test),Recall_(Sensitivity/TPR),0.18181818181818182,0.0,
+Metrics (test),F1-Score,0.3,0.0,
+Metrics (test),MCC,0.3323470256441984,0.0,
+Metrics (test),LogLoss,0.478200485483861,0.5393123075814149,

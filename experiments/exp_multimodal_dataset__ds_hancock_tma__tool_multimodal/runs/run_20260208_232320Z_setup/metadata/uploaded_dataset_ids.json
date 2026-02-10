@@ -1,0 +1,28 @@
+{
+  "history_name": "Agent-Multimodal",
+  "history_id": "bbd44e69cb8906b5ce223e9a81174ae0",
+  "job_id": "bbd44e69cb8906b5810e387b9614c54c",
+  "uploads": [
+    {
+      "name": "HANCOCK_train_split.csv",
+      "id": "f9cad7b01a472135214deb0f5acedc0b",
+      "hid": 1,
+      "state": "ok",
+      "file_ext": "auto"
+    },
+    {
+      "name": "HANCOCK_test_split.csv",
+      "id": "f9cad7b01a4721356b6decc42b7e78f0",
+      "hid": 2,
+      "state": "ok",
+      "file_ext": "auto"
+    },
+    {
+      "name": "tma_cores_cd3_cd8_images.zip",
+      "id": "f9cad7b01a4721357c0e9f7ba4c68487",
+      "hid": 3,
+      "state": "ok",
+      "file_ext": "auto"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+experiment_id: exp_multimodal_dataset__ds_hancock_tma__tool_multimodal
+created_utc: 2026-02-08T23:23:20Z
+objective: "Multimodal dataset setup for HANCOCK train/test splits and TMA CD3/CD8 images"
+primary_tool: "multimodal"
+dataset_name: "hancock tma"
+status: active

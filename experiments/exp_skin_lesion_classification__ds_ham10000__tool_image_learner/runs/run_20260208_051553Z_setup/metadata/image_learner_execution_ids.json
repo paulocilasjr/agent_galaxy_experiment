@@ -4,16 +4,16 @@
   "job": {
     "model_class": "Job",
     "id": "bbd44e69cb8906b5cb776f6840f2d71d",
-    "state": "new",
-    "exit_code": null,
-    "update_time": "2026-02-08T21:20:43.194312",
+    "state": "ok",
+    "exit_code": 0,
+    "update_time": "2026-02-08T21:44:17.735739",
     "create_time": "2026-02-08T21:20:43.123226",
     "galaxy_version": "25.1",
     "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/image_learner/image_learner/0.1.5",
     "tool_version": "0.1.5",
     "history_id": "bbd44e69cb8906b564fe30d18ba75f5b"
   },
-  "job_state_latest": "running",
+  "job_state_latest": "ok",
   "params_resolved": {
     "task_selection": "{\"__current_case__\": 1, \"task\": \"classification\", \"validation_metric_multiclass\": \"\"}",
     "column_override": "{\"__current_case__\": 0, \"image_column\": \"8\", \"override_columns\": \"true\", \"target_column\": \"3\"}",
@@ -33,20 +33,20 @@
       "name": "Image Learner trained model on dataset 1 and 2",
       "id": "f9cad7b01a472135bb403bfe62baf57d",
       "hid": 10,
-      "state": "new",
+      "state": "ok",
       "file_ext": "ludwig_model"
     },
     {
       "name": "Image Learner report on dataset 1 and 2",
       "id": "f9cad7b01a4721352fae0b179f1e19a9",
       "hid": 11,
-      "state": "new",
+      "state": "ok",
       "file_ext": "html"
     }
   ],
   "outputs_state_latest": {
-    "model": "running",
-    "report": "running"
+    "model": "ok",
+    "report": "ok"
   },
   "output_collections": [
     {
@@ -55,13 +55,13 @@
       "hid": 9,
       "collection_type": "list",
       "state_summary": {
-        "new": 1,
+        "new": 0,
         "resubmitted": 0,
         "upload": 0,
         "waiting": 0,
         "queued": 0,
         "running": 0,
-        "ok": 0,
+        "ok": 1,
         "error": 0,
         "failed": 0,
         "paused": 0,

@@ -1,0 +1,18 @@
+{
+  "attempt_key": "attempt_3_fix_optimization_override",
+  "attempt_tag": "attempt_3_fix_optimization_override",
+  "job_id": "bbd44e69cb8906b5fbd5ff2ad8f177dd",
+  "job_state": "ok",
+  "report_state": "ok",
+  "config_state": "ok",
+  "metrics_state": "ok",
+  "last_job_poll_file": "api/60_multimodal_job_status_attempt_3_fix_optimization_override_poll_1.json",
+  "outputs": {
+    "report_html": "outputs/multimodal_report_attempt_3_fix_optimization_override.html",
+    "training_config_yaml": "outputs/multimodal_training_config_attempt_3_fix_optimization_override.yaml",
+    "metric_results_json": "outputs/multimodal_metric_results_attempt_3_fix_optimization_override.json",
+    "canonical_report_html": "outputs/multimodal_report.html",
+    "canonical_training_config_yaml": "outputs/multimodal_training_config.yaml",
+    "canonical_metric_results_json": "outputs/multimodal_metric_results.json"
+  }
+}

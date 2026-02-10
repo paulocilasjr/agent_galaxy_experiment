@@ -1,0 +1,63 @@
+experiment_id: exp_multimodal_dataset__ds_hancock_tma__tool_multimodal
+run_id: run_20260208_232320Z_setup
+created_utc: 2026-02-08T23:23:20Z
+status: completed
+dataset_alias: "hancock_multimodal_v1"
+tool_name: "Multimodal Learner"
+tool_id: "toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5"
+tool_version: "0.1.5"
+history_name: "Agent-Multimodal"
+history_id: "bbd44e69cb8906b5ce223e9a81174ae0"
+base_run_id: ""
+inputs:
+  hancock_train_split:
+    dataset_alias: "hancock_train_split_v1"
+    source_type: "zenodo_url"
+    source: "https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv"
+    galaxy_dataset_id: "f9cad7b01a472135214deb0f5acedc0b"
+    galaxy_hid: 1
+    upload_state: "ok"
+  hancock_test_split:
+    dataset_alias: "hancock_test_split_v1"
+    source_type: "zenodo_url"
+    source: "https://zenodo.org/records/17933596/files/HANCOCK_test_split.csv"
+    galaxy_dataset_id: "f9cad7b01a4721356b6decc42b7e78f0"
+    galaxy_hid: 2
+    upload_state: "ok"
+  tma_cores_cd3_cd8_images_zip:
+    dataset_alias: "tma_cores_cd3_cd8_images_zip_v1"
+    source_type: "zenodo_url"
+    source: "https://zenodo.org/records/17727354/files/tma_cores_cd3_cd8_images.zip"
+    galaxy_dataset_id: "f9cad7b01a4721357c0e9f7ba4c68487"
+    galaxy_hid: 3
+    upload_state: "ok"
+execution:
+  upload_job_id: "bbd44e69cb8906b5810e387b9614c54c"
+  multimodal_job_id: "bbd44e69cb8906b5349dbb08e34ca0d8"
+  multimodal_job_state: "ok"
+outputs:
+  analysis_report_html:
+    galaxy_dataset_id: "f9cad7b01a4721355f6f864ae9ccad3e"
+    galaxy_hid: 13
+    file_ext: "html"
+    state: "ok"
+  training_config_yaml:
+    galaxy_dataset_id: "f9cad7b01a4721353052fd3908a6acba"
+    galaxy_hid: 14
+    file_ext: "yaml"
+    state: "ok"
+  metric_results_json:
+    galaxy_dataset_id: "f9cad7b01a4721352e5935f8ae5b943a"
+    galaxy_hid: 15
+    file_ext: "json"
+    state: "ok"
+failed_attempts:
+  multimodal_attempt_1:
+    job_id: "bbd44e69cb8906b538f7c3278b60f690"
+    reason: "AutoGluon distributed initialization failed with NCCL cuda operation not supported (2-GPU DDP path)."
+  multimodal_attempt_2:
+    job_id: "bbd44e69cb8906b536a90951f82b13c5"
+    reason: "AutoGluon crashed with KeyError: 'optimization not found in config' due deprecated optimization override keys emitted from customized defaults."
+next_setup:
+  config_path: "configs/07_multimodal_learner_request_next_tuning_roc_auc_backbone.json"
+notes: "Attempt 4 completed successfully from tuning config 07 (CAFormer B36 + time_limit 43200 + customize_defaults=no); outputs downloaded and metrics finalized."

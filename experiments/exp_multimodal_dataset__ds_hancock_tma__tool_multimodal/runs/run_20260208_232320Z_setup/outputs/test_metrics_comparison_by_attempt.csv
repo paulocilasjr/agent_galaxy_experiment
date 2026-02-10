@@ -1,0 +1,5 @@
+attempt,job_state,exit_code,metrics_file,ROC-AUC,PR-AUC,Accuracy,Precision,Recall,F1-Score,MCC,LogLoss
+attempt_1,error,1,N/A,,,,,,,,
+attempt_2_deterministic_no,error,1,N/A,,,,,,,,
+attempt_3_fix_optimization_override,ok,0,outputs/multimodal_metric_results_attempt_3_fix_optimization_override.json,0.7693939393939394,0.5859232921106323,0.7894736842105263,0.8571428571428571,0.18181818181818182,0.3,0.3323470256441984,0.478200485483861
+attempt_4_tuning_backbone_b36,ok,0,outputs/multimodal_metric_results_attempt_4_tuning_backbone_b36.json,0.6507650765076507,0.3904788712518046,0.753731343283582,0.0,0.0,0.0,0.0,0.5393123075814149

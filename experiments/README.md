@@ -14,12 +14,11 @@ This folder is the canonical index for all use cases in this repository.
    - entrypoint: `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/START_HERE.md`
    - reproducibility map: `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/REPRODUCE.md`
    - run index: `experiments/exp_skin_lesion_classification__ds_ham10000__tool_image_learner/summaries/run_index.tsv`
-
-## Archived / Placeholder Experiments
-
-1. `exp_image_response__ds_dataset_tbd__tool_image_learner`
-   - status: archived placeholder
-   - do not use for active runs
+3. Multimodal dataset setup with HANCOCK splits + TMA CD3/CD8 images
+   - experiment id: `exp_multimodal_dataset__ds_hancock_tma__tool_multimodal`
+   - entrypoint: `experiments/exp_multimodal_dataset__ds_hancock_tma__tool_multimodal/START_HERE.md`
+   - reproducibility map: `experiments/exp_multimodal_dataset__ds_hancock_tma__tool_multimodal/REPRODUCE.md`
+   - run index: `experiments/exp_multimodal_dataset__ds_hancock_tma__tool_multimodal/summaries/run_index.tsv`
 
 ## Separation Rules
 

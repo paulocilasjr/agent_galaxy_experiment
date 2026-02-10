@@ -1,0 +1,4 @@
+dataset_alias	source_type	source	notes
+hancock_train_split_v1	zenodo_url	https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv	Training split for multimodal setup
+hancock_test_split_v1	zenodo_url	https://zenodo.org/records/17933596/files/HANCOCK_test_split.csv	Test split for multimodal setup
+tma_cores_cd3_cd8_images_zip_v1	zenodo_url	https://zenodo.org/records/17727354/files/tma_cores_cd3_cd8_images.zip	Image archive for multimodal setup

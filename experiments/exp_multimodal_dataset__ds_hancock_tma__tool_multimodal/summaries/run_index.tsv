@@ -1,0 +1,2 @@
+run_id	created_utc	status	tool_id	dataset_alias	notes
+run_20260208_232320Z_setup	2026-02-08T23:23:20Z	completed	toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5	hancock_multimodal_v1	setup + imports ok + attempt_1 failed (NCCL) + attempt_2 failed (optimization override KeyError) + attempt_3 succeeded + attempt_4 completed (B36/time_limit 43200)
