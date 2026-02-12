@@ -1,0 +1,27 @@
+{
+  "data_train": {
+    "id": "f9cad7b01a472135e849184d64d68f38",
+    "src": "hda"
+  },
+  "data_test|data_test_selector": "separate",
+  "data_test|data_test_file": {
+    "id": "f9cad7b01a4721350e0fd2a678772f8b",
+    "src": "hda"
+  },
+  "target_col": "2",
+  "sample_id_col|sample_id_selector": "enabled",
+  "sample_id_col|sample_id": "0",
+  "image_data|image_selector": "enabled",
+  "image_data|image_zip": {
+    "id": "f9cad7b01a472135478cd355c3a50b65",
+    "src": "hda"
+  },
+  "image_data|image_col_0|image_col": "38",
+  "image_data|image_col_1|image_col": "39",
+  "model_config|config_selector": "yaml",
+  "model_config|yaml_content": "model:\n  names:\n    - timm_image\n    - ft_transformer\n    - fusion_mlp\n\n  timm_image:\n    checkpoint_name: caformer_b36.sail_in22k_ft_in1k_384\n    data_types:\n      - image\n    train_transforms:\n      - resize_shorter_side\n      - center_crop\n      - trivial_augment\n    val_transforms:\n      - resize_shorter_side\n      - center_crop\n    image_size: 384\n\n  ft_transformer:\n    data_types:\n      - categorical\n      - numerical\n    token_dim: 192\n    num_blocks: 3\n\n  fusion_mlp:\n    hidden_sizes:\n      - 128\n    activation: leaky_relu\n    dropout: 0.1\n\noptim:\n  optim_type: adamw\n  lr: 0.0001\n  weight_decay: 0.001\n  max_epochs: 20\n  batch_size: 128\n  patience: 10\n  val_check_interval: 0.5\n\nenv:\n  num_gpus: 1\n  precision: \"16-mixed\"\n  seed: 42\n  num_workers: 8\n",
+  "eval_metric": "roc_auc",
+  "random_seed": 42,
+  "time_limit": 7200,
+  "deterministic": true
+}

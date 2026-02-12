@@ -1,0 +1,31 @@
+{
+  "input_csv": {
+    "id": "f9cad7b01a472135e849184d64d68f38",
+    "src": "hda"
+  },
+  "target_column": "3",
+  "sample_id_selector|use_sample_id": "yes",
+  "sample_id_selector|sample_id_column": "1",
+  "test_dataset_conditional|has_test_dataset": "yes",
+  "test_dataset_conditional|input_test": {
+    "id": "f9cad7b01a4721350e0fd2a678772f8b",
+    "src": "hda"
+  },
+  "use_images_conditional|use_images": "yes",
+  "use_images_conditional|images_zip_repeat_0|images_zip": {
+    "id": "f9cad7b01a472135478cd355c3a50b65",
+    "src": "hda"
+  },
+  "use_images_conditional|backbone_image": "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+  "use_images_conditional|missing_image_strategy": false,
+  "backbone_text": "microsoft/deberta-v3-base",
+  "preset": "best_quality",
+  "eval_metric": "roc_auc",
+  "random_seed": 42,
+  "time_limit": 7200,
+  "deterministic": true,
+  "customize_defaults_conditional|customize_defaults": "yes",
+  "customize_defaults_conditional|threshold": "0.12",
+  "customize_defaults_conditional|split_probabilities": "0.85 0.1 0.05",
+  "customize_defaults_conditional|hyperparameters": "{\"env\":{\"num_gpus\":1},\"data\":{\"categorical\":{\"minimum_cat_count\":2}},\"optim\":{\"focal_loss\":{\"alpha\":0.75,\"gamma\":2.0}},\"model\":{\"timm_image\":{\"checkpoint_name\":\"caformer_b36.sail_in22k_ft_in1k_384\"}}}"
+}

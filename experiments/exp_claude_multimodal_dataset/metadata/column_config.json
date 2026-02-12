@@ -1,0 +1,211 @@
+{
+  "patient_id_column": {
+    "name": "patient_id",
+    "index": 0
+  },
+  "target_column": {
+    "name": "target",
+    "index": 2,
+    "values": {
+      "0": 416,
+      "1": 117
+    }
+  },
+  "image_columns": [
+    {
+      "name": "CD3_image_path",
+      "index": 38
+    },
+    {
+      "name": "CD8_image_path",
+      "index": 39
+    }
+  ],
+  "feature_columns": [
+    {
+      "name": "split",
+      "index": 1,
+      "dtype": "int64"
+    },
+    {
+      "name": "sex",
+      "index": 3,
+      "dtype": "int64"
+    },
+    {
+      "name": "primarily_metastasis",
+      "index": 4,
+      "dtype": "float64"
+    },
+    {
+      "name": "smoking_status",
+      "index": 5,
+      "dtype": "int64"
+    },
+    {
+      "name": "age_at_initial_diagnosis",
+      "index": 6,
+      "dtype": "int64"
+    },
+    {
+      "name": "perinodal_invasion",
+      "index": 7,
+      "dtype": "float64"
+    },
+    {
+      "name": "lymphovascular_invasion_L",
+      "index": 8,
+      "dtype": "int64"
+    },
+    {
+      "name": "vascular_invasion_V",
+      "index": 9,
+      "dtype": "int64"
+    },
+    {
+      "name": "perineural_invasion_Pn",
+      "index": 10,
+      "dtype": "int64"
+    },
+    {
+      "name": "carcinoma_in_situ",
+      "index": 11,
+      "dtype": "int64"
+    },
+    {
+      "name": "primary_tumor_site",
+      "index": 12,
+      "dtype": "int64"
+    },
+    {
+      "name": "grading",
+      "index": 13,
+      "dtype": "int64"
+    },
+    {
+      "name": "hpv_association_p16",
+      "index": 14,
+      "dtype": "int64"
+    },
+    {
+      "name": "resection_status",
+      "index": 15,
+      "dtype": "int64"
+    },
+    {
+      "name": "resection_status_carcinoma_in_situ",
+      "index": 16,
+      "dtype": "int64"
+    },
+    {
+      "name": "histologic_type",
+      "index": 17,
+      "dtype": "int64"
+    },
+    {
+      "name": "number_of_positive_lymph_nodes",
+      "index": 18,
+      "dtype": "float64"
+    },
+    {
+      "name": "infiltration_depth_in_mm",
+      "index": 19,
+      "dtype": "float64"
+    },
+    {
+      "name": "pT_stage",
+      "index": 20,
+      "dtype": "int64"
+    },
+    {
+      "name": "pN_stage",
+      "index": 21,
+      "dtype": "int64"
+    },
+    {
+      "name": "Leukocytes [#/volume] in Blood",
+      "index": 22,
+      "dtype": "float64"
+    },
+    {
+      "name": "Hemoglobin [Mass/volume] in Blood",
+      "index": 23,
+      "dtype": "float64"
+    },
+    {
+      "name": "Platelets [#/volume] in Blood",
+      "index": 24,
+      "dtype": "float64"
+    },
+    {
+      "name": "Erythrocytes [#/volume] in Blood",
+      "index": 25,
+      "dtype": "float64"
+    },
+    {
+      "name": "Hematocrit [Volume Fraction] of Blood",
+      "index": 26,
+      "dtype": "float64"
+    },
+    {
+      "name": "Erythrocyte mean corpuscular hemoglobin [Entitic mass]",
+      "index": 27,
+      "dtype": "float64"
+    },
+    {
+      "name": "Erythrocyte mean corpuscular volume [Entitic volume]",
+      "index": 28,
+      "dtype": "float64"
+    },
+    {
+      "name": "Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume]",
+      "index": 29,
+      "dtype": "float64"
+    },
+    {
+      "name": "Erythrocyte distribution width [Ratio]",
+      "index": 30,
+      "dtype": "float64"
+    },
+    {
+      "name": "Platelet mean volume [Entitic volume] in Blood",
+      "index": 31,
+      "dtype": "float64"
+    },
+    {
+      "name": "Granulocytes [#/volume] in Blood",
+      "index": 32,
+      "dtype": "float64"
+    },
+    {
+      "name": "Eosinophils [#/volume] in Blood",
+      "index": 33,
+      "dtype": "float64"
+    },
+    {
+      "name": "Basophils [#/volume] in Blood",
+      "index": 34,
+      "dtype": "float64"
+    },
+    {
+      "name": "Lymphocytes [#/volume] in Blood",
+      "index": 35,
+      "dtype": "float64"
+    },
+    {
+      "name": "Monocytes [#/volume] in Blood",
+      "index": 36,
+      "dtype": "float64"
+    },
+    {
+      "name": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "index": 37,
+      "dtype": "float64"
+    },
+    {
+      "name": "icd_codes",
+      "index": 40,
+      "dtype": "str"
+    }
+  ]
+}

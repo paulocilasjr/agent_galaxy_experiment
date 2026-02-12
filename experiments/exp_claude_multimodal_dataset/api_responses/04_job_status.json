@@ -1,0 +1,45 @@
+{
+  "model_class": "Job",
+  "id": "bbd44e69cb8906b5162e0aed2cc38640",
+  "history_id": "bbd44e69cb8906b55e461195124e37da",
+  "tool_id": "__DATA_FETCH__",
+  "state": "ok",
+  "exit_code": 0,
+  "create_time": "2026-02-11T14:15:44.297563",
+  "update_time": "2026-02-11T15:17:11.898218",
+  "galaxy_version": "25.1",
+  "external_id": null,
+  "handler": null,
+  "job_runner_name": null,
+  "command_line": "python '/cvmfs/main.galaxyproject.org/galaxy/lib/galaxy/tools/data_fetch.py' --galaxy-root '/cvmfs/main.galaxyproject.org/galaxy' --datatypes-registry '/corral4/main/jobs/074/566/74566501/registry.xml' --request-version '1' --request '/corral4/main/jobs/074/566/74566501/configs/tmpc84bd157'",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33",
+  "command_version": null,
+  "params": {
+    "request_version": "\"1\"",
+    "request_json": "\"{\\\"targets\\\": [{\\\"destination\\\": {\\\"type\\\": \\\"hdas\\\"}, \\\"elements\\\": [{\\\"name\\\": \\\"HANCOCK_train_split.csv\\\", \\\"src\\\": \\\"url\\\", \\\"url\\\": \\\"https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv\\\", \\\"hashes\\\": [], \\\"in_place\\\": false, \\\"purge_source\\\": false, \\\"object_id\\\": 168570933}, {\\\"name\\\": \\\"HANCOCK_test_split.csv\\\", \\\"src\\\": \\\"url\\\", \\\"url\\\": \\\"https://zenodo.org/records/17933596/files/HANCOCK_test_split.csv\\\", \\\"hashes\\\": [], \\\"in_place\\\": false, \\\"purge_source\\\": false, \\\"object_id\\\": 168570934}, {\\\"name\\\": \\\"tma_cores_cd3_cd8_images.zip\\\", \\\"src\\\": \\\"url\\\", \\\"url\\\": \\\"https://zenodo.org/records/17727354/files/tma_cores_cd3_cd8_images.zip\\\", \\\"hashes\\\": [], \\\"in_place\\\": false, \\\"purge_source\\\": false, \\\"object_id\\\": 168570935}]}], \\\"check_content\\\": true}\"",
+    "file_count": "\"0\"",
+    "files": "[]",
+    "paramfile": "null"
+  },
+  "inputs": {},
+  "outputs": {
+    "output0": {
+      "id": "f9cad7b01a472135e849184d64d68f38",
+      "src": "hda",
+      "uuid": "c5855394-bc81-4961-83bc-9b835081afab"
+    },
+    "output1": {
+      "id": "f9cad7b01a4721350e0fd2a678772f8b",
+      "src": "hda",
+      "uuid": "0f5c322c-071f-4076-aeb9-1bf3cc459c23"
+    },
+    "output2": {
+      "id": "f9cad7b01a472135478cd355c3a50b65",
+      "src": "hda",
+      "uuid": "aa1a0699-528f-4f0f-ba9a-23399632190b"
+    }
+  },
+  "copied_from_job_id": null,
+  "output_collections": {}
+}

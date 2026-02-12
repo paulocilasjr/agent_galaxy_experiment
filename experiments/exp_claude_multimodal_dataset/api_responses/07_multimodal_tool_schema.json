@@ -1,0 +1,23 @@
+{
+  "model_class": "Tool",
+  "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5",
+  "name": "Multimodal Learner",
+  "version": "0.1.5",
+  "description": "Train and evaluate an AutoGluon Multimodal model (tabular + image + text)",
+  "labels": [],
+  "icon": null,
+  "edam_operations": [],
+  "edam_topics": [],
+  "hidden": "",
+  "is_workflow_compatible": true,
+  "xrefs": [],
+  "tool_shed_repository": {
+    "name": "multimodal_learner",
+    "owner": "goeckslab",
+    "changeset_revision": "3719606b94af",
+    "tool_shed": "toolshed.g2.bx.psu.edu"
+  },
+  "panel_section_id": "machine_learning",
+  "panel_section_name": "Machine Learning",
+  "form_style": "regular"
+}

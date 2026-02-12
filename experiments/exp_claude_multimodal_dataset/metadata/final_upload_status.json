@@ -1,0 +1,17 @@
+{
+  "HANCOCK_train_split.csv": {
+    "state": "ok",
+    "size": 177208,
+    "dataset_id": "f9cad7b01a472135e849184d64d68f38"
+  },
+  "HANCOCK_test_split.csv": {
+    "state": "ok",
+    "size": 81227,
+    "dataset_id": "f9cad7b01a4721350e0fd2a678772f8b"
+  },
+  "tma_cores_cd3_cd8_images.zip": {
+    "state": "ok",
+    "size": 48027225836,
+    "dataset_id": "f9cad7b01a472135478cd355c3a50b65"
+  }
+}

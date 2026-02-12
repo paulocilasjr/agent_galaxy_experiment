@@ -1,0 +1,248 @@
+{
+  "patient_id": {
+    "index": 0,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 533
+  },
+  "split": {
+    "index": 1,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 1
+  },
+  "target": {
+    "index": 2,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "sex": {
+    "index": 3,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "primarily_metastasis": {
+    "index": 4,
+    "dtype": "float64",
+    "null_count": 18,
+    "unique_count": 2
+  },
+  "smoking_status": {
+    "index": 5,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 4
+  },
+  "age_at_initial_diagnosis": {
+    "index": 6,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 49
+  },
+  "perinodal_invasion": {
+    "index": 7,
+    "dtype": "float64",
+    "null_count": 259,
+    "unique_count": 2
+  },
+  "lymphovascular_invasion_L": {
+    "index": 8,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "vascular_invasion_V": {
+    "index": 9,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "perineural_invasion_Pn": {
+    "index": 10,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "carcinoma_in_situ": {
+    "index": 11,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 2
+  },
+  "primary_tumor_site": {
+    "index": 12,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 5
+  },
+  "grading": {
+    "index": 13,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 4
+  },
+  "hpv_association_p16": {
+    "index": 14,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 3
+  },
+  "resection_status": {
+    "index": 15,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 4
+  },
+  "resection_status_carcinoma_in_situ": {
+    "index": 16,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 3
+  },
+  "histologic_type": {
+    "index": 17,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 8
+  },
+  "number_of_positive_lymph_nodes": {
+    "index": 18,
+    "dtype": "float64",
+    "null_count": 114,
+    "unique_count": 21
+  },
+  "infiltration_depth_in_mm": {
+    "index": 19,
+    "dtype": "float64",
+    "null_count": 95,
+    "unique_count": 40
+  },
+  "pT_stage": {
+    "index": 20,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 8
+  },
+  "pN_stage": {
+    "index": 21,
+    "dtype": "int64",
+    "null_count": 0,
+    "unique_count": 10
+  },
+  "Leukocytes [#/volume] in Blood": {
+    "index": 22,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 404
+  },
+  "Hemoglobin [Mass/volume] in Blood": {
+    "index": 23,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 125
+  },
+  "Platelets [#/volume] in Blood": {
+    "index": 24,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 240
+  },
+  "Erythrocytes [#/volume] in Blood": {
+    "index": 25,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 254
+  },
+  "Hematocrit [Volume Fraction] of Blood": {
+    "index": 26,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 211
+  },
+  "Erythrocyte mean corpuscular hemoglobin [Entitic mass]": {
+    "index": 27,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 139
+  },
+  "Erythrocyte mean corpuscular volume [Entitic volume]": {
+    "index": 28,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 227
+  },
+  "Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume]": {
+    "index": 29,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 83
+  },
+  "Erythrocyte distribution width [Ratio]": {
+    "index": 30,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 79
+  },
+  "Platelet mean volume [Entitic volume] in Blood": {
+    "index": 31,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 75
+  },
+  "Granulocytes [#/volume] in Blood": {
+    "index": 32,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 390
+  },
+  "Eosinophils [#/volume] in Blood": {
+    "index": 33,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 83
+  },
+  "Basophils [#/volume] in Blood": {
+    "index": 34,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 25
+  },
+  "Lymphocytes [#/volume] in Blood": {
+    "index": 35,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 262
+  },
+  "Monocytes [#/volume] in Blood": {
+    "index": 36,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 158
+  },
+  "Platelet distribution width [Entitic volume] in Blood by Automated count": {
+    "index": 37,
+    "dtype": "float64",
+    "null_count": 61,
+    "unique_count": 128
+  },
+  "CD3_image_path": {
+    "index": 38,
+    "dtype": "str",
+    "null_count": 0,
+    "unique_count": 521
+  },
+  "CD8_image_path": {
+    "index": 39,
+    "dtype": "str",
+    "null_count": 0,
+    "unique_count": 532
+  },
+  "icd_codes": {
+    "index": 40,
+    "dtype": "str",
+    "null_count": 42,
+    "unique_count": 250
+  }
+}

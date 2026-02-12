@@ -1,0 +1,1784 @@
+{
+  "model_class": "Tool",
+  "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/multimodal_learner/multimodal_learner/0.1.5",
+  "name": "Multimodal Learner",
+  "version": "0.1.5",
+  "description": "Train and evaluate an AutoGluon Multimodal model (tabular + image + text)",
+  "labels": [],
+  "icon": null,
+  "edam_operations": [],
+  "edam_topics": [],
+  "hidden": "",
+  "is_workflow_compatible": true,
+  "xrefs": [],
+  "tool_shed_repository": {
+    "name": "multimodal_learner",
+    "owner": "goeckslab",
+    "changeset_revision": "3719606b94af",
+    "tool_shed": "toolshed.g2.bx.psu.edu"
+  },
+  "panel_section_id": "machine_learning",
+  "panel_section_name": "Machine Learning",
+  "form_style": "regular",
+  "inputs": [
+    {
+      "model_class": "DataToolParameter",
+      "name": "input_csv",
+      "argument": null,
+      "type": "data",
+      "label": "Training dataset (CSV/TSV)",
+      "help": "Must contain the target column and optional image paths",
+      "help_format": "html",
+      "refresh_on_change": true,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": {
+        "values": [
+          {
+            "id": "f9cad7b01a4721350e0fd2a678772f8b",
+            "src": "hda"
+          }
+        ]
+      },
+      "extensions": [
+        "csv",
+        "tsv"
+      ],
+      "edam": {
+        "edam_formats": [
+          "format_3475",
+          "format_3475"
+        ],
+        "edam_data": [
+          "data_0006",
+          "data_0006"
+        ]
+      },
+      "multiple": false,
+      "options": {
+        "dce": [],
+        "ldda": [],
+        "hda": [
+          {
+            "id": "f9cad7b01a4721350e0fd2a678772f8b",
+            "hid": 2,
+            "name": "HANCOCK_test_split.csv",
+            "tags": [],
+            "src": "hda",
+            "keep": false
+          },
+          {
+            "id": "f9cad7b01a472135e849184d64d68f38",
+            "hid": 1,
+            "name": "HANCOCK_train_split.csv",
+            "tags": [],
+            "src": "hda",
+            "keep": false
+          }
+        ],
+        "hdca": []
+      },
+      "tag": null,
+      "default_value": {
+        "values": [
+          {
+            "id": "f9cad7b01a4721350e0fd2a678772f8b",
+            "src": "hda"
+          }
+        ]
+      },
+      "text_value": "No dataset."
+    },
+    {
+      "model_class": "ColumnListParameter",
+      "name": "target_column",
+      "argument": null,
+      "type": "data_column",
+      "label": "Target / Label column",
+      "help": "",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": true,
+      "value": "1",
+      "options": [
+        [
+          "c1: patient_id",
+          "1",
+          false
+        ],
+        [
+          "c2: split",
+          "2",
+          false
+        ],
+        [
+          "c3: target",
+          "3",
+          false
+        ],
+        [
+          "c4: sex",
+          "4",
+          false
+        ],
+        [
+          "c5: primarily_metastasis",
+          "5",
+          false
+        ],
+        [
+          "c6: smoking_status",
+          "6",
+          false
+        ],
+        [
+          "c7: age_at_initial_diagnosis",
+          "7",
+          false
+        ],
+        [
+          "c8: perinodal_invasion",
+          "8",
+          false
+        ],
+        [
+          "c9: lymphovascular_invasion_L",
+          "9",
+          false
+        ],
+        [
+          "c10: vascular_invasion_V",
+          "10",
+          false
+        ],
+        [
+          "c11: perineural_invasion_Pn",
+          "11",
+          false
+        ],
+        [
+          "c12: carcinoma_in_situ",
+          "12",
+          false
+        ],
+        [
+          "c13: primary_tumor_site",
+          "13",
+          false
+        ],
+        [
+          "c14: grading",
+          "14",
+          false
+        ],
+        [
+          "c15: hpv_association_p16",
+          "15",
+          false
+        ],
+        [
+          "c16: resection_status",
+          "16",
+          false
+        ],
+        [
+          "c17: resection_status_carcinoma_in_situ",
+          "17",
+          false
+        ],
+        [
+          "c18: histologic_type",
+          "18",
+          false
+        ],
+        [
+          "c19: number_of_positive_lymph_nodes",
+          "19",
+          false
+        ],
+        [
+          "c20: infiltration_depth_in_mm",
+          "20",
+          false
+        ],
+        [
+          "c21: pT_stage",
+          "21",
+          false
+        ],
+        [
+          "c22: pN_stage",
+          "22",
+          false
+        ],
+        [
+          "c23: Leukocytes [#/volume] in Blood",
+          "23",
+          false
+        ],
+        [
+          "c24: Hemoglobin [Mass/volume] in Blood",
+          "24",
+          false
+        ],
+        [
+          "c25: Platelets [#/volume] in Blood",
+          "25",
+          false
+        ],
+        [
+          "c26: Erythrocytes [#/volume] in Blood",
+          "26",
+          false
+        ],
+        [
+          "c27: Hematocrit [Volume Fraction] of Blood",
+          "27",
+          false
+        ],
+        [
+          "c28: Erythrocyte mean corpuscular hemoglobin [Entitic mass]",
+          "28",
+          false
+        ],
+        [
+          "c29: Erythrocyte mean corpuscular volume [Entitic volume]",
+          "29",
+          false
+        ],
+        [
+          "c30: Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume]",
+          "30",
+          false
+        ],
+        [
+          "c31: Erythrocyte distribution width [Ratio]",
+          "31",
+          false
+        ],
+        [
+          "c32: Platelet mean volume [Entitic volume] in Blood",
+          "32",
+          false
+        ],
+        [
+          "c33: Granulocytes [#/volume] in Blood",
+          "33",
+          false
+        ],
+        [
+          "c34: Eosinophils [#/volume] in Blood",
+          "34",
+          false
+        ],
+        [
+          "c35: Basophils [#/volume] in Blood",
+          "35",
+          false
+        ],
+        [
+          "c36: Lymphocytes [#/volume] in Blood",
+          "36",
+          false
+        ],
+        [
+          "c37: Monocytes [#/volume] in Blood",
+          "37",
+          false
+        ],
+        [
+          "c38: Platelet distribution width [Entitic volume] in Blood by Automated count",
+          "38",
+          false
+        ],
+        [
+          "c39: CD3_image_path",
+          "39",
+          false
+        ],
+        [
+          "c40: CD8_image_path",
+          "40",
+          false
+        ],
+        [
+          "c41: icd_codes",
+          "41",
+          false
+        ]
+      ],
+      "display": null,
+      "multiple": false,
+      "textable": false,
+      "data_ref": "input_csv",
+      "numerical": false,
+      "default_value": "1",
+      "text_value": "1"
+    },
+    {
+      "model_class": "Conditional",
+      "name": "sample_id_selector",
+      "type": "conditional",
+      "cases": [
+        {
+          "model_class": "ConditionalWhen",
+          "value": "yes",
+          "inputs": [
+            {
+              "model_class": "ColumnListParameter",
+              "name": "sample_id_column",
+              "argument": null,
+              "type": "data_column",
+              "label": "Sample ID column",
+              "help": "All rows with the same ID stay in the same split or fold to reduce leakage. Used for internal train/val/test splits and group-aware CV folds.",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": false,
+              "hidden": false,
+              "is_dynamic": true,
+              "value": "1",
+              "options": [
+                [
+                  "c1: patient_id",
+                  "1",
+                  false
+                ],
+                [
+                  "c2: split",
+                  "2",
+                  false
+                ],
+                [
+                  "c3: target",
+                  "3",
+                  false
+                ],
+                [
+                  "c4: sex",
+                  "4",
+                  false
+                ],
+                [
+                  "c5: primarily_metastasis",
+                  "5",
+                  false
+                ],
+                [
+                  "c6: smoking_status",
+                  "6",
+                  false
+                ],
+                [
+                  "c7: age_at_initial_diagnosis",
+                  "7",
+                  false
+                ],
+                [
+                  "c8: perinodal_invasion",
+                  "8",
+                  false
+                ],
+                [
+                  "c9: lymphovascular_invasion_L",
+                  "9",
+                  false
+                ],
+                [
+                  "c10: vascular_invasion_V",
+                  "10",
+                  false
+                ],
+                [
+                  "c11: perineural_invasion_Pn",
+                  "11",
+                  false
+                ],
+                [
+                  "c12: carcinoma_in_situ",
+                  "12",
+                  false
+                ],
+                [
+                  "c13: primary_tumor_site",
+                  "13",
+                  false
+                ],
+                [
+                  "c14: grading",
+                  "14",
+                  false
+                ],
+                [
+                  "c15: hpv_association_p16",
+                  "15",
+                  false
+                ],
+                [
+                  "c16: resection_status",
+                  "16",
+                  false
+                ],
+                [
+                  "c17: resection_status_carcinoma_in_situ",
+                  "17",
+                  false
+                ],
+                [
+                  "c18: histologic_type",
+                  "18",
+                  false
+                ],
+                [
+                  "c19: number_of_positive_lymph_nodes",
+                  "19",
+                  false
+                ],
+                [
+                  "c20: infiltration_depth_in_mm",
+                  "20",
+                  false
+                ],
+                [
+                  "c21: pT_stage",
+                  "21",
+                  false
+                ],
+                [
+                  "c22: pN_stage",
+                  "22",
+                  false
+                ],
+                [
+                  "c23: Leukocytes [#/volume] in Blood",
+                  "23",
+                  false
+                ],
+                [
+                  "c24: Hemoglobin [Mass/volume] in Blood",
+                  "24",
+                  false
+                ],
+                [
+                  "c25: Platelets [#/volume] in Blood",
+                  "25",
+                  false
+                ],
+                [
+                  "c26: Erythrocytes [#/volume] in Blood",
+                  "26",
+                  false
+                ],
+                [
+                  "c27: Hematocrit [Volume Fraction] of Blood",
+                  "27",
+                  false
+                ],
+                [
+                  "c28: Erythrocyte mean corpuscular hemoglobin [Entitic mass]",
+                  "28",
+                  false
+                ],
+                [
+                  "c29: Erythrocyte mean corpuscular volume [Entitic volume]",
+                  "29",
+                  false
+                ],
+                [
+                  "c30: Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume]",
+                  "30",
+                  false
+                ],
+                [
+                  "c31: Erythrocyte distribution width [Ratio]",
+                  "31",
+                  false
+                ],
+                [
+                  "c32: Platelet mean volume [Entitic volume] in Blood",
+                  "32",
+                  false
+                ],
+                [
+                  "c33: Granulocytes [#/volume] in Blood",
+                  "33",
+                  false
+                ],
+                [
+                  "c34: Eosinophils [#/volume] in Blood",
+                  "34",
+                  false
+                ],
+                [
+                  "c35: Basophils [#/volume] in Blood",
+                  "35",
+                  false
+                ],
+                [
+                  "c36: Lymphocytes [#/volume] in Blood",
+                  "36",
+                  false
+                ],
+                [
+                  "c37: Monocytes [#/volume] in Blood",
+                  "37",
+                  false
+                ],
+                [
+                  "c38: Platelet distribution width [Entitic volume] in Blood by Automated count",
+                  "38",
+                  false
+                ],
+                [
+                  "c39: CD3_image_path",
+                  "39",
+                  false
+                ],
+                [
+                  "c40: CD8_image_path",
+                  "40",
+                  false
+                ],
+                [
+                  "c41: icd_codes",
+                  "41",
+                  false
+                ]
+              ],
+              "display": null,
+              "multiple": false,
+              "textable": false,
+              "data_ref": "input_csv",
+              "numerical": false,
+              "default_value": "1",
+              "text_value": "1"
+            }
+          ]
+        },
+        {
+          "model_class": "ConditionalWhen",
+          "value": "no",
+          "inputs": []
+        }
+      ],
+      "test_param": {
+        "model_class": "SelectToolParameter",
+        "name": "use_sample_id",
+        "argument": null,
+        "type": "select",
+        "label": "Use a sample ID column for leakage-aware splitting?",
+        "help": "Select yes to choose a column that groups related records (e.g., patient_id or slide_id).",
+        "help_format": "html",
+        "refresh_on_change": true,
+        "optional": false,
+        "hidden": false,
+        "is_dynamic": false,
+        "value": "no",
+        "options": [
+          [
+            "No column selected",
+            "no",
+            true
+          ],
+          [
+            "Yes",
+            "yes",
+            false
+          ]
+        ],
+        "display": null,
+        "multiple": false,
+        "textable": false,
+        "text_value": "No column selected"
+      }
+    },
+    {
+      "model_class": "Conditional",
+      "name": "test_dataset_conditional",
+      "type": "conditional",
+      "cases": [
+        {
+          "model_class": "ConditionalWhen",
+          "value": "yes",
+          "inputs": [
+            {
+              "model_class": "DataToolParameter",
+              "name": "input_test",
+              "argument": null,
+              "type": "data",
+              "label": "Test dataset (CSV/TSV)",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": true,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "extensions": [
+                "csv",
+                "tsv"
+              ],
+              "edam": {
+                "edam_formats": [
+                  "format_3475",
+                  "format_3475"
+                ],
+                "edam_data": [
+                  "data_0006",
+                  "data_0006"
+                ]
+              },
+              "multiple": false,
+              "options": {
+                "dce": [],
+                "ldda": [],
+                "hda": [
+                  {
+                    "id": "f9cad7b01a4721350e0fd2a678772f8b",
+                    "hid": 2,
+                    "name": "HANCOCK_test_split.csv",
+                    "tags": [],
+                    "src": "hda",
+                    "keep": false
+                  },
+                  {
+                    "id": "f9cad7b01a472135e849184d64d68f38",
+                    "hid": 1,
+                    "name": "HANCOCK_train_split.csv",
+                    "tags": [],
+                    "src": "hda",
+                    "keep": false
+                  }
+                ],
+                "hdca": []
+              },
+              "tag": null,
+              "default_value": null,
+              "text_value": "No dataset."
+            }
+          ]
+        },
+        {
+          "model_class": "ConditionalWhen",
+          "value": "no",
+          "inputs": []
+        }
+      ],
+      "test_param": {
+        "model_class": "BooleanToolParameter",
+        "name": "has_test_dataset",
+        "argument": null,
+        "type": "boolean",
+        "label": "Provide separate test dataset?",
+        "help": "",
+        "help_format": "html",
+        "refresh_on_change": true,
+        "optional": false,
+        "hidden": false,
+        "is_dynamic": false,
+        "value": false,
+        "truevalue": "yes",
+        "falsevalue": "no",
+        "text_value": "False"
+      }
+    },
+    {
+      "model_class": "SelectToolParameter",
+      "name": "backbone_text",
+      "argument": null,
+      "type": "select",
+      "label": "Text backbone",
+      "help": "",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "optional": true,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": "microsoft/deberta-v3-base",
+      "options": [
+        [
+          "microsoft/deberta-v3-base",
+          "microsoft/deberta-v3-base",
+          true
+        ],
+        [
+          "microsoft/deberta-v3-small",
+          "microsoft/deberta-v3-small",
+          false
+        ],
+        [
+          "google/electra-base-discriminator",
+          "google/electra-base-discriminator",
+          false
+        ],
+        [
+          "google/electra-small-discriminator",
+          "google/electra-small-discriminator",
+          false
+        ],
+        [
+          "roberta-base",
+          "roberta-base",
+          false
+        ],
+        [
+          "bert-base-uncased",
+          "bert-base-uncased",
+          false
+        ],
+        [
+          "distilroberta-base",
+          "distilroberta-base",
+          false
+        ],
+        [
+          "albert-base-v2",
+          "albert-base-v2",
+          false
+        ]
+      ],
+      "display": null,
+      "multiple": false,
+      "textable": false,
+      "default_value": "microsoft/deberta-v3-base",
+      "text_value": "microsoft/deberta-v3-base"
+    },
+    {
+      "model_class": "Conditional",
+      "name": "use_images_conditional",
+      "type": "conditional",
+      "cases": [
+        {
+          "model_class": "ConditionalWhen",
+          "value": "yes",
+          "inputs": [
+            {
+              "model_class": "Repeat",
+              "name": "images_zip_repeat",
+              "type": "repeat",
+              "title": "Image archive(s)",
+              "help": null,
+              "default": 1,
+              "min": 1,
+              "max": "__Infinity__",
+              "inputs": [
+                {
+                  "model_class": "DataToolParameter",
+                  "name": "images_zip",
+                  "argument": null,
+                  "type": "data",
+                  "label": "ZIP file containing images",
+                  "help": "",
+                  "help_format": "html",
+                  "refresh_on_change": true,
+                  "optional": false,
+                  "hidden": false,
+                  "is_dynamic": false,
+                  "value": {
+                    "values": [
+                      {
+                        "id": "f9cad7b01a472135478cd355c3a50b65",
+                        "src": "hda"
+                      }
+                    ]
+                  },
+                  "extensions": [
+                    "zip"
+                  ],
+                  "edam": {
+                    "edam_formats": [
+                      "format_2333"
+                    ],
+                    "edam_data": [
+                      "data_0006"
+                    ]
+                  },
+                  "multiple": false,
+                  "options": {
+                    "dce": [],
+                    "ldda": [],
+                    "hda": [
+                      {
+                        "id": "f9cad7b01a472135478cd355c3a50b65",
+                        "hid": 3,
+                        "name": "tma_cores_cd3_cd8_images.zip",
+                        "tags": [],
+                        "src": "hda",
+                        "keep": false
+                      }
+                    ],
+                    "hdca": []
+                  },
+                  "tag": null
+                }
+              ],
+              "cache": []
+            },
+            {
+              "model_class": "SelectToolParameter",
+              "name": "backbone_image",
+              "argument": null,
+              "type": "select",
+              "label": "Image backbone",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+              "options": [
+                [
+                  "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+                  "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+                  true
+                ],
+                [
+                  "swin_base_patch4_window7_224.ms_in1k",
+                  "swin_base_patch4_window7_224.ms_in1k",
+                  false
+                ],
+                [
+                  "swin_base_patch4_window7_224.ms_in22k",
+                  "swin_base_patch4_window7_224.ms_in22k",
+                  false
+                ],
+                [
+                  "swin_large_patch4_window12_384.ms_in22k_ft_in1k",
+                  "swin_large_patch4_window12_384.ms_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "swin_large_patch4_window12_384.ms_in22k",
+                  "swin_large_patch4_window12_384.ms_in22k",
+                  false
+                ],
+                [
+                  "swin_small_patch4_window7_224.ms_in22k_ft_in1k",
+                  "swin_small_patch4_window7_224.ms_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "swin_small_patch4_window7_224.ms_in1k",
+                  "swin_small_patch4_window7_224.ms_in1k",
+                  false
+                ],
+                [
+                  "swin_small_patch4_window7_224.ms_in22k",
+                  "swin_small_patch4_window7_224.ms_in22k",
+                  false
+                ],
+                [
+                  "swin_tiny_patch4_window7_224.ms_in22k_ft_in1k",
+                  "swin_tiny_patch4_window7_224.ms_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "swin_tiny_patch4_window7_224.ms_in1k",
+                  "swin_tiny_patch4_window7_224.ms_in1k",
+                  false
+                ],
+                [
+                  "swin_tiny_patch4_window7_224.ms_in22k",
+                  "swin_tiny_patch4_window7_224.ms_in22k",
+                  false
+                ],
+                [
+                  "caformer_b36.sail_in22k_ft_in1k",
+                  "caformer_b36.sail_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "caformer_b36.sail_in1k",
+                  "caformer_b36.sail_in1k",
+                  false
+                ],
+                [
+                  "caformer_b36.sail_in22k",
+                  "caformer_b36.sail_in22k",
+                  false
+                ],
+                [
+                  "caformer_b36.sail_in1k_384",
+                  "caformer_b36.sail_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_b36.sail_in22k_ft_in1k_384",
+                  "caformer_b36.sail_in22k_ft_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_m36.sail_in22k_ft_in1k",
+                  "caformer_m36.sail_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "caformer_m36.sail_in1k",
+                  "caformer_m36.sail_in1k",
+                  false
+                ],
+                [
+                  "caformer_m36.sail_in22k",
+                  "caformer_m36.sail_in22k",
+                  false
+                ],
+                [
+                  "caformer_m36.sail_in1k_384",
+                  "caformer_m36.sail_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_m36.sail_in22k_ft_in1k_384",
+                  "caformer_m36.sail_in22k_ft_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_s36.sail_in22k_ft_in1k",
+                  "caformer_s36.sail_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "caformer_s36.sail_in1k",
+                  "caformer_s36.sail_in1k",
+                  false
+                ],
+                [
+                  "caformer_s36.sail_in22k",
+                  "caformer_s36.sail_in22k",
+                  false
+                ],
+                [
+                  "caformer_s36.sail_in1k_384",
+                  "caformer_s36.sail_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_s36.sail_in22k_ft_in1k_384",
+                  "caformer_s36.sail_in22k_ft_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_s18.sail_in1k",
+                  "caformer_s18.sail_in1k",
+                  false
+                ],
+                [
+                  "caformer_s18.sail_in22k_ft_in1k",
+                  "caformer_s18.sail_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "caformer_s18.sail_in22k",
+                  "caformer_s18.sail_in22k",
+                  false
+                ],
+                [
+                  "caformer_s18.sail_in1k_384",
+                  "caformer_s18.sail_in1k_384",
+                  false
+                ],
+                [
+                  "caformer_s18.sail_in22k_ft_in1k_384",
+                  "caformer_s18.sail_in22k_ft_in1k_384",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+                  "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.augreg_in1k",
+                  "vit_base_patch16_224.augreg_in1k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.augreg_in21k",
+                  "vit_base_patch16_224.augreg_in21k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.augreg_in21k_ft_in1k",
+                  "vit_base_patch16_224.augreg_in21k_ft_in1k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.dino",
+                  "vit_base_patch16_224.dino",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.mae",
+                  "vit_base_patch16_224.mae",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.orig_in21k",
+                  "vit_base_patch16_224.orig_in21k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.orig_in21k_ft_in1k",
+                  "vit_base_patch16_224.orig_in21k_ft_in1k",
+                  false
+                ],
+                [
+                  "vit_base_patch16_224.sam_in1k",
+                  "vit_base_patch16_224.sam_in1k",
+                  false
+                ],
+                [
+                  "convnext_base.fb_in1k",
+                  "convnext_base.fb_in1k",
+                  false
+                ],
+                [
+                  "convnext_base.fb_in22k_ft_in1k",
+                  "convnext_base.fb_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "convnext_base.fb_in22k_ft_in1k_384",
+                  "convnext_base.fb_in22k_ft_in1k_384",
+                  false
+                ],
+                [
+                  "convnext_base.fb_in22k",
+                  "convnext_base.fb_in22k",
+                  false
+                ],
+                [
+                  "convnext_base.dinov3_lvd1689m",
+                  "convnext_base.dinov3_lvd1689m",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b",
+                  "convnext_base.clip_laion2b",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b_augreg",
+                  "convnext_base.clip_laion2b_augreg",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b_augreg_ft_in1k",
+                  "convnext_base.clip_laion2b_augreg_ft_in1k",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b_augreg_ft_in12k",
+                  "convnext_base.clip_laion2b_augreg_ft_in12k",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b_augreg_ft_in12k_in1k",
+                  "convnext_base.clip_laion2b_augreg_ft_in12k_in1k",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laion2b_augreg_ft_in12k_in1k_384",
+                  "convnext_base.clip_laion2b_augreg_ft_in12k_in1k_384",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laiona",
+                  "convnext_base.clip_laiona",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laiona_320",
+                  "convnext_base.clip_laiona_320",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laiona_augreg_320",
+                  "convnext_base.clip_laiona_augreg_320",
+                  false
+                ],
+                [
+                  "convnext_base.clip_laiona_augreg_ft_in1k_384",
+                  "convnext_base.clip_laiona_augreg_ft_in1k_384",
+                  false
+                ],
+                [
+                  "eva02_base_patch14_448.mim_in22k_ft_in22k_in1k",
+                  "eva02_base_patch14_448.mim_in22k_ft_in22k_in1k",
+                  false
+                ],
+                [
+                  "eva02_base_patch14_448.mim_in22k_ft_in1k",
+                  "eva02_base_patch14_448.mim_in22k_ft_in1k",
+                  false
+                ],
+                [
+                  "eva02_base_patch14_448.mim_in22k_ft_in22k",
+                  "eva02_base_patch14_448.mim_in22k_ft_in22k",
+                  false
+                ],
+                [
+                  "resnet50.a1_in1k",
+                  "resnet50.a1_in1k",
+                  false
+                ],
+                [
+                  "resnet50.a1h_in1k",
+                  "resnet50.a1h_in1k",
+                  false
+                ],
+                [
+                  "resnet50.a2_in1k",
+                  "resnet50.a2_in1k",
+                  false
+                ],
+                [
+                  "resnet50.a3_in1k",
+                  "resnet50.a3_in1k",
+                  false
+                ],
+                [
+                  "resnet50.am_in1k",
+                  "resnet50.am_in1k",
+                  false
+                ],
+                [
+                  "resnet50.b1k_in1k",
+                  "resnet50.b1k_in1k",
+                  false
+                ],
+                [
+                  "resnet50.b2k_in1k",
+                  "resnet50.b2k_in1k",
+                  false
+                ],
+                [
+                  "resnet50.bt_in1k",
+                  "resnet50.bt_in1k",
+                  false
+                ],
+                [
+                  "resnet50.c1_in1k",
+                  "resnet50.c1_in1k",
+                  false
+                ],
+                [
+                  "resnet50.c2_in1k",
+                  "resnet50.c2_in1k",
+                  false
+                ],
+                [
+                  "resnet50.d_in1k",
+                  "resnet50.d_in1k",
+                  false
+                ],
+                [
+                  "resnet50.fb_ssl_yfcc100m_ft_in1k",
+                  "resnet50.fb_ssl_yfcc100m_ft_in1k",
+                  false
+                ],
+                [
+                  "resnet50.fb_swsl_ig1b_ft_in1k",
+                  "resnet50.fb_swsl_ig1b_ft_in1k",
+                  false
+                ],
+                [
+                  "resnet50.gluon_in1k",
+                  "resnet50.gluon_in1k",
+                  false
+                ],
+                [
+                  "resnet50.ra_in1k",
+                  "resnet50.ra_in1k",
+                  false
+                ],
+                [
+                  "resnet50.ram_in1k",
+                  "resnet50.ram_in1k",
+                  false
+                ],
+                [
+                  "resnet50.tv2_in1k",
+                  "resnet50.tv2_in1k",
+                  false
+                ],
+                [
+                  "resnet50.tv_in1k",
+                  "resnet50.tv_in1k",
+                  false
+                ]
+              ],
+              "display": null,
+              "multiple": false,
+              "textable": false,
+              "default_value": "swin_base_patch4_window7_224.ms_in22k_ft_in1k",
+              "text_value": "swin_base_patch4_window7_224.ms_in22k_ft_in1k"
+            },
+            {
+              "model_class": "BooleanToolParameter",
+              "name": "missing_image_strategy",
+              "argument": null,
+              "type": "boolean",
+              "label": "Drop rows with missing images?",
+              "help": "True = drop, False = replace with placeholder (default)",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": false,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": false,
+              "truevalue": "true",
+              "falsevalue": "false",
+              "default_value": false,
+              "text_value": "False"
+            }
+          ]
+        },
+        {
+          "model_class": "ConditionalWhen",
+          "value": "no",
+          "inputs": []
+        }
+      ],
+      "test_param": {
+        "model_class": "BooleanToolParameter",
+        "name": "use_images",
+        "argument": null,
+        "type": "boolean",
+        "label": "Use image modality?",
+        "help": "",
+        "help_format": "html",
+        "refresh_on_change": true,
+        "optional": false,
+        "hidden": false,
+        "is_dynamic": false,
+        "value": false,
+        "truevalue": "yes",
+        "falsevalue": "no",
+        "text_value": "False"
+      }
+    },
+    {
+      "model_class": "SelectToolParameter",
+      "name": "preset",
+      "argument": null,
+      "type": "select",
+      "label": "Quality preset",
+      "help": "",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": "medium_quality",
+      "options": [
+        [
+          "Medium quality (fast)",
+          "medium_quality",
+          true
+        ],
+        [
+          "High quality",
+          "high_quality",
+          false
+        ],
+        [
+          "Best quality (slowest)",
+          "best_quality",
+          false
+        ]
+      ],
+      "display": null,
+      "multiple": false,
+      "textable": false,
+      "default_value": "medium_quality",
+      "text_value": "Medium quality (fast)"
+    },
+    {
+      "model_class": "SelectToolParameter",
+      "name": "eval_metric",
+      "argument": null,
+      "type": "select",
+      "label": "Primary evaluation metric",
+      "help": "",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": "auto",
+      "options": [
+        [
+          "Auto (let AutoGluon choose)",
+          "auto",
+          true
+        ],
+        [
+          "ROC AUC",
+          "roc_auc",
+          false
+        ],
+        [
+          "Accuracy",
+          "accuracy",
+          false
+        ],
+        [
+          "Balanced Accuracy",
+          "balanced_accuracy",
+          false
+        ],
+        [
+          "F1",
+          "f1",
+          false
+        ],
+        [
+          "F1 Macro",
+          "f1_macro",
+          false
+        ],
+        [
+          "F1 Micro",
+          "f1_micro",
+          false
+        ],
+        [
+          "F1 Weighted",
+          "f1_weighted",
+          false
+        ],
+        [
+          "Precision",
+          "precision",
+          false
+        ],
+        [
+          "Precision Macro",
+          "precision_macro",
+          false
+        ],
+        [
+          "Precision Micro",
+          "precision_micro",
+          false
+        ],
+        [
+          "Precision Weighted",
+          "precision_weighted",
+          false
+        ],
+        [
+          "Recall",
+          "recall",
+          false
+        ],
+        [
+          "Recall Macro",
+          "recall_macro",
+          false
+        ],
+        [
+          "Recall Micro",
+          "recall_micro",
+          false
+        ],
+        [
+          "Recall Weighted",
+          "recall_weighted",
+          false
+        ],
+        [
+          "Average Precision",
+          "average_precision",
+          false
+        ],
+        [
+          "ROC AUC OVO Macro",
+          "roc_auc_ovo_macro",
+          false
+        ],
+        [
+          "ROC AUC OVO Weighted",
+          "roc_auc_ovo_weighted",
+          false
+        ],
+        [
+          "ROC AUC OVR Macro",
+          "roc_auc_ovr_macro",
+          false
+        ],
+        [
+          "ROC AUC OVR Weighted",
+          "roc_auc_ovr_weighted",
+          false
+        ],
+        [
+          "Log Loss",
+          "log_loss",
+          false
+        ],
+        [
+          "MSE",
+          "mse",
+          false
+        ],
+        [
+          "RMSE",
+          "rmse",
+          false
+        ],
+        [
+          "MAE",
+          "mae",
+          false
+        ],
+        [
+          "MSLE",
+          "msle",
+          false
+        ],
+        [
+          "R2",
+          "r2",
+          false
+        ]
+      ],
+      "display": null,
+      "multiple": false,
+      "textable": false,
+      "default_value": "auto",
+      "text_value": "Auto (let AutoGluon choose)"
+    },
+    {
+      "model_class": "IntegerToolParameter",
+      "name": "random_seed",
+      "argument": null,
+      "type": "integer",
+      "label": "Random seed",
+      "help": "",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "min": null,
+      "max": null,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": "42",
+      "area": false,
+      "datalist": [],
+      "default_value": "42",
+      "text_value": "42"
+    },
+    {
+      "model_class": "IntegerToolParameter",
+      "name": "time_limit",
+      "argument": null,
+      "type": "integer",
+      "label": "Time limit (seconds)",
+      "help": "Total training time budget. Recommended: 3600+ for real runs",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "min": 60,
+      "max": null,
+      "optional": true,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": "",
+      "area": false,
+      "datalist": [],
+      "default_value": null,
+      "text_value": "Empty."
+    },
+    {
+      "model_class": "BooleanToolParameter",
+      "name": "deterministic",
+      "argument": null,
+      "type": "boolean",
+      "label": "Enable deterministic mode",
+      "help": "Use deterministic algorithms and CuDNN settings to reduce run-to-run variance (may slow training)",
+      "help_format": "html",
+      "refresh_on_change": false,
+      "optional": false,
+      "hidden": false,
+      "is_dynamic": false,
+      "value": false,
+      "truevalue": "true",
+      "falsevalue": "false",
+      "default_value": false,
+      "text_value": "False"
+    },
+    {
+      "model_class": "Conditional",
+      "name": "customize_defaults_conditional",
+      "type": "conditional",
+      "cases": [
+        {
+          "model_class": "ConditionalWhen",
+          "value": "yes",
+          "inputs": [
+            {
+              "model_class": "FloatToolParameter",
+              "name": "validation_size",
+              "argument": null,
+              "type": "float",
+              "label": "Validation fraction (when test set provided)",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": null,
+              "max": null,
+              "optional": false,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": "0.2",
+              "area": false,
+              "datalist": [],
+              "default_value": "0.2",
+              "text_value": "0.2"
+            },
+            {
+              "model_class": "TextToolParameter",
+              "name": "split_probabilities",
+              "argument": null,
+              "type": "text",
+              "label": "Train / Val / Test split (space-separated) when no test set",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": "0.7 0.1 0.2",
+              "area": false,
+              "datalist": [],
+              "default_value": "0.7 0.1 0.2",
+              "text_value": "0.7 0.1 0.2"
+            },
+            {
+              "model_class": "BooleanToolParameter",
+              "name": "cross_validation",
+              "argument": null,
+              "type": "boolean",
+              "label": "Enable k-fold cross-validation",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": false,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": false,
+              "truevalue": "true",
+              "falsevalue": "false",
+              "default_value": false,
+              "text_value": "False"
+            },
+            {
+              "model_class": "IntegerToolParameter",
+              "name": "num_folds",
+              "argument": null,
+              "type": "integer",
+              "label": "Number of CV folds",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": null,
+              "max": null,
+              "optional": false,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": "5",
+              "area": false,
+              "datalist": [],
+              "default_value": "5",
+              "text_value": "5"
+            },
+            {
+              "model_class": "IntegerToolParameter",
+              "name": "epochs",
+              "argument": null,
+              "type": "integer",
+              "label": "Max epochs",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": null,
+              "max": null,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "area": false,
+              "datalist": [],
+              "default_value": null,
+              "text_value": "Not available."
+            },
+            {
+              "model_class": "FloatToolParameter",
+              "name": "learning_rate",
+              "argument": null,
+              "type": "float",
+              "label": "Learning rate",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": null,
+              "max": null,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "area": false,
+              "datalist": [],
+              "default_value": null,
+              "text_value": "Not available."
+            },
+            {
+              "model_class": "IntegerToolParameter",
+              "name": "batch_size",
+              "argument": null,
+              "type": "integer",
+              "label": "Batch size",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": null,
+              "max": null,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "area": false,
+              "datalist": [],
+              "default_value": null,
+              "text_value": "Not available."
+            },
+            {
+              "model_class": "FloatToolParameter",
+              "name": "threshold",
+              "argument": null,
+              "type": "float",
+              "label": "Binary classification threshold",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "min": 0.0,
+              "max": 1.0,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "area": false,
+              "datalist": [],
+              "default_value": null,
+              "text_value": "Not available."
+            },
+            {
+              "model_class": "TextToolParameter",
+              "name": "hyperparameters",
+              "argument": null,
+              "type": "text",
+              "label": "Extra AutoGluon hyperparameters (JSON or YAML string)",
+              "help": "",
+              "help_format": "html",
+              "refresh_on_change": false,
+              "optional": true,
+              "hidden": false,
+              "is_dynamic": false,
+              "value": null,
+              "area": false,
+              "datalist": [],
+              "default_value": null,
+              "text_value": "Not available."
+            }
+          ]
+        },
+        {
+          "model_class": "ConditionalWhen",
+          "value": "no",
+          "inputs": []
+        }
+      ],
+      "test_param": {
+        "model_class": "BooleanToolParameter",
+        "name": "customize_defaults",
+        "argument": null,
+        "type": "boolean",
+        "label": "Advanced: customize training settings?",
+        "help": "",
+        "help_format": "html",
+        "refresh_on_change": true,
+        "optional": false,
+        "hidden": false,
+        "is_dynamic": false,
+        "value": false,
+        "truevalue": "yes",
+        "falsevalue": "no",
+        "text_value": "False"
+      }
+    }
+  ],
+  "help": "<p><strong>AutoGluon Multimodal Learner</strong></p>\n<p>Trains a powerful multimodal model combining tabular features, images, and text using AutoGluon-Multimodal.</p>\n<ul class=\"simple\">\n<li>Handles missing images intelligently</li>\n<li>Supports cross-validation</li>\n<li>Produces detailed HTML reports and transparent metrics</li>\n<li>Fully reproducible</li>\n</ul>\n<p>Ideal for medical imaging + clinical data, product images + descriptions, etc.</p>\n",
+  "help_format": "restructuredtext",
+  "citations": true,
+  "sharable_url": "https://toolshed.g2.bx.psu.edu/view/goeckslab/multimodal_learner",
+  "message": "",
+  "warnings": null,
+  "versions": [
+    "0.1.0",
+    "0.1.2",
+    "0.1.3",
+    "0.1.4",
+    "0.1.5"
+  ],
+  "requirements": [],
+  "credentials": [],
+  "errors": {},
+  "tool_errors": null,
+  "state_inputs": {
+    "input_csv": {
+      "values": [
+        {
+          "id": "f9cad7b01a4721350e0fd2a678772f8b",
+          "src": "hda"
+        }
+      ]
+    },
+    "target_column": "1",
+    "sample_id_selector": {
+      "use_sample_id": "no",
+      "__current_case__": 1
+    },
+    "test_dataset_conditional": {
+      "has_test_dataset": false,
+      "__current_case__": 1
+    },
+    "backbone_text": "microsoft/deberta-v3-base",
+    "use_images_conditional": {
+      "use_images": false,
+      "__current_case__": 1
+    },
+    "preset": "medium_quality",
+    "eval_metric": "auto",
+    "random_seed": "42",
+    "time_limit": "",
+    "deterministic": false,
+    "customize_defaults_conditional": {
+      "customize_defaults": false,
+      "__current_case__": 1
+    }
+  },
+  "job_id": null,
+  "job_remap": null,
+  "job_credentials_context": null,
+  "history_id": "bbd44e69cb8906b55e461195124e37da",
+  "display": true,
+  "action": "/tool_runner/index",
+  "license": null,
+  "creator": null,
+  "method": "post",
+  "enctype": "application/x-www-form-urlencoded"
+}

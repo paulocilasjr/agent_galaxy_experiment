@@ -1,0 +1,17 @@
+{
+  "HANCOCK_train_split.csv": {
+    "dataset_id": "f9cad7b01a472135e849184d64d68f38",
+    "url": "https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv",
+    "file_type": "csv"
+  },
+  "HANCOCK_test_split.csv": {
+    "dataset_id": "f9cad7b01a4721350e0fd2a678772f8b",
+    "url": "https://zenodo.org/records/17933596/files/HANCOCK_test_split.csv",
+    "file_type": "csv"
+  },
+  "tma_cores_cd3_cd8_images.zip": {
+    "dataset_id": "f9cad7b01a472135478cd355c3a50b65",
+    "url": "https://zenodo.org/records/17727354/files/tma_cores_cd3_cd8_images.zip",
+    "file_type": "zip"
+  }
+}

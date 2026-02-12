@@ -1,0 +1,85 @@
+01:07:00 | INFO | === AutoGluon Training Wrapper Started ===
+01:07:00 | INFO | Working directory: /jetstream2/scratch/main/jobs/74579051/working
+01:07:00 | INFO | Command line: /jetstream2/scratch/main/jobs/74579051/tool_files/multimodal_learner.py --input_csv_train train_input.csv --input_csv_test test_input.csv --target_column 3 --sample_id_column 1 --images_zip /jetstream2/scratch/main/jobs/74579051/inputs/dataset_aa1a0699-528f-4f0f-ba9a-23399632190b.dat --missing_image_strategy false --backbone_image caformer_b36.sail_in22k_ft_in1k_384 --backbone_text microsoft/deberta-v3-base --preset best_quality --eval_metric roc_auc --random_seed 42 --time_limit 7200 --deterministic --validation_size 0.15 --split_probabilities 0.85 0.1 0.05 --batch_size 32 --threshold 0.12 --output_json /jetstream2/scratch/main/jobs/74579051/outputs/dataset_ca37ec57-118a-4e23-a91a-89d66795a1b9.dat --output_html /jetstream2/scratch/main/jobs/74579051/outputs/dataset_d84acfdf-b08c-4af2-a759-b4c39d41f3a7.dat --output_config /jetstream2/scratch/main/jobs/74579051/outputs/dataset_7fb80fb0-de5c-4644-8624-d7a07cceaff6.dat
+01:07:00 | INFO | Parsed args: {'train_dataset': 'train_input.csv', 'test_dataset': 'test_input.csv', 'target_column': '3', 'output_json': '/jetstream2/scratch/main/jobs/74579051/outputs/dataset_ca37ec57-118a-4e23-a91a-89d66795a1b9.dat', 'output_html': '/jetstream2/scratch/main/jobs/74579051/outputs/dataset_d84acfdf-b08c-4af2-a759-b4c39d41f3a7.dat', 'output_config': '/jetstream2/scratch/main/jobs/74579051/outputs/dataset_7fb80fb0-de5c-4644-8624-d7a07cceaff6.dat', 'images_zip': ['/jetstream2/scratch/main/jobs/74579051/inputs/dataset_aa1a0699-528f-4f0f-ba9a-23399632190b.dat'], 'missing_image_strategy': 'false', 'threshold': 0.12, 'time_limit': 7200, 'deterministic': True, 'random_seed': 42, 'cross_validation': 'false', 'num_folds': 5, 'epochs': None, 'learning_rate': None, 'batch_size': 32, 'num_workers': None, 'num_workers_eval': None, 'backbone_image': 'caformer_b36.sail_in22k_ft_in1k_384', 'backbone_text': 'microsoft/deberta-v3-base', 'validation_size': 0.15, 'split_probabilities': [0.85, 0.1, 0.05], 'sample_id_column': '1', 'preset': 'best_quality', 'eval_metric': 'roc_auc', 'hyperparameters': None}
+01:07:00 | INFO | Cache dirs: TORCH_HOME=./torch_cache HF_HOME=./hf_cache HUGGINGFACE_HUB_CACHE=./hf_cache/hub
+01:07:00 | INFO | Deterministic mode enabled (seed=42)
+01:07:00 | INFO | Train dataset loaded: 533 rows
+01:07:00 | INFO | Test dataset loaded: 134 rows
+01:07:00 | INFO | Target column '3' not found; using column #3 header 'target' instead.
+01:07:00 | INFO | Sample ID column '1' not found; using column #1 header 'patient_id' instead.
+01:07:00 | INFO | Extracting 1 image ZIP(s) to /jetstream2/scratch/main/jobs/74579051/tmp/autogluon_images_eafcrkpj
+01:11:45 | INFO | Extracted dataset_aa1a0699-528f-4f0f-ba9a-23399632190b.dat
+01:11:45 | INFO | Inferred image columns: ['CD3_image_path', 'CD8_image_path']
+01:12:03 | INFO | Placeholder image created: /jetstream2/scratch/main/jobs/74579051/tmp/ag_placeholder_txnqoyhf/placeholder_73ef69a85a6747f789e670c322a15cea.png
+01:12:04 | INFO | Filled 13 missing images with placeholder
+01:12:05 | INFO | Filled 1 missing images with placeholder
+01:12:05 | INFO | After cleanup → train: 533, test: 134
+01:12:05 | INFO | External test set → created val split (15%)
+01:12:05 | INFO | Final split distribution:
+split
+train    452
+val       81
+Name: count, dtype: int64
+01:12:05 | INFO | Preprocessing complete — ready for AutoGluon training!
+01:12:05 | INFO | Final split counts:
+split
+train    452
+val       81
+Name: count, dtype: int64
+01:12:05 | INFO | Applying custom decision threshold 0.1200 for binary evaluation.
+01:12:05 | INFO | Using default training num_workers=8 (heuristic).
+01:12:05 | INFO | Using default inference num_workers=8 (heuristic).
+01:12:05 | INFO | AutoGluon config prepared: fit={'time_limit': 7200, 'seed': 42, 'presets': 'best_quality'}, hyperparameters keys=['env', 'optimization', 'model', 'optimization.per_device_train_batch_size', 'optimization.batch_size', 'optim.per_device_train_batch_size', 'optim.batch_size', 'env.per_gpu_batch_size', 'env.num_workers', 'env.num_workers_inference', 'model.timm_image.checkpoint_name', 'model.hf_text.checkpoint_name']
+01:12:05 | INFO | Fitting AutoGluon with 452 train / 81 val rows (internal test rows: 0, external test provided: True)
+No path specified. Models will be saved in: "AutogluonModels/ag-20260212_011205"
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC Sat Jan 17 14:23:47 EST 2026
+CPU Count:          16
+Pytorch Version:    2.7.1+cu126
+CUDA Version:       12.6
+GPU Count:          1
+Memory Avail:       56.36 GB / 58.59 GB (96.2%)
+Disk Space Avail:   20223.65 GB / 64000.00 GB (31.6%)
+===================================================
+AutoGluon infers your prediction problem is: 'binary' (because only two unique label-values observed).
+	2 unique label values:  [np.int64(0), np.int64(1)]
+	If 'binary' is not the correct problem_type, please manually specify the problem_type parameter during Predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression', 'quantile'])
+
+AutoMM starts to create your model. ✨✨✨
+
+To track the learning progress, you can open a terminal and launch Tensorboard:
+    ```shell
+    # Assume you have installed tensorboard
+    tensorboard --logdir /jetstream2/scratch/main/jobs/74579051/working/AutogluonModels/ag-20260212_011205
+    ```
+
+Seed set to 42
+The provided hyperparameter name optimization.per_device_train_batch_size contains a deprecated key `optimization.`. Please replace `optimization.` with `optim.` when customizing the optimization hyperparameters.
+The provided hyperparameter name optimization.batch_size contains a deprecated key `optimization.`. Please replace `optimization.` with `optim.` when customizing the optimization hyperparameters.
+Traceback (most recent call last):
+  File "/jetstream2/scratch/main/jobs/74579051/tool_files/multimodal_learner.py", line 473, in <module>
+    main()
+  File "/jetstream2/scratch/main/jobs/74579051/tool_files/multimodal_learner.py", line 419, in main
+    predictor, data_ctx = run_autogluon_experiment(
+  File "/jetstream2/scratch/main/jobs/74579051/tool_files/training_pipeline.py", line 635, in run_autogluon_experiment
+    predictor.fit(**fit_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/predictor.py", line 540, in fit
+    self._learner.fit(
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/learners/base.py", line 665, in fit
+    fit_returns = self.execute_fit()
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/learners/base.py", line 577, in execute_fit
+    attributes = self.fit_per_run(**self._fit_args)
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/learners/base.py", line 1275, in fit_per_run
+    config = self.get_config_per_run(config=config, hyperparameters=hyperparameters)
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/learners/base.py", line 703, in get_config_per_run
+    config = get_config(
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/utils/config.py", line 198, in get_config
+    config = apply_omegaconf_overrides(config, overrides=overrides, check_key_exist=True)
+  File "/usr/local/lib/python3.10/dist-packages/autogluon/multimodal/utils/config.py", line 480, in apply_omegaconf_overrides
+    raise KeyError(
+KeyError: '"optimization" is not found in the config. You may need to check the overrides. overrides={\'env\': {\'seed\': 42, \'per_gpu_batch_size\': 32, \'num_workers\': 8, \'num_workers_inference\': 8}, \'optimization\': {\'per_device_train_batch_size\': 32, \'train_batch_size\': 32}, \'model\': {\'metric_learning\': {\'metric\': \'roc_auc\'}, \'timm_image\': {\'checkpoint_name\': \'caformer_b36.sail_in22k_ft_in1k_384\'}, \'hf_text\': {\'checkpoint_name\': \'microsoft/deberta-v3-base\'}}, \'optimization.per_device_train_batch_size\': 32, \'optimization.batch_size\': 32, \'optim.per_device_train_batch_size\': 32, \'optim.batch_size\': 32, \'env.per_gpu_batch_size\': 32, \'env.num_workers\': 8, \'env.num_workers_inference\': 8, \'model.timm_image.checkpoint_name\': \'caformer_b36.sail_in22k_ft_in1k_384\', \'model.hf_text.checkpoint_name\': \'microsoft/deberta-v3-base\'}'
