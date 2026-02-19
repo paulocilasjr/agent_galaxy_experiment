@@ -1,0 +1,297 @@
+{
+  "action": "/tool_runner/index",
+  "citations": true,
+  "creator": null,
+  "credentials": [],
+  "description": "of tabular data",
+  "display": true,
+  "edam_operations": [],
+  "edam_topics": [],
+  "enctype": "application/x-www-form-urlencoded",
+  "errors": {
+    "infile_trained_model": "Parameter 'infile_trained_model': specify a dataset of the required format / build for parameter"
+  },
+  "form_style": "regular",
+  "help": "<p><strong>What it does</strong></p>\n<p>Produce a <a class=\"reference external\" href=\"https://plot.ly/python/heatmaps/\">heatmap plot (confusion matrix)</a> from tabular files. The input data contains the original/true class labels (last column) and the predicted data contains the predicted class labels (last column). The true and predicted class labels are plotted against each other. The diagonal of this heatmap shows the correctly predicted data. The plot is buried in a html file which\nprovides rich interactive features. Image can be saved in various format, such as 'png', 'svg', 'jpeg' and so on.</p>\n",
+  "help_format": "restructuredtext",
+  "hidden": "",
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "icon": null,
+  "id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+  "inputs": [
+    {
+      "argument": null,
+      "default_value": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      },
+      "edam": {
+        "edam_data": [
+          "data_0006"
+        ],
+        "edam_formats": [
+          "format_3475"
+        ]
+      },
+      "extensions": [
+        "tabular"
+      ],
+      "help": "Input data is a matrix (tabular) where each column is a feature and the last column contains the (true or original) class labels.",
+      "help_format": "html",
+      "hidden": false,
+      "is_dynamic": false,
+      "label": "Select input data file :",
+      "model_class": "DataToolParameter",
+      "multiple": false,
+      "name": "infile_input",
+      "optional": false,
+      "options": {
+        "dce": [],
+        "hda": [
+          {
+            "hid": 5,
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "keep": false,
+            "name": "MSK1_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 4,
+            "id": "f9cad7b01a4721354130d78b087ddcd1",
+            "keep": false,
+            "name": "MSK1_No_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 3,
+            "id": "f9cad7b01a472135fcee3144425e2753",
+            "keep": false,
+            "name": "Chowell_train_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 2,
+            "id": "f9cad7b01a4721353a31536b18594d1c",
+            "keep": false,
+            "name": "Chowell_test_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 1,
+            "id": "f9cad7b01a47213588efba34d9aa5fcd",
+            "keep": false,
+            "name": "Chowell_test_No_Response.tsv",
+            "src": "hda",
+            "tags": []
+          }
+        ],
+        "hdca": [],
+        "ldda": []
+      },
+      "refresh_on_change": true,
+      "tag": null,
+      "text_value": "No dataset.",
+      "type": "data",
+      "value": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      }
+    },
+    {
+      "argument": null,
+      "default_value": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      },
+      "edam": {
+        "edam_data": [
+          "data_0006"
+        ],
+        "edam_formats": [
+          "format_3475"
+        ]
+      },
+      "extensions": [
+        "tabular"
+      ],
+      "help": "Predicted data is a matrix (tabular) where each column is a feature and the last column contains the predicted class labels.",
+      "help_format": "html",
+      "hidden": false,
+      "is_dynamic": false,
+      "label": "Select predicted data file :",
+      "model_class": "DataToolParameter",
+      "multiple": false,
+      "name": "infile_output",
+      "optional": false,
+      "options": {
+        "dce": [],
+        "hda": [
+          {
+            "hid": 5,
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "keep": false,
+            "name": "MSK1_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 4,
+            "id": "f9cad7b01a4721354130d78b087ddcd1",
+            "keep": false,
+            "name": "MSK1_No_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 3,
+            "id": "f9cad7b01a472135fcee3144425e2753",
+            "keep": false,
+            "name": "Chowell_train_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 2,
+            "id": "f9cad7b01a4721353a31536b18594d1c",
+            "keep": false,
+            "name": "Chowell_test_Response.tsv",
+            "src": "hda",
+            "tags": []
+          },
+          {
+            "hid": 1,
+            "id": "f9cad7b01a47213588efba34d9aa5fcd",
+            "keep": false,
+            "name": "Chowell_test_No_Response.tsv",
+            "src": "hda",
+            "tags": []
+          }
+        ],
+        "hdca": [],
+        "ldda": []
+      },
+      "refresh_on_change": true,
+      "tag": null,
+      "text_value": "No dataset.",
+      "type": "data",
+      "value": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      }
+    },
+    {
+      "argument": null,
+      "default_value": null,
+      "edam": {
+        "edam_data": [
+          "data_0006"
+        ],
+        "edam_formats": [
+          "format_3590"
+        ]
+      },
+      "extensions": [
+        "h5mlm"
+      ],
+      "help": "This file is a final model trained on training data.",
+      "help_format": "html",
+      "hidden": false,
+      "is_dynamic": false,
+      "label": "Select trained model :",
+      "model_class": "DataToolParameter",
+      "multiple": false,
+      "name": "infile_trained_model",
+      "optional": false,
+      "options": {
+        "dce": [],
+        "hda": [],
+        "hdca": [],
+        "ldda": []
+      },
+      "refresh_on_change": true,
+      "tag": null,
+      "text_value": "No dataset.",
+      "type": "data",
+      "value": null
+    }
+  ],
+  "is_workflow_compatible": true,
+  "job_credentials_context": null,
+  "job_id": null,
+  "job_remap": null,
+  "labels": [],
+  "license": null,
+  "message": "",
+  "method": "post",
+  "model_class": "Tool",
+  "name": "Plot confusion matrix, precision, recall and ROC and AUC curves",
+  "panel_section_id": "graph_display_data",
+  "panel_section_name": "Graph/Display Data",
+  "requirements": [
+    {
+      "name": "galaxy-ml",
+      "version": "0.10.0"
+    }
+  ],
+  "sharable_url": "https://toolshed.g2.bx.psu.edu/view/bgruening/plotly_ml_performance_plots",
+  "state_inputs": {
+    "infile_input": {
+      "values": [
+        {
+          "id": "f9cad7b01a472135932c95d1fc41ff39",
+          "src": "hda"
+        }
+      ]
+    },
+    "infile_output": {
+      "values": [
+        {
+          "id": "f9cad7b01a472135932c95d1fc41ff39",
+          "src": "hda"
+        }
+      ]
+    },
+    "infile_trained_model": null
+  },
+  "tool_errors": null,
+  "tool_shed_repository": {
+    "changeset_revision": "f234e2e59d76",
+    "name": "plotly_ml_performance_plots",
+    "owner": "bgruening",
+    "tool_shed": "toolshed.g2.bx.psu.edu"
+  },
+  "version": "0.4",
+  "versions": [
+    "0.1",
+    "0.2",
+    "0.3",
+    "0.4"
+  ],
+  "warnings": null,
+  "xrefs": [
+    {
+      "type": "bio.tools",
+      "value": "scikit-learn"
+    }
+  ]
+}

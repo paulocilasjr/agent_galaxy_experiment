@@ -1,0 +1,8 @@
+{
+  "bigwig_file_size_delta_bytes": -10680,
+  "narrowpeak_peak_count_delta": -2,
+  "narrowpeak_signal_sum_delta": -9.481410000000004,
+  "overall_alignment_rate_delta_pct_points": 0.05000000000001137,
+  "same_narrowpeak_sha256": false,
+  "summits_line_count_delta": -2
+}

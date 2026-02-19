@@ -1,0 +1,22 @@
+{
+  "create_time": "2026-02-18T18:13:10.570184",
+  "dataset_id": "f9cad7b01a47213522af872e612f30df",
+  "deleted": false,
+  "extension": "h5mlm",
+  "genome_build": "?",
+  "hid": 6,
+  "history_content_type": "dataset",
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "id": "f9cad7b01a472135bd2032f63576f418",
+  "name": "New Pipleline/Estimator",
+  "object_store_id": "corral4",
+  "purged": false,
+  "quota_source_label": null,
+  "state": "ok",
+  "tags": [],
+  "type": "file",
+  "type_id": "dataset-f9cad7b01a472135bd2032f63576f418",
+  "update_time": "2026-02-18T18:13:43.391353",
+  "url": "/api/histories/bbd44e69cb8906b519322378c6ea8f6e/contents/f9cad7b01a472135bd2032f63576f418",
+  "visible": true
+}

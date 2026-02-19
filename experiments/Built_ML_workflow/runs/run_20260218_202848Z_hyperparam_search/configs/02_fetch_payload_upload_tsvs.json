@@ -1,0 +1,42 @@
+{
+  "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+  "targets": [
+    {
+      "destination": {
+        "type": "hdas"
+      },
+      "elements": [
+        {
+          "dbkey": "?",
+          "ext": "tabular",
+          "src": "url",
+          "url": "https://zenodo.org/records/13885908/files/Chowell_test_No_Response.tsv"
+        },
+        {
+          "dbkey": "?",
+          "ext": "tabular",
+          "src": "url",
+          "url": "https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv"
+        },
+        {
+          "dbkey": "?",
+          "ext": "tabular",
+          "src": "url",
+          "url": "https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv"
+        },
+        {
+          "dbkey": "?",
+          "ext": "tabular",
+          "src": "url",
+          "url": "https://zenodo.org/records/13885908/files/MSK1_No_Response.tsv"
+        },
+        {
+          "dbkey": "?",
+          "ext": "tabular",
+          "src": "url",
+          "url": "https://zenodo.org/records/13885908/files/MSK1_Response.tsv"
+        }
+      ]
+    }
+  ]
+}

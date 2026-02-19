@@ -1,0 +1,24 @@
+{
+  "collection_type": "list:paired",
+  "element_identifiers": [
+    {
+      "collection_type": "paired",
+      "element_identifiers": [
+        {
+          "id": "f9cad7b01a4721354bf8f827bf5df1a5",
+          "name": "forward",
+          "src": "hda"
+        },
+        {
+          "id": "f9cad7b01a4721351533342561fcdc18",
+          "name": "reverse",
+          "src": "hda"
+        }
+      ],
+      "name": "wt_H3K4me3",
+      "src": "new_collection"
+    }
+  ],
+  "history_id": "bbd44e69cb8906b5b8fba8bcb2057dda",
+  "name": "wt_H3K4me3_reads_list_paired_local_ga"
+}

@@ -1,0 +1,59 @@
+{
+  "command_line": null,
+  "command_version": null,
+  "copied_from_job_id": null,
+  "create_time": "2026-02-18T18:17:34.876062",
+  "exit_code": null,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "id": "bbd44e69cb8906b54c600b6fb990877c",
+  "inputs": {
+    "infile_input": {
+      "id": "f9cad7b01a4721353a31536b18594d1c",
+      "src": "hda",
+      "uuid": "e7fc769c-7598-4778-b766-1511aa7b8574"
+    },
+    "infile_output": {
+      "id": "f9cad7b01a4721358fb2bb7b1cf8224b",
+      "src": "hda",
+      "uuid": "d2aa9776-b90d-49ff-a98f-aaa976a53dc2"
+    },
+    "infile_trained_model": {
+      "id": "f9cad7b01a472135c8e6fc3210694f3e",
+      "src": "hda",
+      "uuid": "6611fd74-24f7-478f-9616-8f10061b5311"
+    }
+  },
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "output_confusion": {
+      "id": "f9cad7b01a472135ceb51dc7cbca207c",
+      "src": "hda",
+      "uuid": "c06bf4de-c037-4a8a-ba3b-07c979d0ecc0"
+    },
+    "output_prf": {
+      "id": "f9cad7b01a4721351ccd879a50f09c86",
+      "src": "hda",
+      "uuid": "ed56fe4c-8161-4169-8ff9-b51d5a7dfaee"
+    },
+    "output_roc": {
+      "id": "f9cad7b01a47213568824b29a996b464",
+      "src": "hda",
+      "uuid": "d3b7ce52-f619-4497-b738-1e489bfff84a"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\""
+  },
+  "state": "queued",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+  "update_time": "2026-02-18T18:17:39.581304",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

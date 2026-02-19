@@ -1,0 +1,271 @@
+{
+  "a_galaxy_workflow": "true",
+  "annotation": "",
+  "comments": [],
+  "format-version": "0.1",
+  "name": "ML_workflow_built_pipeline",
+  "steps": {
+    "0": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+      "errors": null,
+      "id": 0,
+      "input_connections": {},
+      "inputs": [],
+      "label": null,
+      "name": "Pipeline Builder",
+      "outputs": [
+        {
+          "name": "outfile",
+          "type": "h5mlm"
+        }
+      ],
+      "position": {
+        "left": 10,
+        "top": 10
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+      "tool_shed_repository": {
+        "changeset_revision": "4c4ec859c31a",
+        "name": "sklearn_build_pipeline",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"final_estimator\": {\"estimator_selector\": {\"selected_module\": \"svm\", \"__current_case__\": 0, \"selected_estimator\": \"LinearSVC\", \"text_params\": \"\"}}, \"pipeline_component\": [{\"__index__\": 0, \"component_selector\": {\"component_type\": \"None\", \"__current_case__\": 0}}], \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "1.0.11.0",
+      "type": "tool",
+      "uuid": "728d9484-c651-4114-b1b3-a3a45e36f58c",
+      "when": null,
+      "workflow_outputs": []
+    },
+    "1": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+      "errors": null,
+      "id": 1,
+      "input_connections": {
+        "infile_estimator": {
+          "id": 0,
+          "output_name": "outfile"
+        }
+      },
+      "inputs": [],
+      "label": null,
+      "name": "Fit a Pipeline, Ensemble",
+      "outputs": [
+        {
+          "name": "out_object",
+          "type": "h5mlm"
+        }
+      ],
+      "position": {
+        "left": 230,
+        "top": 10
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+      "tool_shed_repository": {
+        "changeset_revision": "f0ede473a7e8",
+        "name": "sklearn_model_fit",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"infile_estimator\": null, \"input_options\": {\"selected_input\": \"tabular\", \"__current_case__\": 0, \"infile1\": null, \"header1\": true, \"column_selector_options_1\": {\"selected_column_selector_option\": \"all_but_by_header_name\", \"__current_case__\": 3, \"col1\": \"Response\"}, \"infile2\": null, \"header2\": true, \"column_selector_options_2\": {\"selected_column_selector_option2\": \"by_header_name\", \"__current_case__\": 2, \"col2\": \"Response\"}}, \"is_deep_learning\": false, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "1.0.11.0",
+      "type": "tool",
+      "uuid": "c71b59a8-986a-4573-b294-d4c5957bf34b",
+      "when": null,
+      "workflow_outputs": []
+    },
+    "2": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+      "errors": null,
+      "id": 2,
+      "input_connections": {
+        "infile_estimator": {
+          "id": 1,
+          "output_name": "out_object"
+        }
+      },
+      "inputs": [],
+      "label": null,
+      "name": "Model Prediction",
+      "outputs": [
+        {
+          "name": "outfile_predict",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 450,
+        "top": 10
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+      "tool_shed_repository": {
+        "changeset_revision": "25b46af53232",
+        "name": "model_prediction",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"infile_estimator\": null, \"input_options\": {\"selected_input\": \"tabular\", \"__current_case__\": 0, \"infile1\": null, \"header1\": true, \"column_selector_options_1\": {\"selected_column_selector_option\": \"all_columns\", \"__current_case__\": 4}}, \"method\": \"predict\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "1.0.11.0",
+      "type": "tool",
+      "uuid": "ae6f2791-e897-4906-b9a8-ad5cb5309b53",
+      "when": null,
+      "workflow_outputs": []
+    },
+    "3": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+      "errors": null,
+      "id": 3,
+      "input_connections": {
+        "infile_estimator": {
+          "id": 1,
+          "output_name": "out_object"
+        }
+      },
+      "inputs": [],
+      "label": null,
+      "name": "Model Prediction",
+      "outputs": [
+        {
+          "name": "outfile_predict",
+          "type": "tabular"
+        }
+      ],
+      "position": {
+        "left": 450,
+        "top": 130
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+      "tool_shed_repository": {
+        "changeset_revision": "25b46af53232",
+        "name": "model_prediction",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"infile_estimator\": null, \"input_options\": {\"selected_input\": \"tabular\", \"__current_case__\": 0, \"infile1\": null, \"header1\": true, \"column_selector_options_1\": {\"selected_column_selector_option\": \"all_columns\", \"__current_case__\": 4}}, \"method\": \"predict\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "1.0.11.0",
+      "type": "tool",
+      "uuid": "47810297-b012-43b9-a934-aa0f2e815e89",
+      "when": null,
+      "workflow_outputs": []
+    },
+    "4": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+      "errors": null,
+      "id": 4,
+      "input_connections": {
+        "infile_output": {
+          "id": 2,
+          "output_name": "outfile_predict"
+        },
+        "infile_trained_model": {
+          "id": 1,
+          "output_name": "out_object"
+        }
+      },
+      "inputs": [],
+      "label": null,
+      "name": "Plot confusion matrix, precision, recall and ROC and AUC curves",
+      "outputs": [
+        {
+          "name": "output_confusion",
+          "type": "png"
+        },
+        {
+          "name": "output_prf",
+          "type": "html"
+        },
+        {
+          "name": "output_roc",
+          "type": "html"
+        }
+      ],
+      "position": {
+        "left": 670,
+        "top": 10
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+      "tool_shed_repository": {
+        "changeset_revision": "f234e2e59d76",
+        "name": "plotly_ml_performance_plots",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"infile_input\": null, \"infile_output\": null, \"infile_trained_model\": null, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "0.4",
+      "type": "tool",
+      "uuid": "e4261a1c-e43f-413b-a6d9-ac45f7837777",
+      "when": null,
+      "workflow_outputs": []
+    },
+    "5": {
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+      "errors": null,
+      "id": 5,
+      "input_connections": {
+        "infile_output": {
+          "id": 3,
+          "output_name": "outfile_predict"
+        },
+        "infile_trained_model": {
+          "id": 1,
+          "output_name": "out_object"
+        }
+      },
+      "inputs": [],
+      "label": null,
+      "name": "Plot confusion matrix, precision, recall and ROC and AUC curves",
+      "outputs": [
+        {
+          "name": "output_confusion",
+          "type": "png"
+        },
+        {
+          "name": "output_prf",
+          "type": "html"
+        },
+        {
+          "name": "output_roc",
+          "type": "html"
+        }
+      ],
+      "position": {
+        "left": 670,
+        "top": 130
+      },
+      "post_job_actions": {},
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+      "tool_shed_repository": {
+        "changeset_revision": "f234e2e59d76",
+        "name": "plotly_ml_performance_plots",
+        "owner": "bgruening",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"infile_input\": null, \"infile_output\": null, \"infile_trained_model\": null, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+      "tool_uuid": null,
+      "tool_version": "0.4",
+      "type": "tool",
+      "uuid": "87cf3695-46c6-432d-b587-a2ec710e7c8f",
+      "when": null,
+      "workflow_outputs": []
+    }
+  },
+  "tags": [],
+  "uuid": "2e9205ba-6bf1-4a97-8893-2828d3ff4e12",
+  "version": 0
+}

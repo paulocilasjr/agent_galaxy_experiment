@@ -1,0 +1,65 @@
+{
+  "dataset_ids": [
+    "f9cad7b01a47213588efba34d9aa5fcd",
+    "f9cad7b01a4721353a31536b18594d1c",
+    "f9cad7b01a472135fcee3144425e2753",
+    "f9cad7b01a4721354130d78b087ddcd1",
+    "f9cad7b01a472135932c95d1fc41ff39"
+  ],
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "history_name": "ML_workflow",
+  "name_to_id": {
+    "Chowell_test_No_Response.tsv": "f9cad7b01a47213588efba34d9aa5fcd",
+    "Chowell_test_Response.tsv": "f9cad7b01a4721353a31536b18594d1c",
+    "Chowell_train_Response.tsv": "f9cad7b01a472135fcee3144425e2753",
+    "MSK1_No_Response.tsv": "f9cad7b01a4721354130d78b087ddcd1",
+    "MSK1_Response.tsv": "f9cad7b01a472135932c95d1fc41ff39"
+  },
+  "shape_rows": [
+    {
+      "cols_inferred": 21,
+      "dataset_id": "f9cad7b01a47213588efba34d9aa5fcd",
+      "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16",
+      "hid": 1,
+      "name": "Chowell_test_No_Response.tsv",
+      "rows_inferred": 515,
+      "state": "ok"
+    },
+    {
+      "cols_inferred": 22,
+      "dataset_id": "f9cad7b01a4721353a31536b18594d1c",
+      "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+      "hid": 2,
+      "name": "Chowell_test_Response.tsv",
+      "rows_inferred": 515,
+      "state": "ok"
+    },
+    {
+      "cols_inferred": 22,
+      "dataset_id": "f9cad7b01a472135fcee3144425e2753",
+      "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+      "hid": 3,
+      "name": "Chowell_train_Response.tsv",
+      "rows_inferred": 964,
+      "state": "ok"
+    },
+    {
+      "cols_inferred": 21,
+      "dataset_id": "f9cad7b01a4721354130d78b087ddcd1",
+      "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16",
+      "hid": 4,
+      "name": "MSK1_No_Response.tsv",
+      "rows_inferred": 453,
+      "state": "ok"
+    },
+    {
+      "cols_inferred": 22,
+      "dataset_id": "f9cad7b01a472135932c95d1fc41ff39",
+      "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+      "hid": 5,
+      "name": "MSK1_Response.tsv",
+      "rows_inferred": 453,
+      "state": "ok"
+    }
+  ]
+}

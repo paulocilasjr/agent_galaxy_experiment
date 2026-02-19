@@ -1,0 +1,62 @@
+{
+  "accessible": true,
+  "annotation": null,
+  "api_type": "file",
+  "copied_from_ldda_id": null,
+  "create_time": "2026-02-18T23:57:28.408718",
+  "created_from_basename": null,
+  "creating_job": "bbd44e69cb8906b5cc03b189f660ef30",
+  "data_type": "galaxy.datatypes.binary.H5MLM",
+  "dataset_id": "f9cad7b01a472135b2a94ab4e1e4b608",
+  "deleted": false,
+  "display_apps": [],
+  "display_types": [],
+  "download_url": "/api/histories/bbd44e69cb8906b5d9ad8dc22de96251/contents/f9cad7b01a472135f9864eb1efacb127/display",
+  "drs_id": "hda-527053b5a6a6e7560964bb79e2b024f6",
+  "extension": "h5mlm",
+  "file_ext": "h5mlm",
+  "file_name": "/corral4/main/objects/3/c/5/dataset_3c554da3-f54e-447e-856c-72b4561473dc.dat",
+  "file_size": 12560,
+  "genome_build": "?",
+  "hashes": [],
+  "hda_ldda": "hda",
+  "hid": 6,
+  "history_content_type": "dataset",
+  "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+  "id": "f9cad7b01a472135f9864eb1efacb127",
+  "meta_files": [
+    {
+      "download_url": "/api/histories/bbd44e69cb8906b5d9ad8dc22de96251/contents/f9cad7b01a472135f9864eb1efacb127/metadata_file?metadata_file=hyper_params",
+      "file_type": "hyper_params"
+    }
+  ],
+  "metadata_dbkey": "?",
+  "metadata_hyper_params": "/corral4/main/objects/_metadata_files/b/6/8/metadata_b688e94c-5f49-4f4c-b125-80753ed6a547.dat",
+  "misc_blurb": "12.3 KB",
+  "misc_info": "LinearSVC()\n2026-02-18 23:57:37.212270: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  S",
+  "model_class": "HistoryDatasetAssociation",
+  "name": "New Pipleline/Estimator",
+  "object_store_id": "corral4",
+  "peek": "LinearSVC()",
+  "permissions": {
+    "access": [],
+    "manage": [
+      "24dd4a7b10e74dc4"
+    ]
+  },
+  "purged": false,
+  "quota_source_label": null,
+  "rerunnable": true,
+  "resubmitted": false,
+  "sources": [],
+  "state": "ok",
+  "tags": [],
+  "type": "file",
+  "type_id": "dataset-f9cad7b01a472135f9864eb1efacb127",
+  "update_time": "2026-02-18T23:57:59.294565",
+  "url": "/api/histories/bbd44e69cb8906b5d9ad8dc22de96251/contents/f9cad7b01a472135f9864eb1efacb127",
+  "uuid": "3c554da3-f54e-447e-856c-72b4561473dc",
+  "validated_state": "unknown",
+  "validated_state_message": null,
+  "visible": true
+}

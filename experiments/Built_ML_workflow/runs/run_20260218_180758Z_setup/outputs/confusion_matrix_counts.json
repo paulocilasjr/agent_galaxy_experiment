@@ -1,0 +1,24 @@
+[
+  {
+    "accuracy": 0.29902912621359223,
+    "dataset": "chowell_test",
+    "fn": 0,
+    "fp": 361,
+    "n_rows_compared": 515,
+    "precision_pos": 0.26024590163934425,
+    "recall_pos": 1.0,
+    "tn": 27,
+    "tp": 127
+  },
+  {
+    "accuracy": 0.27593818984547464,
+    "dataset": "msk1_test",
+    "fn": 1,
+    "fp": 327,
+    "n_rows_compared": 453,
+    "precision_pos": 0.26018099547511314,
+    "recall_pos": 0.9913793103448276,
+    "tn": 10,
+    "tp": 115
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "datasets": [
+    {
+      "id": "f9cad7b01a4721354bf8f827bf5df1a5",
+      "name": "wt_H3K4me3_read1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721351533342561fcdc18",
+      "name": "wt_H3K4me3_read2.fastq.gz",
+      "state": "running"
+    }
+  ],
+  "poll": 8
+}

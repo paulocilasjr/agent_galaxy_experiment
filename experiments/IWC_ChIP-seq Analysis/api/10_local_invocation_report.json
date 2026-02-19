@@ -1,0 +1,18 @@
+{
+  "errors": null,
+  "generate_time": "2026-02-18T16:26:00.511779",
+  "generate_version": "25.1",
+  "histories": null,
+  "history_dataset_collections": null,
+  "history_datasets": null,
+  "id": "bbd44e69cb8906b50c241e11d1aec44fbe521b51ee84ed16",
+  "invocation_markdown": "\n# Workflow Execution Summary of ChIP-seq Analysis: Paired-End Read Processing\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs(invocation_id=7f6d92f66b786b5c)\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs(invocation_id=7f6d92f66b786b5c)\n```\n\n## Workflow\n```galaxy\nworkflow_display(invocation_id=7f6d92f66b786b5c)\n```\n",
+  "invocations": null,
+  "jobs": null,
+  "markdown": "\n# Workflow Execution Summary of ChIP-seq Analysis: Paired-End Read Processing\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs(invocation_id=7f6d92f66b786b5c)\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs(invocation_id=7f6d92f66b786b5c)\n```\n\n## Workflow\n```galaxy\nworkflow_display(invocation_id=7f6d92f66b786b5c)\n```\n",
+  "model_class": "Report",
+  "render_format": "markdown",
+  "title": "ChIP-seq Analysis: Paired-End Read Processing",
+  "username": "lyra-jr",
+  "workflows": null
+}

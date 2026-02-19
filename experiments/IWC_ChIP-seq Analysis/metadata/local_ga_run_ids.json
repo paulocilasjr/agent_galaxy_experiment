@@ -1,0 +1,27 @@
+{
+  "collection_id": "d78fa2cadd1fb771",
+  "dataset_ids": [
+    "f9cad7b01a4721354bf8f827bf5df1a5",
+    "f9cad7b01a4721351533342561fcdc18"
+  ],
+  "dataset_names": {
+    "f9cad7b01a4721351533342561fcdc18": "wt_H3K4me3_read2.fastq.gz",
+    "f9cad7b01a4721354bf8f827bf5df1a5": "wt_H3K4me3_read1.fastq.gz"
+  },
+  "galaxy_url": "https://usegalaxy.org",
+  "history_id_local_ga": "bbd44e69cb8906b5b8fba8bcb2057dda",
+  "history_name_local_ga": "IWC_ChIP-seq-local-ga-20260218_161836Z",
+  "invocation_terminal_detected": true,
+  "last_jobs_summary": {
+    "id": "7f6d92f66b786b5c",
+    "model": "WorkflowInvocation",
+    "populated_state": "ok",
+    "states": {
+      "ok": 7
+    }
+  },
+  "local_invocation_id": "7f6d92f66b786b5c",
+  "local_workflow_id": "b6a88c16f02c8f8e",
+  "read1_id": "f9cad7b01a4721354bf8f827bf5df1a5",
+  "read2_id": "f9cad7b01a4721351533342561fcdc18"
+}

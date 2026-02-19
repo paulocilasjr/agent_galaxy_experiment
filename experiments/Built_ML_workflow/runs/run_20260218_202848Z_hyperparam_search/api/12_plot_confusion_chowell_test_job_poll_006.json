@@ -1,0 +1,59 @@
+{
+  "command_line": "python '/cvmfs/main.galaxyproject.org/shed_tools/toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/f234e2e59d76/plotly_ml_performance_plots/plot_ml_performance.py' -i '/corral4/main/objects/4/c/3/dataset_4c39ee46-75a9-4e71-9eb4-c75cdb7e0b47.dat' -j '/corral4/main/objects/6/d/0/dataset_6d014d7b-f16c-44cf-a6a8-ff21674c9eef.dat' -k '/corral4/main/objects/6/0/4/dataset_604c2302-fb8b-468d-b6e7-f44da1c2f0de.dat'",
+  "command_version": null,
+  "copied_from_job_id": null,
+  "create_time": "2026-02-19T00:00:09.896898",
+  "exit_code": null,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+  "id": "bbd44e69cb8906b5fef8318e4ede5c72",
+  "inputs": {
+    "infile_input": {
+      "id": "f9cad7b01a47213553396f5136059f90",
+      "src": "hda",
+      "uuid": "4c39ee46-75a9-4e71-9eb4-c75cdb7e0b47"
+    },
+    "infile_output": {
+      "id": "f9cad7b01a472135b73efc5f82408c70",
+      "src": "hda",
+      "uuid": "6d014d7b-f16c-44cf-a6a8-ff21674c9eef"
+    },
+    "infile_trained_model": {
+      "id": "f9cad7b01a47213569ef53bc0ee1582b",
+      "src": "hda",
+      "uuid": "604c2302-fb8b-468d-b6e7-f44da1c2f0de"
+    }
+  },
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "output_confusion": {
+      "id": "f9cad7b01a4721350fa4ce806d27a5d1",
+      "src": "hda",
+      "uuid": "1fa4c302-60c4-4341-8005-bd42013413f6"
+    },
+    "output_prf": {
+      "id": "f9cad7b01a4721355a08eebb260dbe44",
+      "src": "hda",
+      "uuid": "3e9590dc-3f9e-4c64-8e4f-7d7890e34e10"
+    },
+    "output_roc": {
+      "id": "f9cad7b01a472135b884b5e5879a0451",
+      "src": "hda",
+      "uuid": "0bc9b7e7-b1a2-4043-a69a-84e197ae2819"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\""
+  },
+  "state": "running",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+  "update_time": "2026-02-19T00:00:11.344648",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

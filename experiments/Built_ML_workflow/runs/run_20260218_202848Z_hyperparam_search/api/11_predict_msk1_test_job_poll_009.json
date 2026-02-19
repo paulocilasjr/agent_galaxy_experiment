@@ -1,0 +1,46 @@
+{
+  "command_line": "export HDF5_USE_FILE_LOCKING='FALSE'; python '/cvmfs/main.galaxyproject.org/shed_tools/toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/25b46af53232/model_prediction/model_prediction.py' --inputs '/corral4/main/jobs/074/757/74757577/configs/tmp0vun_yzz' --infile_estimator '/corral4/main/objects/6/0/4/dataset_604c2302-fb8b-468d-b6e7-f44da1c2f0de.dat' --outfile_predict '/corral4/main/jobs/074/757/74757577/outputs/dataset_ca8ef3f2-ce03-49ba-91f4-ee5a4283c53e.dat' --infile1 '/corral4/main/objects/d/9/c/dataset_d9c0153a-7bdc-403c-96bc-486a5537e8a2.dat'",
+  "command_version": "1.0.11.0",
+  "copied_from_job_id": null,
+  "create_time": "2026-02-18T23:59:26.644229",
+  "exit_code": 0,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+  "id": "bbd44e69cb8906b548c7fb08c922097b",
+  "inputs": {
+    "infile_estimator": {
+      "id": "f9cad7b01a47213569ef53bc0ee1582b",
+      "src": "hda",
+      "uuid": "604c2302-fb8b-468d-b6e7-f44da1c2f0de"
+    },
+    "input_options|infile1": {
+      "id": "f9cad7b01a472135265c3e6bfdbe62d5",
+      "src": "hda",
+      "uuid": "d9c0153a-7bdc-403c-96bc-486a5537e8a2"
+    }
+  },
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "outfile_predict": {
+      "id": "f9cad7b01a472135db48b798e1f017d4",
+      "src": "hda",
+      "uuid": "ca8ef3f2-ce03-49ba-91f4-ee5a4283c53e"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\"",
+    "input_options": "{\"__current_case__\": 0, \"column_selector_options_1\": {\"__current_case__\": 4, \"selected_column_selector_option\": \"all_columns\"}, \"header1\": true, \"infile1\": {\"values\": [{\"id\": 169025207, \"src\": \"hda\"}]}, \"selected_input\": \"tabular\"}",
+    "method": "\"predict\""
+  },
+  "state": "ok",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+  "update_time": "2026-02-19T00:00:08.505571",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

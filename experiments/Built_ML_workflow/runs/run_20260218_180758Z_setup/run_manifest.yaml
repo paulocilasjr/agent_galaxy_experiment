@@ -1,0 +1,120 @@
+experiment_id: Built_ML_workflow
+run_id: run_20260218_180758Z_setup
+created_utc: 2026-02-18T18:07:58Z
+status: completed
+dataset_alias: "chowell_msk1_response_tsvs_v1"
+tool_name: "ML_workflow_built_pipeline"
+tool_id: "4588c13287e93b82"
+tool_version: "workflow_extract_from_history_job_ids"
+history_name: "ML_workflow"
+history_id: "bbd44e69cb8906b519322378c6ea8f6e"
+inputs:
+  chowell_test_no_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_test_No_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a47213588efba34d9aa5fcd"
+    galaxy_hid: 1
+    rows_inferred: 515
+    cols_inferred: 21
+    state: "ok"
+  chowell_test_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a4721353a31536b18594d1c"
+    galaxy_hid: 2
+    rows_inferred: 515
+    cols_inferred: 22
+    state: "ok"
+  chowell_train_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a472135fcee3144425e2753"
+    galaxy_hid: 3
+    rows_inferred: 964
+    cols_inferred: 22
+    state: "ok"
+  msk1_no_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/MSK1_No_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a4721354130d78b087ddcd1"
+    galaxy_hid: 4
+    rows_inferred: 453
+    cols_inferred: 21
+    state: "ok"
+  msk1_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/MSK1_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a472135932c95d1fc41ff39"
+    galaxy_hid: 5
+    rows_inferred: 453
+    cols_inferred: 22
+    state: "ok"
+execution:
+  upload_job_id: "bbd44e69cb8906b56ed237db48b242fa"
+  pipeline_builder_job_id: "bbd44e69cb8906b5b326ae67fab9cd2f"
+  model_fit_job_id: "bbd44e69cb8906b5ec06b97be0b7e3cb"
+  prediction_chowell_job_id: "bbd44e69cb8906b5ff0bd2346ab71ecb"
+  prediction_msk1_job_id: "bbd44e69cb8906b59559f4b98bcded4d"
+  confusion_plot_chowell_job_id: "bbd44e69cb8906b54c600b6fb990877c"
+  confusion_plot_msk1_job_id: "bbd44e69cb8906b506c6502ed144f7c1"
+  workflow_extraction_job_ids:
+    - "bbd44e69cb8906b5b326ae67fab9cd2f"
+    - "bbd44e69cb8906b5ec06b97be0b7e3cb"
+    - "bbd44e69cb8906b5ff0bd2346ab71ecb"
+    - "bbd44e69cb8906b59559f4b98bcded4d"
+    - "bbd44e69cb8906b54c600b6fb990877c"
+    - "bbd44e69cb8906b506c6502ed144f7c1"
+outputs:
+  pipeline_estimator:
+    galaxy_dataset_id: "f9cad7b01a472135bd2032f63576f418"
+    galaxy_hid: 6
+    state: "ok"
+  trained_model:
+    galaxy_dataset_id: "f9cad7b01a472135c8e6fc3210694f3e"
+    galaxy_hid: 7
+    state: "ok"
+  prediction_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a4721358fb2bb7b1cf8224b"
+    galaxy_hid: 8
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/predictions_chowell_test.tsv"
+  prediction_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a472135cd0771adbee9659a"
+    galaxy_hid: 9
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/predictions_msk1_test.tsv"
+  confusion_matrix_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a472135ceb51dc7cbca207c"
+    galaxy_hid: 10
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/confusion_matrix_chowell_test.png"
+  confusion_matrix_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a472135ab4ece2bec7ac33a"
+    galaxy_hid: 13
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/confusion_matrix_msk1_test.png"
+  precision_recall_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a4721351ccd879a50f09c86"
+    galaxy_hid: 11
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/precision_recall_fscore_chowell_test.html"
+  precision_recall_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a472135b3d14b5f18c6949b"
+    galaxy_hid: 14
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/precision_recall_fscore_msk1_test.html"
+  roc_auc_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a47213568824b29a996b464"
+    galaxy_hid: 12
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/roc_auc_chowell_test.html"
+  roc_auc_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a472135b32ae62bb673a85d"
+    galaxy_hid: 15
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/roc_auc_msk1_test.html"
+  workflow_definition:
+    workflow_id: "4588c13287e93b82"
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/ML_workflow_built_pipeline.ga"
+notes: "Built chain starting with Pipeline Builder, fixed conditional encoding for model_fit using flattened keys, generated confusion matrices for both requested cohorts, and extracted a reusable workflow with 6 tool steps."

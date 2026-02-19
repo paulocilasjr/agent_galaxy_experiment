@@ -1,0 +1,13 @@
+{
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "inputs": {
+    "final_estimator": {
+      "estimator_selector": {
+        "selected_estimator": "LogisticRegression",
+        "selected_module": "linear_model",
+        "text_params": "max_iter=1000,solver=\"lbfgs\""
+      }
+    }
+  },
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0"
+}

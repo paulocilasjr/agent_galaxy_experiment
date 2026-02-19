@@ -1,0 +1,47 @@
+[
+  {
+    "cols_inferred": 21,
+    "dataset_id": "f9cad7b01a4721356bb1143ed800cc4b",
+    "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16",
+    "hid": 1,
+    "name": "Chowell_test_No_Response.tsv",
+    "rows_inferred": 515,
+    "state": "ok"
+  },
+  {
+    "cols_inferred": 22,
+    "dataset_id": "f9cad7b01a47213553396f5136059f90",
+    "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+    "hid": 2,
+    "name": "Chowell_test_Response.tsv",
+    "rows_inferred": 515,
+    "state": "ok"
+  },
+  {
+    "cols_inferred": 22,
+    "dataset_id": "f9cad7b01a4721352281190d86c3c0d8",
+    "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+    "hid": 3,
+    "name": "Chowell_train_Response.tsv",
+    "rows_inferred": 964,
+    "state": "ok"
+  },
+  {
+    "cols_inferred": 21,
+    "dataset_id": "f9cad7b01a472135265c3e6bfdbe62d5",
+    "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16",
+    "hid": 4,
+    "name": "MSK1_No_Response.tsv",
+    "rows_inferred": 453,
+    "state": "ok"
+  },
+  {
+    "cols_inferred": 22,
+    "dataset_id": "f9cad7b01a4721359c38ecaca105de65",
+    "header": "TMB\tSystemic_therapy_history\tAlbumin\tNLR\tAge\tCancerType1\tCancerType2\tCancerType3\tCancerType4\tCancerType5\tCancerType6\tCancerType7\tCancerType8\tCancerType9\tCancerType10\tCancerType11\tCancerType12\tCancerType13\tCancerType14\tCancerType15\tCancerType16\tResponse",
+    "hid": 5,
+    "name": "MSK1_Response.tsv",
+    "rows_inferred": 453,
+    "state": "ok"
+  }
+]

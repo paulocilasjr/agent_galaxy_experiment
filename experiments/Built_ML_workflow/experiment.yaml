@@ -1,0 +1,6 @@
+experiment_id: Built_ML_workflow
+created_utc: 2026-02-18T18:07:58Z
+objective: "Build and run a Galaxy ML workflow with confusion matrices on Chowell_test and MSK1 test sets"
+primary_tool: "pipeline builder + tabular ML"
+dataset_name: "Chowell/MSK1 response TSVs"
+status: active

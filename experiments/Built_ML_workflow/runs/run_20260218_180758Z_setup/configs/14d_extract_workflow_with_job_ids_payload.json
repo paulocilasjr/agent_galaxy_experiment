@@ -1,0 +1,12 @@
+{
+  "from_history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "job_ids": [
+    "bbd44e69cb8906b5b326ae67fab9cd2f",
+    "bbd44e69cb8906b5ec06b97be0b7e3cb",
+    "bbd44e69cb8906b5ff0bd2346ab71ecb",
+    "bbd44e69cb8906b59559f4b98bcded4d",
+    "bbd44e69cb8906b54c600b6fb990877c",
+    "bbd44e69cb8906b506c6502ed144f7c1"
+  ],
+  "workflow_name": "ML_workflow_built_pipeline"
+}

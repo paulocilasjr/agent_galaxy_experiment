@@ -1,0 +1,10 @@
+{
+  "confusion_chowell": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/confusion_matrix_chowell_test_hyperparam.png",
+  "confusion_msk1": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/confusion_matrix_msk1_test_hyperparam.png",
+  "precision_recall_chowell": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/precision_recall_fscore_chowell_test_hyperparam.html",
+  "precision_recall_msk1": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/precision_recall_fscore_msk1_test_hyperparam.html",
+  "predictions_chowell": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/predictions_chowell_test_hyperparam.tsv",
+  "predictions_msk1": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/predictions_msk1_test_hyperparam.tsv",
+  "roc_auc_chowell": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/roc_auc_chowell_test_hyperparam.html",
+  "roc_auc_msk1": "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/roc_auc_msk1_test_hyperparam.html"
+}

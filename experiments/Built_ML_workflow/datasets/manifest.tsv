@@ -1,0 +1,6 @@
+dataset_alias	source_type	source	notes
+chowell_test_no_response_v1	url	https://zenodo.org/records/13885908/files/Chowell_test_No_Response.tsv	feature-only table for Chowell test cohort
+chowell_test_response_v1	url	https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv	labels included for Chowell test cohort
+chowell_train_response_v1	url	https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv	training data with Response label
+msk1_no_response_v1	url	https://zenodo.org/records/13885908/files/MSK1_No_Response.tsv	feature-only table for MSK1 test cohort
+msk1_response_v1	url	https://zenodo.org/records/13885908/files/MSK1_Response.tsv	labels included for MSK1 test cohort

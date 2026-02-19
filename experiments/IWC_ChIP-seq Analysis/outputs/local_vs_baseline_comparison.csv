@@ -1,0 +1,8 @@
+metric,baseline_iwc_release_v1_0,local_ga_release_0_14
+overall_alignment_rate_percent,98.63,98.68
+narrowpeak_peak_count,13,11
+narrowpeak_signal_value_sum,66.70214,57.220729999999996
+summits_line_count,13,11
+bigwig_file_size,568174,557494
+multiqc_stats_file_size,393,176
+narrowpeak_sha256,dbd2d34eb1f16e631c2952bdfeabb9a82e98045ce3444b600da21448a3df9a88,e868fd64979dc908968d4e87555ae6c18b1919491c9f9c7842a17ad2fd40da3d

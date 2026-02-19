@@ -1,0 +1,245 @@
+{
+  "baseline": {
+    "history_id": "bbd44e69cb8906b5a74b1a30aafedb83",
+    "invocation_id": "2ca0bcda7a418ad4",
+    "invocation_state": "scheduled",
+    "invocation_steps": 12,
+    "jobs_summary": {
+      "id": "2ca0bcda7a418ad4",
+      "model": "WorkflowInvocation",
+      "populated_state": "ok",
+      "states": {
+        "ok": 7
+      }
+    },
+    "key_outputs": {
+      "bigwig_dataset_id": "f9cad7b01a4721350511f3472e53875c",
+      "mapping_stats_dataset_id": "f9cad7b01a472135ddaa252340e7e9db",
+      "multiqc_stats_dataset_id": "f9cad7b01a4721352a9d2bc1dec1c9c1",
+      "narrowpeak_dataset_id": "f9cad7b01a472135811894c8db459b04",
+      "summary_dataset_id": "f9cad7b01a47213575fced8851153c49",
+      "summits_dataset_id": "f9cad7b01a472135d3ff9309a461230b"
+    },
+    "metrics": {
+      "bigwig_file_size": 568174,
+      "macs2_summary_line_count": 25,
+      "mapping_stats": {
+        "overall_alignment_rate_percent": 98.63,
+        "total_reads": 47581
+      },
+      "multiqc_stats_file_size": 393,
+      "narrowpeak": {
+        "bytes": 964,
+        "mean_peak_length": 232.92307692307693,
+        "peak_count": 13,
+        "sha256": "dbd2d34eb1f16e631c2952bdfeabb9a82e98045ce3444b600da21448a3df9a88",
+        "signal_value_count": 13,
+        "signal_value_sum": 66.70214
+      },
+      "summits_line_count": 13
+    },
+    "report_title": "imported: ChIP-seq Analysis: Paired-End Read Processing (release v1.0)",
+    "request_inputs": {
+      "Effective genome size": 1870000000,
+      "Normalize profile": true,
+      "PE fastq input": {
+        "id": "239d876b8b4f7e91",
+        "src": "hdca"
+      },
+      "Percentage of bad quality bases per read": 70,
+      "Reference genome": "mm10"
+    },
+    "run_name": "baseline_iwc_release_v1_0",
+    "tools_by_step": [
+      {
+        "label": "PE fastq input",
+        "order": 0,
+        "tool_id": null
+      },
+      {
+        "label": "Percentage of bad quality bases per read",
+        "order": 1,
+        "tool_id": null
+      },
+      {
+        "label": "Reference genome",
+        "order": 2,
+        "tool_id": null
+      },
+      {
+        "label": "Effective genome size",
+        "order": 3,
+        "tool_id": null
+      },
+      {
+        "label": "Normalize profile",
+        "order": 4,
+        "tool_id": null
+      },
+      {
+        "label": "Fastp (remove adapter and bad quality reads)",
+        "order": 5,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/1.0.1+galaxy2"
+      },
+      {
+        "label": "Bowtie2 map on reference",
+        "order": 6,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.4+galaxy0"
+      },
+      {
+        "label": "filter MAPQ30 concordent pairs",
+        "order": 7,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1"
+      },
+      {
+        "label": "Call Peaks with MACS2",
+        "order": 8,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0"
+      },
+      {
+        "label": "summary of MACS2",
+        "order": 9,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy2"
+      },
+      {
+        "label": "Bigwig from MACS2",
+        "order": 10,
+        "tool_id": "wig_to_bigWig"
+      },
+      {
+        "label": "MultiQC",
+        "order": 11,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3"
+      }
+    ]
+  },
+  "comparison": {
+    "bigwig_file_size_delta_bytes": -10680,
+    "narrowpeak_peak_count_delta": -2,
+    "narrowpeak_signal_sum_delta": -9.481410000000004,
+    "overall_alignment_rate_delta_pct_points": 0.05000000000001137,
+    "same_narrowpeak_sha256": false,
+    "summits_line_count_delta": -2
+  },
+  "galaxy_url": "https://usegalaxy.org",
+  "local": {
+    "history_id": "bbd44e69cb8906b5b8fba8bcb2057dda",
+    "invocation_id": "7f6d92f66b786b5c",
+    "invocation_state": "scheduled",
+    "invocation_steps": 13,
+    "jobs_summary": {
+      "id": "7f6d92f66b786b5c",
+      "model": "WorkflowInvocation",
+      "populated_state": "ok",
+      "states": {
+        "ok": 7
+      }
+    },
+    "key_outputs": {
+      "bigwig_dataset_id": "f9cad7b01a472135ec8849d9d64e994c",
+      "mapping_stats_dataset_id": "f9cad7b01a47213541565837c3ebb9e3",
+      "multiqc_stats_dataset_id": "f9cad7b01a472135eba650bcdd555278",
+      "narrowpeak_dataset_id": "f9cad7b01a47213586b193c49f289876",
+      "summary_dataset_id": "f9cad7b01a4721356eab5b19b803b385",
+      "summits_dataset_id": "f9cad7b01a472135ab1b9ae8f3ec5073"
+    },
+    "metrics": {
+      "bigwig_file_size": 557494,
+      "macs2_summary_line_count": 25,
+      "mapping_stats": {
+        "overall_alignment_rate_percent": 98.68,
+        "total_reads": 46305
+      },
+      "multiqc_stats_file_size": 176,
+      "narrowpeak": {
+        "bytes": 815,
+        "mean_peak_length": 225.45454545454547,
+        "peak_count": 11,
+        "sha256": "e868fd64979dc908968d4e87555ae6c18b1919491c9f9c7842a17ad2fd40da3d",
+        "signal_value_count": 11,
+        "signal_value_sum": 57.220729999999996
+      },
+      "summits_line_count": 11
+    },
+    "report_title": "ChIP-seq Analysis: Paired-End Read Processing",
+    "request_inputs": {
+      "PE fastq input": {
+        "id": "d78fa2cadd1fb771",
+        "src": "hdca"
+      },
+      "adapter_forward": "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC",
+      "adapter_reverse": "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT",
+      "effective_genome_size": 1870000000,
+      "normalize_profile": true,
+      "reference_genome": "mm10"
+    },
+    "run_name": "local_ga_release_0_14",
+    "tools_by_step": [
+      {
+        "label": "PE fastq input",
+        "order": 0,
+        "tool_id": null
+      },
+      {
+        "label": "adapter_forward",
+        "order": 1,
+        "tool_id": null
+      },
+      {
+        "label": "adapter_reverse",
+        "order": 2,
+        "tool_id": null
+      },
+      {
+        "label": "reference_genome",
+        "order": 3,
+        "tool_id": null
+      },
+      {
+        "label": "effective_genome_size",
+        "order": 4,
+        "tool_id": null
+      },
+      {
+        "label": "normalize_profile",
+        "order": 5,
+        "tool_id": null
+      },
+      {
+        "label": "Cutadapt (remove adapter + bad quality bases)",
+        "order": 6,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.0+galaxy0"
+      },
+      {
+        "label": "Bowtie2 map on reference",
+        "order": 7,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1"
+      },
+      {
+        "label": "filter MAPQ30 concordent pairs",
+        "order": 8,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1"
+      },
+      {
+        "label": "Call Peaks with MACS2",
+        "order": 9,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0"
+      },
+      {
+        "label": "summary of MACS2",
+        "order": 10,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy0"
+      },
+      {
+        "label": "Bigwig from MACS2",
+        "order": 11,
+        "tool_id": "wig_to_bigWig"
+      },
+      {
+        "label": "MultiQC",
+        "order": 12,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3"
+      }
+    ]
+  }
+}

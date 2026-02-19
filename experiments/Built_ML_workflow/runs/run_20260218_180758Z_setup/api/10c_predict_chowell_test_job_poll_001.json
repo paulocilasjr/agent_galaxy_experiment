@@ -1,0 +1,46 @@
+{
+  "command_line": null,
+  "command_version": null,
+  "copied_from_job_id": null,
+  "create_time": "2026-02-18T18:16:25.536928",
+  "exit_code": null,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "id": "bbd44e69cb8906b5ff0bd2346ab71ecb",
+  "inputs": {
+    "infile_estimator": {
+      "id": "f9cad7b01a472135c8e6fc3210694f3e",
+      "src": "hda",
+      "uuid": "6611fd74-24f7-478f-9616-8f10061b5311"
+    },
+    "input_options|infile1": {
+      "id": "f9cad7b01a47213588efba34d9aa5fcd",
+      "src": "hda",
+      "uuid": "e0c2bc7f-18f9-460a-8ef6-9ede049383ac"
+    }
+  },
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "outfile_predict": {
+      "id": "f9cad7b01a4721358fb2bb7b1cf8224b",
+      "src": "hda",
+      "uuid": "d2aa9776-b90d-49ff-a98f-aaa976a53dc2"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\"",
+    "input_options": "{\"__current_case__\": 0, \"column_selector_options_1\": {\"__current_case__\": 4, \"selected_column_selector_option\": \"all_columns\"}, \"header1\": true, \"infile1\": {\"values\": [{\"id\": 169014272, \"src\": \"hda\"}]}, \"selected_input\": \"tabular\"}",
+    "method": "\"predict\""
+  },
+  "state": "new",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+  "update_time": "2026-02-18T18:16:25.854822",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

@@ -1,0 +1,356 @@
+[
+  {
+    "description": "Convert BLAST XML output to tabular",
+    "id": "toolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/blastxml_to_tabular/2.16.0+galaxy0",
+    "name": "BLAST XML to tabular",
+    "version": "2.16.0+galaxy0"
+  },
+  {
+    "description": "for classification performance",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_clf_metrics/sklearn_clf_metrics/1.0.11.0",
+    "name": "Calculate metrics",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "for regression performance",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_regression_metrics/sklearn_regression_metrics/1.0.11.0",
+    "name": "Calculate metrics",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "for curation and standardizing of molecular structures",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/chembl/chembl_structure_pipeline/1.0.0+galaxy0",
+    "name": "ChEMBL structure pipeline",
+    "version": "1.0.0+galaxy0"
+  },
+  {
+    "description": "for curation and standardizing of molecular structures",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/chembl_structure_pipeline/chembl_structure_pipeline/1.0.0+galaxy0",
+    "name": "ChEMBL structure pipeline",
+    "version": "1.0.0+galaxy0"
+  },
+  {
+    "description": "",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_discriminant_classifier/sklearn_discriminant_classifier/1.0.11.0",
+    "name": "Discriminant Analysis",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "for classification and regression",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0",
+    "name": "Ensemble methods",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "get important attributes from an estimator or scikit object",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_estimator_attributes/sklearn_estimator_attributes/1.0.11.0",
+    "name": "Estimator attributes",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "using a new batch of labeled data",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_fitted_model_eval/sklearn_fitted_model_eval/1.0.11.0",
+    "name": "Evaluate a Fitted Model",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "or compute affinity or kernel for sets of samples",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_pairwise_metrics/sklearn_pairwise_metrics/1.0.11.0",
+    "name": "Evaluate pairwise distances",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "module, including univariate filter selection methods and recursive feature elimination algorithm",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_feature_selection/sklearn_feature_selection/1.0.11.0",
+    "name": "Feature Selection",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "or other models using a labeled dataset",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+    "name": "Fit a Pipeline, Ensemble",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "",
+    "id": "toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/1.8.17+galaxy0",
+    "name": "Funannotate predict annotation",
+    "version": "1.8.17+galaxy0"
+  },
+  {
+    "description": "for classification and regression",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_generalized_linear/sklearn_generalized_linear/1.0.11.0",
+    "name": "Generalized linear models",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "random samples with controlled size and complexity",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_sample_generator/sklearn_sample_generator/1.0.11.0",
+    "name": "Generate",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "builds a Ludwig machine learning configuration file for a dataset",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_config_generator/ludwig_config_generator/0.10.1+3",
+    "name": "Generic Learner Config Creator",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "loads a pretrained model and evaluates its performance by comparing its predictions with ground truth",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_evaluate/ludwig_evaluate/0.10.1+3",
+    "name": "Generic Learner Evaluate",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "trains and evaluates a model",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_experiment/ludwig_experiment/0.10.1+3",
+    "name": "Generic Learner Experiment",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "searches for optimal Hyperparameters",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_hyperopt/ludwig_hyperopt/0.10.1+3",
+    "name": "Generic Learner Hyperopt",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "loads a pretrained model to do prediction",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_predict/ludwig_predict/0.10.1+3",
+    "name": "Generic Learner Predict",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "renders thefull config based on user input",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_render_config/ludwig_render_config/0.10.1+3",
+    "name": "Generic Learner Render Config",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "trains a deep learning model",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_train/ludwig_train/0.10.1+3",
+    "name": "Generic Learner Train",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "analyzes results and shows in plots",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/ludwig_visualize/ludwig_visualize/0.10.1+3",
+    "name": "Generic Learner Visualize",
+    "version": "0.10.1+3"
+  },
+  {
+    "description": "derives the reverse transcriptase (RT) stop count on each nucleotide from a mapped file provided by the Iterative Mapping module",
+    "id": "toolshed.g2.bx.psu.edu/repos/tyty/structurefold/get_read_pipeline/1.0",
+    "name": "Get RT Stop Counts",
+    "version": "1.0"
+  },
+  {
+    "description": "performs hyperparameter optimization using various SearchCVs",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0",
+    "name": "Hyperparameter Search",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "iteratively maps the raw reads of RNA structural data to the reference transcriptome",
+    "id": "toolshed.g2.bx.psu.edu/repos/tyty/structurefold/iterative_map_pipeline/1.0",
+    "name": "Iterative Mapping",
+    "version": "1.0"
+  },
+  {
+    "description": "- train and apply LightGBM models",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_lightgbm/sklearn_lightgbm/1.0.11.0",
+    "name": "LightGBM",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "Predict 'd' or fragment size from alignment results",
+    "id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_predictd/2.2.9.1+galaxy0",
+    "name": "MACS2 predictd",
+    "version": "2.2.9.1+galaxy0"
+  },
+  {
+    "description": "includes several types of plotting for machine learning",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.11.0",
+    "name": "Machine Learning Visualization Extension",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "predicts on new data using a preffited model",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+    "name": "Model Prediction",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "includes cross_validate, cross_val_predict, learning_curve, and more",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_validation/sklearn_model_validation/1.0.11.0",
+    "name": "Model Validation",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_nn_classifier/sklearn_nn_classifier/1.0.11.0",
+    "name": "Nearest Neighbors Classification",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_numeric_clustering/sklearn_numeric_clustering/1.0.11.0",
+    "name": "Numeric Clustering",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "an all-in-one platform to build pipeline, single estimator, preprocessor and custom wrappers",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+    "name": "Pipeline Builder",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "of tabular data",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4",
+    "name": "Plot confusion matrix, precision, recall and ROC and AUC curves",
+    "version": "0.4"
+  },
+  {
+    "description": "raw feature vectors into standardized datasets",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_data_preprocess/sklearn_data_preprocess/1.0.11.0",
+    "name": "Preprocess",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "with scikit-learn",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_pca/sklearn_pca/1.0.11.0",
+    "name": "Principal component analysis",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "predicts/evaluates your pycaret ML model on a dataset.",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/pycaret_predict/pycaret_predict/3.3.2+2",
+    "name": "PyCaret Predictor/Evaluator",
+    "version": "3.3.2+2"
+  },
+  {
+    "description": "predict RNA structures with or without experimental constraints from the Reactivity Calculation module",
+    "id": "toolshed.g2.bx.psu.edu/repos/tyty/structurefold/predict_pipeline/1.0",
+    "name": "RNA Structure Prediction",
+    "version": "1.0"
+  },
+  {
+    "description": "calculates structural reactivity on each nucleotide based on RT stop counts from the Get RT Stop Counts module",
+    "id": "toolshed.g2.bx.psu.edu/repos/tyty/structurefold/react_cal_pipeline/1.0",
+    "name": "Reactivity Calculation",
+    "version": "1.0"
+  },
+  {
+    "description": "into training and test subsets",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_train_test_split/sklearn_train_test_split/1.0.11.0",
+    "name": "Split Dataset",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "builds stacking, voting ensemble models with numerous base options",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_stacking_ensemble_models/sklearn_stacking_ensemble_models/1.0.8.4",
+    "name": "Stacking Ensembles",
+    "version": "1.0.8.4"
+  },
+  {
+    "description": "for classification",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_svm_classifier/sklearn_svm_classifier/1.0.11.0",
+    "name": "Support vector machines (SVMs)",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "applies and evaluates multiple machine learning models on a tabular dataset",
+    "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/tabular_learner/tabular_learner/0.1.4",
+    "name": "Tabular Learner",
+    "version": "0.1.4"
+  },
+  {
+    "description": "Converts a class vector (integers) to binary class matrix",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_to_categorical/sklearn_to_categorical/1.0.11.0",
+    "name": "To categorical",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "fit a model using part of dataset and evaluate using the rest",
+    "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_train_test_eval/sklearn_train_test_eval/1.0.11.0",
+    "name": "Train, Test and Evaluation",
+    "version": "1.0.11.0"
+  },
+  {
+    "description": "download proteome as XML or fasta",
+    "id": "toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.5.0",
+    "name": "UniProt",
+    "version": "2.5.0"
+  },
+  {
+    "description": "host of input bacteriophage/archaeal virus genomes",
+    "id": "toolshed.g2.bx.psu.edu/repos/ufz/iphop_predict/iphop_predict/1.3.3+galaxy0",
+    "name": "iPHoP predict",
+    "version": "1.3.3+galaxy0"
+  },
+  {
+    "description": "Assembly polishing via neural networks",
+    "id": "toolshed.g2.bx.psu.edu/repos/iuc/medaka_consensus_pipeline/medaka_consensus_pipeline/2.1.1+galaxy0",
+    "name": "medaka consensus pipeline",
+    "version": "2.1.1+galaxy0"
+  },
+  {
+    "description": "via neural networks",
+    "id": "toolshed.g2.bx.psu.edu/repos/iuc/medaka_variant_pipeline/medaka_variant_pipeline/1.4.4+galaxy1",
+    "name": "medaka variant pipeline",
+    "version": "1.4.4+galaxy1"
+  },
+  {
+    "description": "ALPHA Hybrid classifier: VSEARCH exact match + sklearn classifier",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__feature_classifier__classify_hybrid_vsearch_sklearn/qiime2__feature_classifier__classify_hybrid_vsearch_sklearn/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 feature-classifier classify-hybrid-vsearch-sklearn",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Pre-fitted sklearn-based taxonomy classifier",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__feature_classifier__classify_sklearn/qiime2__feature_classifier__classify_sklearn/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 feature-classifier classify-sklearn",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Train an almost arbitrary scikit-learn classifier",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__feature_classifier__fit_classifier_sklearn/qiime2__feature_classifier__fit_classifier_sklearn/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 feature-classifier fit-classifier-sklearn",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Evaluate expected vs. observed taxonomic composition of samples",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__quality_control__evaluate_composition/qiime2__quality_control__evaluate_composition/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 quality-control evaluate-composition",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Compare query (observed) vs. reference (expected) sequences.",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__quality_control__evaluate_seqs/qiime2__quality_control__evaluate_seqs/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 quality-control evaluate-seqs",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Evaluate expected vs. observed taxonomic assignments",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__quality_control__evaluate_taxonomy/qiime2__quality_control__evaluate_taxonomy/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 quality-control evaluate-taxonomy",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Make a confusion matrix from sample classifier predictions.",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__sample_classifier__confusion_matrix/qiime2__sample_classifier__confusion_matrix/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 sample-classifier confusion-matrix",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Use trained classifier to predict target values for new samples.",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__sample_classifier__predict_classification/qiime2__sample_classifier__predict_classification/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 sample-classifier predict-classification",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  },
+  {
+    "description": "Use trained regressor to predict target values for new samples.",
+    "id": "toolshed.g2.bx.psu.edu/repos/q2d2/qiime2__sample_classifier__predict_regression/qiime2__sample_classifier__predict_regression/2026.1.0+q2galaxy.2026.1.0",
+    "name": "qiime2 sample-classifier predict-regression",
+    "version": "2026.1.0+q2galaxy.2026.1.0"
+  }
+]

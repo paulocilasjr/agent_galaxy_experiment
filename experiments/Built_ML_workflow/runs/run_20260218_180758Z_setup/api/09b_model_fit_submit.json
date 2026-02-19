@@ -1,0 +1,19 @@
+{
+  "json": {
+    "err_code": 400008,
+    "err_data": {
+      "input_options|column_selector_options_1|col1": "Parameter 'col1': an invalid option (None) was selected, please verify"
+    },
+    "err_msg": "Parameter 'col1': an invalid option (None) was selected, please verify",
+    "param_errors": {
+      "input_options|column_selector_options_1|col1": {
+        "is_dynamic": true,
+        "message": "Parameter 'col1': an invalid option (None) was selected, please verify",
+        "message_suffix": "an invalid option (None) was selected, please verify",
+        "parameter_name": "col1",
+        "parameter_value": null
+      }
+    }
+  },
+  "status": 400
+}

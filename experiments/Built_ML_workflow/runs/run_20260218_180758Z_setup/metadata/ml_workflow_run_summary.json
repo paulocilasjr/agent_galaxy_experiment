@@ -1,0 +1,29 @@
+{
+  "confusion_matrix_dataset_ids": [
+    "f9cad7b01a472135ceb51dc7cbca207c",
+    "f9cad7b01a472135ab4ece2bec7ac33a"
+  ],
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "history_name": "ML_workflow",
+  "job_ids_for_workflow": [
+    "bbd44e69cb8906b5b326ae67fab9cd2f",
+    "bbd44e69cb8906b5ec06b97be0b7e3cb",
+    "bbd44e69cb8906b5ff0bd2346ab71ecb",
+    "bbd44e69cb8906b59559f4b98bcded4d",
+    "bbd44e69cb8906b54c600b6fb990877c",
+    "bbd44e69cb8906b506c6502ed144f7c1"
+  ],
+  "precision_recall_dataset_ids": [
+    "f9cad7b01a4721351ccd879a50f09c86",
+    "f9cad7b01a472135b3d14b5f18c6949b"
+  ],
+  "prediction_chowell_id": "f9cad7b01a4721358fb2bb7b1cf8224b",
+  "prediction_msk1_id": "f9cad7b01a472135cd0771adbee9659a",
+  "roc_auc_dataset_ids": [
+    "f9cad7b01a47213568824b29a996b464",
+    "f9cad7b01a472135b32ae62bb673a85d"
+  ],
+  "trained_model_id": "f9cad7b01a472135c8e6fc3210694f3e",
+  "workflow_file": "experiments/Built_ML_workflow/runs/run_20260218_180758Z_setup/outputs/ML_workflow_built_pipeline.ga",
+  "workflow_id": "4588c13287e93b82"
+}

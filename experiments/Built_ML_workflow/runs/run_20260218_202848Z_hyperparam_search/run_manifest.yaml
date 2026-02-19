@@ -1,0 +1,124 @@
+experiment_id: Built_ML_workflow
+run_id: run_20260218_202848Z_hyperparam_search
+created_utc: 2026-02-18T20:28:48Z
+status: completed
+dataset_alias: "chowell_msk1_response_tsvs_v1"
+tool_name: "ML_workflow_built_pipeline_hyperparam_search"
+tool_id: "10eaad6bb1a3bb64"
+tool_version: "workflow_extract_from_history_job_ids"
+history_name: "ML_workflow_hyperparam"
+history_id: "bbd44e69cb8906b5d9ad8dc22de96251"
+inputs:
+  chowell_test_no_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_test_No_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a4721356bb1143ed800cc4b"
+    galaxy_hid: 1
+    rows_inferred: 515
+    cols_inferred: 21
+    state: "ok"
+  chowell_test_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_test_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a47213553396f5136059f90"
+    galaxy_hid: 2
+    rows_inferred: 515
+    cols_inferred: 22
+    state: "ok"
+  chowell_train_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/Chowell_train_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a4721352281190d86c3c0d8"
+    galaxy_hid: 3
+    rows_inferred: 964
+    cols_inferred: 22
+    state: "ok"
+  msk1_no_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/MSK1_No_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a472135265c3e6bfdbe62d5"
+    galaxy_hid: 4
+    rows_inferred: 453
+    cols_inferred: 21
+    state: "ok"
+  msk1_response:
+    source_type: "url"
+    source: "https://zenodo.org/records/13885908/files/MSK1_Response.tsv"
+    galaxy_dataset_id: "f9cad7b01a4721359c38ecaca105de65"
+    galaxy_hid: 5
+    rows_inferred: 453
+    cols_inferred: 22
+    state: "ok"
+execution:
+  upload_job_id: "bbd44e69cb8906b57eb57d65688b2492"
+  pipeline_builder_job_id: "bbd44e69cb8906b5cc03b189f660ef30"
+  searchcv_job_id: "bbd44e69cb8906b51fce40c6738cb818"
+  prediction_chowell_job_id: "bbd44e69cb8906b5c25c3841407a98ba"
+  prediction_msk1_job_id: "bbd44e69cb8906b548c7fb08c922097b"
+  confusion_plot_chowell_job_id: "bbd44e69cb8906b5fef8318e4ede5c72"
+  confusion_plot_msk1_job_id: "bbd44e69cb8906b52891c490081832a6"
+  workflow_extraction_job_ids:
+    - "bbd44e69cb8906b5cc03b189f660ef30"
+    - "bbd44e69cb8906b51fce40c6738cb818"
+    - "bbd44e69cb8906b5c25c3841407a98ba"
+    - "bbd44e69cb8906b548c7fb08c922097b"
+    - "bbd44e69cb8906b5fef8318e4ede5c72"
+    - "bbd44e69cb8906b52891c490081832a6"
+outputs:
+  pipeline_estimator:
+    galaxy_dataset_id: "f9cad7b01a472135f9864eb1efacb127"
+    galaxy_hid: 6
+    state: "ok"
+  searchcv_results:
+    galaxy_dataset_id: "f9cad7b01a472135de8db279fff6c3b5"
+    galaxy_hid: 7
+    state: "ok"
+  tuned_model:
+    galaxy_dataset_id: "f9cad7b01a47213569ef53bc0ee1582b"
+    galaxy_hid: 8
+    state: "ok"
+  prediction_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a472135b73efc5f82408c70"
+    galaxy_hid: 9
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/predictions_chowell_test_hyperparam.tsv"
+  prediction_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a472135db48b798e1f017d4"
+    galaxy_hid: 10
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/predictions_msk1_test_hyperparam.tsv"
+  confusion_matrix_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a4721350fa4ce806d27a5d1"
+    galaxy_hid: 11
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/confusion_matrix_chowell_test_hyperparam.png"
+  confusion_matrix_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a4721354b47a07cf2b21930"
+    galaxy_hid: 14
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/confusion_matrix_msk1_test_hyperparam.png"
+  precision_recall_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a4721355a08eebb260dbe44"
+    galaxy_hid: 12
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/precision_recall_fscore_chowell_test_hyperparam.html"
+  precision_recall_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a4721353d7c210712f671b3"
+    galaxy_hid: 15
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/precision_recall_fscore_msk1_test_hyperparam.html"
+  roc_auc_chowell_test:
+    galaxy_dataset_id: "f9cad7b01a472135b884b5e5879a0451"
+    galaxy_hid: 13
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/roc_auc_chowell_test_hyperparam.html"
+  roc_auc_msk1_test:
+    galaxy_dataset_id: "f9cad7b01a47213562abb82258c8ca98"
+    galaxy_hid: 16
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/roc_auc_msk1_test_hyperparam.html"
+  workflow_definition:
+    workflow_id: "10eaad6bb1a3bb64"
+    state: "ok"
+    local_file: "experiments/Built_ML_workflow/runs/run_20260218_202848Z_hyperparam_search/outputs/ML_workflow_built_pipeline_hyperparam_search.ga"
+notes: "Added SearchCV hyperparameter search between Pipeline Builder and prediction using Chowell_train (grid: C in [0.01,0.1,1,10,100], max_iter in [1000,2000,4000]). Confusion matrix outputs generated from tuned model."

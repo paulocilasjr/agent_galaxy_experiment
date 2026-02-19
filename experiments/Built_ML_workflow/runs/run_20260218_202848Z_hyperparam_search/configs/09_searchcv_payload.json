@@ -1,0 +1,38 @@
+{
+  "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+  "inputs": {
+    "infile_estimator": {
+      "id": "f9cad7b01a472135f9864eb1efacb127",
+      "src": "hda"
+    },
+    "input_options|column_selector_options_1|col1": "Response",
+    "input_options|column_selector_options_1|selected_column_selector_option": "all_but_by_header_name",
+    "input_options|column_selector_options_2|col2": "Response",
+    "input_options|column_selector_options_2|selected_column_selector_option2": "by_header_name",
+    "input_options|header1": true,
+    "input_options|header2": true,
+    "input_options|infile1": {
+      "id": "f9cad7b01a4721352281190d86c3c0d8",
+      "src": "hda"
+    },
+    "input_options|infile2": {
+      "id": "f9cad7b01a4721352281190d86c3c0d8",
+      "src": "hda"
+    },
+    "input_options|selected_input": "tabular",
+    "is_deep_learning": false,
+    "options|cv_selector|selected_cv": "default",
+    "options|error_score": true,
+    "options|return_train_score": false,
+    "options|scoring|primary_scoring": "f1_weighted",
+    "options|verbose": "0",
+    "outer_split|split_mode": "no",
+    "save": "save_estimator",
+    "search_algos|selected_search_algo": "GridSearchCV",
+    "search_params_builder|param_set_0|sp_list": "[0.01, 0.1, 1.0, 10.0, 100.0]",
+    "search_params_builder|param_set_0|sp_name": "C",
+    "search_params_builder|param_set_1|sp_list": "[1000, 2000, 4000]",
+    "search_params_builder|param_set_1|sp_name": "max_iter"
+  },
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0"
+}

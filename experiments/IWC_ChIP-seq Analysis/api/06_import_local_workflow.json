@@ -1,0 +1,23 @@
+{
+  "annotations": [
+    "Complete ChIP-seq analysis for paired-end sequencing data. Processes raw FASTQ files through adapter removal (cutadapt), alignment to reference genome (Bowtie2), and stringent quality filtering (MAPQ &gt;= 30, concordant pairs only). Peak calling with MACS2 optimized for paired-end reads identifies protein-DNA binding sites. Generates alignment files, peak calls, and quality metrics for downstream analysis."
+  ],
+  "create_time": "2026-02-18T16:19:24.823684",
+  "creator_deleted": false,
+  "deleted": false,
+  "hidden": false,
+  "id": "b6a88c16f02c8f8e",
+  "importable": false,
+  "latest_workflow_id": 690680,
+  "latest_workflow_uuid": "1834d09c-c683-4424-bc8d-57df156c2fc8",
+  "model_class": "StoredWorkflow",
+  "name": "ChIP-seq Analysis: Paired-End Read Processing",
+  "number_of_steps": 13,
+  "owner": "lyra-jr",
+  "published": false,
+  "tags": [
+    "ChIP"
+  ],
+  "update_time": "2026-02-18T16:19:24.980847",
+  "url": "/api/workflows/b6a88c16f02c8f8e"
+}

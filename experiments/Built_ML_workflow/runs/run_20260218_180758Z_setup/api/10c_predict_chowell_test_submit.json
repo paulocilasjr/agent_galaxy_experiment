@@ -1,0 +1,58 @@
+{
+  "json": {
+    "implicit_collections": [],
+    "jobs": [
+      {
+        "create_time": "2026-02-18T18:16:25.536928",
+        "exit_code": null,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+        "id": "bbd44e69cb8906b5ff0bd2346ab71ecb",
+        "model_class": "Job",
+        "state": "new",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.11.0",
+        "tool_version": "1.0.11.0",
+        "update_time": "2026-02-18T18:16:25.584862"
+      }
+    ],
+    "output_collections": [],
+    "outputs": [
+      {
+        "create_time": "2026-02-18T18:16:25.558035",
+        "data_type": "galaxy.datatypes.tabular.Tabular",
+        "deleted": false,
+        "file_ext": "tabular",
+        "file_size": 0,
+        "genome_build": "?",
+        "hda_ldda": "hda",
+        "hid": 8,
+        "history_content_type": "dataset",
+        "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+        "id": "f9cad7b01a4721358fb2bb7b1cf8224b",
+        "metadata_column_names": [],
+        "metadata_column_types": [],
+        "metadata_columns": 0,
+        "metadata_comment_lines": 0,
+        "metadata_data_lines": 0,
+        "metadata_dbkey": "?",
+        "metadata_delimiter": "\t",
+        "misc_blurb": "queued",
+        "misc_info": null,
+        "model_class": "HistoryDatasetAssociation",
+        "name": "Model Prediction on dataset 1 and 7",
+        "output_name": "outfile_predict",
+        "peek": null,
+        "purged": false,
+        "state": "new",
+        "tags": [],
+        "update_time": "2026-02-18T18:16:25.558049",
+        "uuid": "d2aa9776-b90d-49ff-a98f-aaa976a53dc2",
+        "validated_state": "unknown",
+        "validated_state_message": null,
+        "visible": true
+      }
+    ],
+    "produces_entry_points": false
+  },
+  "status": 200
+}

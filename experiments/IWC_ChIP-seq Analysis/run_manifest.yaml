@@ -1,0 +1,25 @@
+experiment_name: IWC_ChIP-seq Analysis
+created_utc: 2026-02-18T15:59:25Z
+status: completed
+galaxy_url: https://usegalaxy.org
+history_name_local_ga: IWC_ChIP-seq-local-ga-20260218_161836Z
+history_id_local_ga: bbd44e69cb8906b5b8fba8bcb2057dda
+history_name_baseline: IWC_ChIP-seq
+history_id_baseline: bbd44e69cb8906b5a74b1a30aafedb83
+workflow_file: IWC_ChIP-seq Analysis/chipseq-pe.ga
+workflow_file_copy: IWC_ChIP-seq Analysis/configs/chipseq-pe.ga
+baseline_invocation_id: 2ca0bcda7a418ad4
+local_invocation_id: 7f6d92f66b786b5c
+inputs:
+  read1_url: https://zenodo.org/record/1324070/files/wt_H3K4me3_read1.fastq.gz
+  read2_url: https://zenodo.org/record/1324070/files/wt_H3K4me3_read2.fastq.gz
+  reference_genome: mm10
+  effective_genome_size: 1870000000
+  normalize_profile: true
+  adapter_forward: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+  adapter_reverse: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+artifacts:
+  comparison_json: IWC_ChIP-seq Analysis/outputs/local_vs_baseline_comparison.json
+  comparison_md: IWC_ChIP-seq Analysis/outputs/local_vs_baseline_comparison.md
+notes: "Replay local .ga workflow from scratch completed. Final comparison shows non-identical outputs vs baseline (narrowPeak sha256 mismatch; 13 vs 11 peaks)."
+git_commit: a2295789538cc520443b77a4c4bd4b6e4ca6476f

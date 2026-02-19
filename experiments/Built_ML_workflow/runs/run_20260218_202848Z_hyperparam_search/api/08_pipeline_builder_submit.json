@@ -1,0 +1,53 @@
+{
+  "json": {
+    "implicit_collections": [],
+    "jobs": [
+      {
+        "create_time": "2026-02-18T23:57:28.391039",
+        "exit_code": null,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+        "id": "bbd44e69cb8906b5cc03b189f660ef30",
+        "model_class": "Job",
+        "state": "new",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+        "tool_version": "1.0.11.0",
+        "update_time": "2026-02-18T23:57:28.423231"
+      }
+    ],
+    "output_collections": [],
+    "outputs": [
+      {
+        "create_time": "2026-02-18T23:57:28.408718",
+        "data_type": "galaxy.datatypes.binary.H5MLM",
+        "deleted": false,
+        "file_ext": "h5mlm",
+        "file_size": 0,
+        "genome_build": "?",
+        "hda_ldda": "hda",
+        "hid": 6,
+        "history_content_type": "dataset",
+        "history_id": "bbd44e69cb8906b5d9ad8dc22de96251",
+        "id": "f9cad7b01a472135f9864eb1efacb127",
+        "metadata_dbkey": "?",
+        "metadata_hyper_params": null,
+        "misc_blurb": "queued",
+        "misc_info": null,
+        "model_class": "HistoryDatasetAssociation",
+        "name": "New Pipleline/Estimator",
+        "output_name": "outfile",
+        "peek": null,
+        "purged": false,
+        "state": "new",
+        "tags": [],
+        "update_time": "2026-02-18T23:57:28.408726",
+        "uuid": "3c554da3-f54e-447e-856c-72b4561473dc",
+        "validated_state": "unknown",
+        "validated_state_message": null,
+        "visible": true
+      }
+    ],
+    "produces_entry_points": false
+  },
+  "status": 200
+}

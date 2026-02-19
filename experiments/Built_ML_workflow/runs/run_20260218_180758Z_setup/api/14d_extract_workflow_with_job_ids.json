@@ -1,0 +1,19 @@
+{
+  "json": {
+    "create_time": "2026-02-18T18:19:38.264642",
+    "creator_deleted": false,
+    "deleted": false,
+    "hidden": false,
+    "id": "4588c13287e93b82",
+    "importable": false,
+    "latest_workflow_id": 690722,
+    "latest_workflow_uuid": "2e9205ba-6bf1-4a97-8893-2828d3ff4e12",
+    "model_class": "StoredWorkflow",
+    "name": "ML_workflow_built_pipeline",
+    "published": false,
+    "tags": [],
+    "update_time": "2026-02-18T18:19:38.279025",
+    "url": "/api/workflows/4588c13287e93b82"
+  },
+  "status": 200
+}

@@ -1,0 +1,53 @@
+{
+  "json": {
+    "implicit_collections": [],
+    "jobs": [
+      {
+        "create_time": "2026-02-18T18:15:11.941047",
+        "exit_code": null,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+        "id": "bbd44e69cb8906b5ec06b97be0b7e3cb",
+        "model_class": "Job",
+        "state": "new",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+        "tool_version": "1.0.11.0",
+        "update_time": "2026-02-18T18:15:12.013778"
+      }
+    ],
+    "output_collections": [],
+    "outputs": [
+      {
+        "create_time": "2026-02-18T18:15:11.977427",
+        "data_type": "galaxy.datatypes.binary.H5MLM",
+        "deleted": false,
+        "file_ext": "h5mlm",
+        "file_size": 0,
+        "genome_build": "?",
+        "hda_ldda": "hda",
+        "hid": 7,
+        "history_content_type": "dataset",
+        "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+        "id": "f9cad7b01a472135c8e6fc3210694f3e",
+        "metadata_dbkey": "?",
+        "metadata_hyper_params": null,
+        "misc_blurb": "queued",
+        "misc_info": null,
+        "model_class": "HistoryDatasetAssociation",
+        "name": "Fitted model (skeleton) on dataset 3 and 6",
+        "output_name": "out_object",
+        "peek": null,
+        "purged": false,
+        "state": "new",
+        "tags": [],
+        "update_time": "2026-02-18T18:15:11.977448",
+        "uuid": "6611fd74-24f7-478f-9616-8f10061b5311",
+        "validated_state": "unknown",
+        "validated_state_message": null,
+        "visible": true
+      }
+    ],
+    "produces_entry_points": false
+  },
+  "status": 200
+}

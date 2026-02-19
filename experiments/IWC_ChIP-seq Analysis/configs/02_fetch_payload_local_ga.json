@@ -1,0 +1,24 @@
+{
+  "history_id": "bbd44e69cb8906b5b8fba8bcb2057dda",
+  "targets": [
+    {
+      "destination": {
+        "type": "hdas"
+      },
+      "elements": [
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "src": "url",
+          "url": "https://zenodo.org/record/1324070/files/wt_H3K4me3_read1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "src": "url",
+          "url": "https://zenodo.org/record/1324070/files/wt_H3K4me3_read2.fastq.gz"
+        }
+      ]
+    }
+  ]
+}

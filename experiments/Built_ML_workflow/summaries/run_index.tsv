@@ -1,0 +1,3 @@
+run_id	created_utc	status	tool_id	dataset_alias	notes
+run_20260218_180758Z_setup	2026-02-18T18:07:58Z	completed	4588c13287e93b82	chowell_msk1_response_tsvs_v1	setup pipeline_builder->model_fit->predict(x2)->confusion_matrix(x2)
+run_20260218_202848Z_hyperparam_search	2026-02-18T20:28:48Z	completed	10eaad6bb1a3bb64	chowell_msk1_response_tsvs_v1	pipeline_builder->searchcv(grid C,max_iter)->predict(x2)->confusion_matrix(x2)

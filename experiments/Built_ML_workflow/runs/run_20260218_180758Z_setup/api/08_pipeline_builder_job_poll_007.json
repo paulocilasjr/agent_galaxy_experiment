@@ -1,0 +1,35 @@
+{
+  "command_line": "python \"/corral4/main/jobs/074/751/74751794/configs/tmpttluatak\" '/corral4/main/jobs/074/751/74751794/configs/tmpo9kqmzyy'",
+  "command_version": "1.0.11.0",
+  "copied_from_job_id": null,
+  "create_time": "2026-02-18T18:13:10.542718",
+  "exit_code": 0,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "id": "bbd44e69cb8906b5b326ae67fab9cd2f",
+  "inputs": {},
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "outfile": {
+      "id": "f9cad7b01a472135bd2032f63576f418",
+      "src": "hda",
+      "uuid": "b0f964d6-f1d3-4bea-bbaa-1e5b99eb7b74"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\"",
+    "final_estimator": "{\"estimator_selector\": {\"__current_case__\": 0, \"selected_estimator\": \"LinearSVC\", \"selected_module\": \"svm\", \"text_params\": \"\"}}",
+    "pipeline_component": "[{\"__index__\": 0, \"component_selector\": {\"__current_case__\": 0, \"component_type\": \"None\"}}]"
+  },
+  "state": "ok",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0",
+  "update_time": "2026-02-18T18:13:43.467578",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

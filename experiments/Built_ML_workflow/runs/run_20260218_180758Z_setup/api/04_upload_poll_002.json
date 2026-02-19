@@ -1,0 +1,35 @@
+{
+  "datasets": [
+    {
+      "hid": 1,
+      "id": "f9cad7b01a47213588efba34d9aa5fcd",
+      "name": "Chowell_test_No_Response.tsv",
+      "state": "running"
+    },
+    {
+      "hid": 2,
+      "id": "f9cad7b01a4721353a31536b18594d1c",
+      "name": "Chowell_test_Response.tsv",
+      "state": "running"
+    },
+    {
+      "hid": 3,
+      "id": "f9cad7b01a472135fcee3144425e2753",
+      "name": "Chowell_train_Response.tsv",
+      "state": "ok"
+    },
+    {
+      "hid": 4,
+      "id": "f9cad7b01a4721354130d78b087ddcd1",
+      "name": "MSK1_No_Response.tsv",
+      "state": "ok"
+    },
+    {
+      "hid": 5,
+      "id": "f9cad7b01a472135932c95d1fc41ff39",
+      "name": "MSK1_Response.tsv",
+      "state": "ok"
+    }
+  ],
+  "poll": 2
+}

@@ -1,0 +1,50 @@
+{
+  "history_state_ids": {
+    "deferred": [],
+    "discarded": [],
+    "empty": [],
+    "error": [],
+    "failed_metadata": [],
+    "new": [
+      "f9cad7b01a472135563171b56f81a330",
+      "f9cad7b01a4721355d65409cd490da85",
+      "f9cad7b01a47213586b193c49f289876",
+      "f9cad7b01a472135ab1b9ae8f3ec5073",
+      "f9cad7b01a472135af6aa822ea66d195",
+      "f9cad7b01a4721353767990f8e108479",
+      "f9cad7b01a472135cdae63c0d031a163",
+      "f9cad7b01a4721356eab5b19b803b385",
+      "f9cad7b01a472135ec8849d9d64e994c",
+      "f9cad7b01a47213586528c45fb1adc05",
+      "f9cad7b01a472135eba650bcdd555278"
+    ],
+    "ok": [
+      "f9cad7b01a4721354bf8f827bf5df1a5",
+      "f9cad7b01a4721351533342561fcdc18",
+      "f9cad7b01a472135fd6f73f3075fb8f1",
+      "f9cad7b01a472135ab4fb4968b788934",
+      "f9cad7b01a472135fb948626978307bd"
+    ],
+    "paused": [],
+    "queued": [],
+    "running": [
+      "f9cad7b01a4721350c81cdee5ae32b38",
+      "f9cad7b01a47213541565837c3ebb9e3"
+    ],
+    "setting_metadata": [],
+    "upload": []
+  },
+  "invocation_state": "scheduled",
+  "invocation_steps": 13,
+  "jobs_summary": {
+    "id": "7f6d92f66b786b5c",
+    "model": "WorkflowInvocation",
+    "populated_state": "ok",
+    "states": {
+      "new": 5,
+      "ok": 1,
+      "running": 1
+    }
+  },
+  "poll": 26
+}

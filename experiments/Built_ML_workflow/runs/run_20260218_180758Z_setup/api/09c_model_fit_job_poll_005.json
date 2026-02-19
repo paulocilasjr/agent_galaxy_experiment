@@ -1,0 +1,51 @@
+{
+  "command_line": "export HDF5_USE_FILE_LOCKING='FALSE'; python '/cvmfs/main.galaxyproject.org/shed_tools/toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/f0ede473a7e8/sklearn_model_fit/simple_model_fit.py' --inputs '/corral4/main/jobs/074/751/74751846/configs/tmpv76d_54o' --infile_estimator '/corral4/main/objects/b/0/f/dataset_b0f964d6-f1d3-4bea-bbaa-1e5b99eb7b74.dat' --infile1 '/corral4/main/objects/3/c/5/dataset_3c59cf99-6f7c-4643-9398-e554f0844474.dat' --infile2 '/corral4/main/objects/3/c/5/dataset_3c59cf99-6f7c-4643-9398-e554f0844474.dat' --out_object '/corral4/main/jobs/074/751/74751846/outputs/dataset_6611fd74-24f7-478f-9616-8f10061b5311.dat'",
+  "command_version": null,
+  "copied_from_job_id": null,
+  "create_time": "2026-02-18T18:15:11.941047",
+  "exit_code": null,
+  "external_id": null,
+  "galaxy_version": "25.1",
+  "handler": null,
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "id": "bbd44e69cb8906b5ec06b97be0b7e3cb",
+  "inputs": {
+    "infile_estimator": {
+      "id": "f9cad7b01a472135bd2032f63576f418",
+      "src": "hda",
+      "uuid": "b0f964d6-f1d3-4bea-bbaa-1e5b99eb7b74"
+    },
+    "input_options|infile1": {
+      "id": "f9cad7b01a472135fcee3144425e2753",
+      "src": "hda",
+      "uuid": "3c59cf99-6f7c-4643-9398-e554f0844474"
+    },
+    "input_options|infile2": {
+      "id": "f9cad7b01a472135fcee3144425e2753",
+      "src": "hda",
+      "uuid": "3c59cf99-6f7c-4643-9398-e554f0844474"
+    }
+  },
+  "job_runner_name": null,
+  "model_class": "Job",
+  "output_collections": {},
+  "outputs": {
+    "out_object": {
+      "id": "f9cad7b01a472135c8e6fc3210694f3e",
+      "src": "hda",
+      "uuid": "6611fd74-24f7-478f-9616-8f10061b5311"
+    }
+  },
+  "params": {
+    "__input_ext": "\"input\"",
+    "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+    "dbkey": "\"?\"",
+    "input_options": "{\"__current_case__\": 0, \"column_selector_options_1\": {\"__current_case__\": 3, \"col1\": \"Response\", \"selected_column_selector_option\": \"all_but_by_header_name\"}, \"column_selector_options_2\": {\"__current_case__\": 2, \"col2\": \"Response\", \"selected_column_selector_option2\": \"by_header_name\"}, \"header1\": true, \"header2\": true, \"infile1\": {\"values\": [{\"id\": 169014274, \"src\": \"hda\"}]}, \"infile2\": {\"values\": [{\"id\": 169014274, \"src\": \"hda\"}]}, \"selected_input\": \"tabular\"}",
+    "is_deep_learning": "false"
+  },
+  "state": "running",
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+  "update_time": "2026-02-18T18:15:16.177635",
+  "user_email": null,
+  "user_id": "92401dda9a0b9e33"
+}

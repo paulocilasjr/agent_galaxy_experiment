@@ -1,0 +1,25 @@
+{
+  "history_id": "bbd44e69cb8906b5b8fba8bcb2057dda",
+  "inputs": {
+    "PE fastq input": {
+      "id": "d78fa2cadd1fb771",
+      "src": "hdca"
+    },
+    "adapter_forward": "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC",
+    "adapter_reverse": "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT",
+    "effective_genome_size": 1870000000,
+    "normalize_profile": true,
+    "reference_genome": "mm10"
+  },
+  "inputs_by": "name",
+  "instance": true,
+  "parameters": null,
+  "parameters_normalized": true,
+  "preferred_intermediate_object_store_id": null,
+  "preferred_object_store_id": null,
+  "preferred_outputs_object_store_id": null,
+  "replacement_params": null,
+  "resource_params": null,
+  "use_cached_job": false,
+  "workflow_id": "87e2b76667c94e07"
+}

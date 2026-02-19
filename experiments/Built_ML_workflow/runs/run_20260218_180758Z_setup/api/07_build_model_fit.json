@@ -1,0 +1,1550 @@
+{
+  "action": "/tool_runner/index",
+  "citations": true,
+  "creator": null,
+  "credentials": [],
+  "description": "or other models using a labeled dataset",
+  "display": true,
+  "edam_operations": [],
+  "edam_topics": [],
+  "enctype": "application/x-www-form-urlencoded",
+  "errors": {
+    "infile_estimator": "Parameter 'infile_estimator': specify a dataset of the required format / build for parameter",
+    "input_options|column_selector_options_1|col1": "Parameter 'col1': an invalid option (None) was selected, please verify"
+  },
+  "form_style": "regular",
+  "help": "<p><strong>What it does</strong></p>\n<p>This tools takes a pre-built model to simply fit on the provided labeled dataset by calling scikit-learn API <cite>fit</cite>. The model could be built in <cite>build_pipeline</cite> tool, <cite>stacking_ensemble</cite> tool or other places. Limited deep learning model is also supported.</p>\n<p>The supported labeled dataset are the following:</p>\n<ul class=\"simple\">\n<li>tabular</li>\n<li>sparse</li>\n</ul>\n<p><strong>Output</strong></p>\n<ul class=\"simple\">\n<li>fitted model, h5mlm model.</li>\n<li>optional hdf5 file containing weights for deep learning models.</li>\n</ul>\n",
+  "help_format": "restructuredtext",
+  "hidden": "",
+  "history_id": "bbd44e69cb8906b519322378c6ea8f6e",
+  "icon": null,
+  "id": "toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_model_fit/sklearn_model_fit/1.0.11.0",
+  "inputs": [
+    {
+      "argument": null,
+      "default_value": null,
+      "edam": {
+        "edam_data": [
+          "data_0006"
+        ],
+        "edam_formats": [
+          "format_3590"
+        ]
+      },
+      "extensions": [
+        "h5mlm"
+      ],
+      "help": "",
+      "help_format": "html",
+      "hidden": false,
+      "is_dynamic": false,
+      "label": "Choose the dataset containing pipeline/estimator",
+      "model_class": "DataToolParameter",
+      "multiple": false,
+      "name": "infile_estimator",
+      "optional": false,
+      "options": {
+        "dce": [],
+        "hda": [],
+        "hdca": [],
+        "ldda": []
+      },
+      "refresh_on_change": true,
+      "tag": null,
+      "text_value": "No dataset.",
+      "type": "data",
+      "value": null
+    },
+    {
+      "argument": null,
+      "default_value": false,
+      "falsevalue": "boolfalse",
+      "help": "",
+      "help_format": "html",
+      "hidden": false,
+      "is_dynamic": false,
+      "label": "Is the estimator a deep learning model?",
+      "model_class": "BooleanToolParameter",
+      "name": "is_deep_learning",
+      "optional": false,
+      "refresh_on_change": false,
+      "text_value": "False",
+      "truevalue": "booltrue",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "cases": [
+        {
+          "inputs": [
+            {
+              "argument": null,
+              "default_value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              },
+              "edam": {
+                "edam_data": [
+                  "data_0006"
+                ],
+                "edam_formats": [
+                  "format_3475"
+                ]
+              },
+              "extensions": [
+                "tabular"
+              ],
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Choose the training dataset containing features",
+              "model_class": "DataToolParameter",
+              "multiple": false,
+              "name": "infile1",
+              "optional": false,
+              "options": {
+                "dce": [],
+                "hda": [
+                  {
+                    "hid": 5,
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "keep": false,
+                    "name": "MSK1_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 4,
+                    "id": "f9cad7b01a4721354130d78b087ddcd1",
+                    "keep": false,
+                    "name": "MSK1_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 3,
+                    "id": "f9cad7b01a472135fcee3144425e2753",
+                    "keep": false,
+                    "name": "Chowell_train_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 2,
+                    "id": "f9cad7b01a4721353a31536b18594d1c",
+                    "keep": false,
+                    "name": "Chowell_test_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 1,
+                    "id": "f9cad7b01a47213588efba34d9aa5fcd",
+                    "keep": false,
+                    "name": "Chowell_test_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  }
+                ],
+                "hdca": [],
+                "ldda": []
+              },
+              "refresh_on_change": true,
+              "tag": null,
+              "text_value": "No dataset.",
+              "type": "data",
+              "value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              }
+            },
+            {
+              "argument": null,
+              "default_value": false,
+              "falsevalue": "boolfalse",
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Does the dataset contain header:",
+              "model_class": "BooleanToolParameter",
+              "name": "header1",
+              "optional": true,
+              "refresh_on_change": false,
+              "text_value": "False",
+              "truevalue": "booltrue",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "cases": [
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile1",
+                      "default_value": null,
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": true,
+                      "name": "col1",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [
+                        [
+                          "c1: TMB",
+                          "1",
+                          false
+                        ],
+                        [
+                          "c2: Systemic_therapy_history",
+                          "2",
+                          false
+                        ],
+                        [
+                          "c3: Albumin",
+                          "3",
+                          false
+                        ],
+                        [
+                          "c4: NLR",
+                          "4",
+                          false
+                        ],
+                        [
+                          "c5: Age",
+                          "5",
+                          false
+                        ],
+                        [
+                          "c6: CancerType1",
+                          "6",
+                          false
+                        ],
+                        [
+                          "c7: CancerType2",
+                          "7",
+                          false
+                        ],
+                        [
+                          "c8: CancerType3",
+                          "8",
+                          false
+                        ],
+                        [
+                          "c9: CancerType4",
+                          "9",
+                          false
+                        ],
+                        [
+                          "c10: CancerType5",
+                          "10",
+                          false
+                        ],
+                        [
+                          "c11: CancerType6",
+                          "11",
+                          false
+                        ],
+                        [
+                          "c12: CancerType7",
+                          "12",
+                          false
+                        ],
+                        [
+                          "c13: CancerType8",
+                          "13",
+                          false
+                        ],
+                        [
+                          "c14: CancerType9",
+                          "14",
+                          false
+                        ],
+                        [
+                          "c15: CancerType10",
+                          "15",
+                          false
+                        ],
+                        [
+                          "c16: CancerType11",
+                          "16",
+                          false
+                        ],
+                        [
+                          "c17: CancerType12",
+                          "17",
+                          false
+                        ],
+                        [
+                          "c18: CancerType13",
+                          "18",
+                          false
+                        ],
+                        [
+                          "c19: CancerType14",
+                          "19",
+                          false
+                        ],
+                        [
+                          "c20: CancerType15",
+                          "20",
+                          false
+                        ],
+                        [
+                          "c21: CancerType16",
+                          "21",
+                          false
+                        ],
+                        [
+                          "c22: Response",
+                          "22",
+                          false
+                        ]
+                      ],
+                      "refresh_on_change": false,
+                      "text_value": "None",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": null
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile1",
+                      "default_value": null,
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": true,
+                      "name": "col1",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [
+                        [
+                          "c1: TMB",
+                          "1",
+                          false
+                        ],
+                        [
+                          "c2: Systemic_therapy_history",
+                          "2",
+                          false
+                        ],
+                        [
+                          "c3: Albumin",
+                          "3",
+                          false
+                        ],
+                        [
+                          "c4: NLR",
+                          "4",
+                          false
+                        ],
+                        [
+                          "c5: Age",
+                          "5",
+                          false
+                        ],
+                        [
+                          "c6: CancerType1",
+                          "6",
+                          false
+                        ],
+                        [
+                          "c7: CancerType2",
+                          "7",
+                          false
+                        ],
+                        [
+                          "c8: CancerType3",
+                          "8",
+                          false
+                        ],
+                        [
+                          "c9: CancerType4",
+                          "9",
+                          false
+                        ],
+                        [
+                          "c10: CancerType5",
+                          "10",
+                          false
+                        ],
+                        [
+                          "c11: CancerType6",
+                          "11",
+                          false
+                        ],
+                        [
+                          "c12: CancerType7",
+                          "12",
+                          false
+                        ],
+                        [
+                          "c13: CancerType8",
+                          "13",
+                          false
+                        ],
+                        [
+                          "c14: CancerType9",
+                          "14",
+                          false
+                        ],
+                        [
+                          "c15: CancerType10",
+                          "15",
+                          false
+                        ],
+                        [
+                          "c16: CancerType11",
+                          "16",
+                          false
+                        ],
+                        [
+                          "c17: CancerType12",
+                          "17",
+                          false
+                        ],
+                        [
+                          "c18: CancerType13",
+                          "18",
+                          false
+                        ],
+                        [
+                          "c19: CancerType14",
+                          "19",
+                          false
+                        ],
+                        [
+                          "c20: CancerType15",
+                          "20",
+                          false
+                        ],
+                        [
+                          "c21: CancerType16",
+                          "21",
+                          false
+                        ],
+                        [
+                          "c22: Response",
+                          "22",
+                          false
+                        ]
+                      ],
+                      "refresh_on_change": false,
+                      "text_value": "None",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": null
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col1",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_header_name"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col1",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_header_name"
+                },
+                {
+                  "inputs": [],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_columns"
+                }
+              ],
+              "model_class": "Conditional",
+              "name": "column_selector_options_1",
+              "test_param": {
+                "argument": null,
+                "display": null,
+                "help": "",
+                "help_format": "html",
+                "hidden": false,
+                "is_dynamic": false,
+                "label": "Choose how to select data by column:",
+                "model_class": "SelectToolParameter",
+                "multiple": false,
+                "name": "selected_column_selector_option",
+                "optional": false,
+                "options": [
+                  [
+                    "Select columns by column index number(s)",
+                    "by_index_number",
+                    true
+                  ],
+                  [
+                    "All columns EXCLUDING some by column index number(s)",
+                    "all_but_by_index_number",
+                    false
+                  ],
+                  [
+                    "Select columns by column header name(s)",
+                    "by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns EXCLUDING some by column header name(s)",
+                    "all_but_by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns",
+                    "all_columns",
+                    false
+                  ]
+                ],
+                "refresh_on_change": true,
+                "text_value": "Select columns by column index number(s)",
+                "textable": false,
+                "type": "select",
+                "value": "by_index_number"
+              },
+              "type": "conditional"
+            },
+            {
+              "argument": null,
+              "default_value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              },
+              "edam": {
+                "edam_data": [
+                  "data_0006"
+                ],
+                "edam_formats": [
+                  "format_3475"
+                ]
+              },
+              "extensions": [
+                "tabular"
+              ],
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Dataset containing class labels or target values:",
+              "model_class": "DataToolParameter",
+              "multiple": false,
+              "name": "infile2",
+              "optional": false,
+              "options": {
+                "dce": [],
+                "hda": [
+                  {
+                    "hid": 5,
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "keep": false,
+                    "name": "MSK1_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 4,
+                    "id": "f9cad7b01a4721354130d78b087ddcd1",
+                    "keep": false,
+                    "name": "MSK1_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 3,
+                    "id": "f9cad7b01a472135fcee3144425e2753",
+                    "keep": false,
+                    "name": "Chowell_train_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 2,
+                    "id": "f9cad7b01a4721353a31536b18594d1c",
+                    "keep": false,
+                    "name": "Chowell_test_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 1,
+                    "id": "f9cad7b01a47213588efba34d9aa5fcd",
+                    "keep": false,
+                    "name": "Chowell_test_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  }
+                ],
+                "hdca": [],
+                "ldda": []
+              },
+              "refresh_on_change": true,
+              "tag": null,
+              "text_value": "No dataset.",
+              "type": "data",
+              "value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              }
+            },
+            {
+              "argument": null,
+              "default_value": false,
+              "falsevalue": "boolfalse",
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Does the dataset contain header:",
+              "model_class": "BooleanToolParameter",
+              "name": "header2",
+              "optional": true,
+              "refresh_on_change": false,
+              "text_value": "False",
+              "truevalue": "booltrue",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "cases": [
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile2",
+                      "default_value": "1",
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": false,
+                      "name": "col2",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [
+                        [
+                          "c1: TMB",
+                          "1",
+                          false
+                        ],
+                        [
+                          "c2: Systemic_therapy_history",
+                          "2",
+                          false
+                        ],
+                        [
+                          "c3: Albumin",
+                          "3",
+                          false
+                        ],
+                        [
+                          "c4: NLR",
+                          "4",
+                          false
+                        ],
+                        [
+                          "c5: Age",
+                          "5",
+                          false
+                        ],
+                        [
+                          "c6: CancerType1",
+                          "6",
+                          false
+                        ],
+                        [
+                          "c7: CancerType2",
+                          "7",
+                          false
+                        ],
+                        [
+                          "c8: CancerType3",
+                          "8",
+                          false
+                        ],
+                        [
+                          "c9: CancerType4",
+                          "9",
+                          false
+                        ],
+                        [
+                          "c10: CancerType5",
+                          "10",
+                          false
+                        ],
+                        [
+                          "c11: CancerType6",
+                          "11",
+                          false
+                        ],
+                        [
+                          "c12: CancerType7",
+                          "12",
+                          false
+                        ],
+                        [
+                          "c13: CancerType8",
+                          "13",
+                          false
+                        ],
+                        [
+                          "c14: CancerType9",
+                          "14",
+                          false
+                        ],
+                        [
+                          "c15: CancerType10",
+                          "15",
+                          false
+                        ],
+                        [
+                          "c16: CancerType11",
+                          "16",
+                          false
+                        ],
+                        [
+                          "c17: CancerType12",
+                          "17",
+                          false
+                        ],
+                        [
+                          "c18: CancerType13",
+                          "18",
+                          false
+                        ],
+                        [
+                          "c19: CancerType14",
+                          "19",
+                          false
+                        ],
+                        [
+                          "c20: CancerType15",
+                          "20",
+                          false
+                        ],
+                        [
+                          "c21: CancerType16",
+                          "21",
+                          false
+                        ],
+                        [
+                          "c22: Response",
+                          "22",
+                          false
+                        ]
+                      ],
+                      "refresh_on_change": false,
+                      "text_value": "1",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": "1"
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile2",
+                      "default_value": "1",
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": false,
+                      "name": "col2",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [
+                        [
+                          "c1: TMB",
+                          "1",
+                          false
+                        ],
+                        [
+                          "c2: Systemic_therapy_history",
+                          "2",
+                          false
+                        ],
+                        [
+                          "c3: Albumin",
+                          "3",
+                          false
+                        ],
+                        [
+                          "c4: NLR",
+                          "4",
+                          false
+                        ],
+                        [
+                          "c5: Age",
+                          "5",
+                          false
+                        ],
+                        [
+                          "c6: CancerType1",
+                          "6",
+                          false
+                        ],
+                        [
+                          "c7: CancerType2",
+                          "7",
+                          false
+                        ],
+                        [
+                          "c8: CancerType3",
+                          "8",
+                          false
+                        ],
+                        [
+                          "c9: CancerType4",
+                          "9",
+                          false
+                        ],
+                        [
+                          "c10: CancerType5",
+                          "10",
+                          false
+                        ],
+                        [
+                          "c11: CancerType6",
+                          "11",
+                          false
+                        ],
+                        [
+                          "c12: CancerType7",
+                          "12",
+                          false
+                        ],
+                        [
+                          "c13: CancerType8",
+                          "13",
+                          false
+                        ],
+                        [
+                          "c14: CancerType9",
+                          "14",
+                          false
+                        ],
+                        [
+                          "c15: CancerType10",
+                          "15",
+                          false
+                        ],
+                        [
+                          "c16: CancerType11",
+                          "16",
+                          false
+                        ],
+                        [
+                          "c17: CancerType12",
+                          "17",
+                          false
+                        ],
+                        [
+                          "c18: CancerType13",
+                          "18",
+                          false
+                        ],
+                        [
+                          "c19: CancerType14",
+                          "19",
+                          false
+                        ],
+                        [
+                          "c20: CancerType15",
+                          "20",
+                          false
+                        ],
+                        [
+                          "c21: CancerType16",
+                          "21",
+                          false
+                        ],
+                        [
+                          "c22: Response",
+                          "22",
+                          false
+                        ]
+                      ],
+                      "refresh_on_change": false,
+                      "text_value": "1",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": "1"
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col2",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_header_name"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col2",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_header_name"
+                },
+                {
+                  "inputs": [],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_columns"
+                }
+              ],
+              "model_class": "Conditional",
+              "name": "column_selector_options_2",
+              "test_param": {
+                "argument": null,
+                "display": null,
+                "help": "",
+                "help_format": "html",
+                "hidden": false,
+                "is_dynamic": false,
+                "label": "Choose how to select data by column:",
+                "model_class": "SelectToolParameter",
+                "multiple": false,
+                "name": "selected_column_selector_option2",
+                "optional": false,
+                "options": [
+                  [
+                    "Select columns by column index number(s)",
+                    "by_index_number",
+                    true
+                  ],
+                  [
+                    "All columns EXCLUDING some by column index number(s)",
+                    "all_but_by_index_number",
+                    false
+                  ],
+                  [
+                    "Select columns by column header name(s)",
+                    "by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns EXCLUDING some by column header name(s)",
+                    "all_but_by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns",
+                    "all_columns",
+                    false
+                  ]
+                ],
+                "refresh_on_change": true,
+                "text_value": "Select columns by column index number(s)",
+                "textable": false,
+                "type": "select",
+                "value": "by_index_number"
+              },
+              "type": "conditional"
+            }
+          ],
+          "model_class": "ConditionalWhen",
+          "value": "tabular"
+        },
+        {
+          "inputs": [
+            {
+              "argument": null,
+              "default_value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              },
+              "edam": {
+                "edam_data": [
+                  "data_0006"
+                ],
+                "edam_formats": [
+                  "format_2330"
+                ]
+              },
+              "extensions": [
+                "txt"
+              ],
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Select a sparse matrix:",
+              "model_class": "DataToolParameter",
+              "multiple": false,
+              "name": "infile1",
+              "optional": false,
+              "options": {
+                "dce": [],
+                "hda": [
+                  {
+                    "hid": 5,
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "keep": false,
+                    "name": "MSK1_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 4,
+                    "id": "f9cad7b01a4721354130d78b087ddcd1",
+                    "keep": false,
+                    "name": "MSK1_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 3,
+                    "id": "f9cad7b01a472135fcee3144425e2753",
+                    "keep": false,
+                    "name": "Chowell_train_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 2,
+                    "id": "f9cad7b01a4721353a31536b18594d1c",
+                    "keep": false,
+                    "name": "Chowell_test_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 1,
+                    "id": "f9cad7b01a47213588efba34d9aa5fcd",
+                    "keep": false,
+                    "name": "Chowell_test_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  }
+                ],
+                "hdca": [],
+                "ldda": []
+              },
+              "refresh_on_change": true,
+              "tag": null,
+              "text_value": "No dataset.",
+              "type": "data",
+              "value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              }
+            },
+            {
+              "argument": null,
+              "default_value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              },
+              "edam": {
+                "edam_data": [
+                  "data_0006"
+                ],
+                "edam_formats": [
+                  "format_3475"
+                ]
+              },
+              "extensions": [
+                "tabular"
+              ],
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Dataset containing class labels or target values:",
+              "model_class": "DataToolParameter",
+              "multiple": false,
+              "name": "infile2",
+              "optional": false,
+              "options": {
+                "dce": [],
+                "hda": [
+                  {
+                    "hid": 5,
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "keep": false,
+                    "name": "MSK1_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 4,
+                    "id": "f9cad7b01a4721354130d78b087ddcd1",
+                    "keep": false,
+                    "name": "MSK1_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 3,
+                    "id": "f9cad7b01a472135fcee3144425e2753",
+                    "keep": false,
+                    "name": "Chowell_train_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 2,
+                    "id": "f9cad7b01a4721353a31536b18594d1c",
+                    "keep": false,
+                    "name": "Chowell_test_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  },
+                  {
+                    "hid": 1,
+                    "id": "f9cad7b01a47213588efba34d9aa5fcd",
+                    "keep": false,
+                    "name": "Chowell_test_No_Response.tsv",
+                    "src": "hda",
+                    "tags": []
+                  }
+                ],
+                "hdca": [],
+                "ldda": []
+              },
+              "refresh_on_change": true,
+              "tag": null,
+              "text_value": "No dataset.",
+              "type": "data",
+              "value": {
+                "values": [
+                  {
+                    "id": "f9cad7b01a472135932c95d1fc41ff39",
+                    "src": "hda"
+                  }
+                ]
+              }
+            },
+            {
+              "argument": null,
+              "default_value": false,
+              "falsevalue": "boolfalse",
+              "help": "",
+              "help_format": "html",
+              "hidden": false,
+              "is_dynamic": false,
+              "label": "Does the dataset contain header:",
+              "model_class": "BooleanToolParameter",
+              "name": "header2",
+              "optional": true,
+              "refresh_on_change": false,
+              "text_value": "False",
+              "truevalue": "booltrue",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "cases": [
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile2",
+                      "default_value": null,
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": false,
+                      "name": "col2",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [],
+                      "refresh_on_change": false,
+                      "text_value": "None",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": null
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "argument": null,
+                      "data_ref": "infile2",
+                      "default_value": null,
+                      "display": null,
+                      "help": "",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": true,
+                      "label": "Select target column(s):",
+                      "model_class": "ColumnListParameter",
+                      "multiple": false,
+                      "name": "col2",
+                      "numerical": false,
+                      "optional": false,
+                      "options": [],
+                      "refresh_on_change": false,
+                      "text_value": "None",
+                      "textable": false,
+                      "type": "data_column",
+                      "value": null
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_index_number"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col2",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "by_header_name"
+                },
+                {
+                  "inputs": [
+                    {
+                      "area": false,
+                      "argument": null,
+                      "datalist": [],
+                      "default_value": "",
+                      "help": "Comma-separated string. For example: target1,target2",
+                      "help_format": "html",
+                      "hidden": false,
+                      "is_dynamic": false,
+                      "label": "Type header name(s):",
+                      "model_class": "TextToolParameter",
+                      "name": "col2",
+                      "optional": true,
+                      "refresh_on_change": false,
+                      "text_value": "Empty.",
+                      "type": "text",
+                      "value": ""
+                    }
+                  ],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_but_by_header_name"
+                },
+                {
+                  "inputs": [],
+                  "model_class": "ConditionalWhen",
+                  "value": "all_columns"
+                }
+              ],
+              "model_class": "Conditional",
+              "name": "column_selector_options_2",
+              "test_param": {
+                "argument": null,
+                "display": null,
+                "help": "",
+                "help_format": "html",
+                "hidden": false,
+                "is_dynamic": false,
+                "label": "Choose how to select data by column:",
+                "model_class": "SelectToolParameter",
+                "multiple": false,
+                "name": "selected_column_selector_option2",
+                "optional": false,
+                "options": [
+                  [
+                    "Select columns by column index number(s)",
+                    "by_index_number",
+                    true
+                  ],
+                  [
+                    "All columns EXCLUDING some by column index number(s)",
+                    "all_but_by_index_number",
+                    false
+                  ],
+                  [
+                    "Select columns by column header name(s)",
+                    "by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns EXCLUDING some by column header name(s)",
+                    "all_but_by_header_name",
+                    false
+                  ],
+                  [
+                    "All columns",
+                    "all_columns",
+                    false
+                  ]
+                ],
+                "refresh_on_change": true,
+                "text_value": "Select columns by column index number(s)",
+                "textable": false,
+                "type": "select",
+                "value": "by_index_number"
+              },
+              "type": "conditional"
+            }
+          ],
+          "model_class": "ConditionalWhen",
+          "value": "sparse"
+        }
+      ],
+      "model_class": "Conditional",
+      "name": "input_options",
+      "test_param": {
+        "argument": null,
+        "display": null,
+        "help": "",
+        "help_format": "html",
+        "hidden": false,
+        "is_dynamic": false,
+        "label": "Select input type:",
+        "model_class": "SelectToolParameter",
+        "multiple": false,
+        "name": "selected_input",
+        "optional": false,
+        "options": [
+          [
+            "tabular data",
+            "tabular",
+            true
+          ],
+          [
+            "sparse matrix",
+            "sparse",
+            false
+          ]
+        ],
+        "refresh_on_change": true,
+        "text_value": "tabular data",
+        "textable": false,
+        "type": "select",
+        "value": "tabular"
+      },
+      "type": "conditional"
+    }
+  ],
+  "is_workflow_compatible": true,
+  "job_credentials_context": null,
+  "job_id": null,
+  "job_remap": null,
+  "labels": [],
+  "license": null,
+  "message": "",
+  "method": "post",
+  "model_class": "Tool",
+  "name": "Fit a Pipeline, Ensemble",
+  "panel_section_id": "machine_learning",
+  "panel_section_name": "Machine Learning",
+  "requirements": [
+    {
+      "name": "python",
+      "version": "3.9"
+    },
+    {
+      "name": "galaxy-ml",
+      "version": "0.10.0"
+    }
+  ],
+  "sharable_url": "https://toolshed.g2.bx.psu.edu/view/bgruening/sklearn_model_fit",
+  "state_inputs": {
+    "infile_estimator": null,
+    "input_options": {
+      "__current_case__": 0,
+      "column_selector_options_1": {
+        "__current_case__": 0,
+        "col1": null,
+        "selected_column_selector_option": "by_index_number"
+      },
+      "column_selector_options_2": {
+        "__current_case__": 0,
+        "col2": "1",
+        "selected_column_selector_option2": "by_index_number"
+      },
+      "header1": false,
+      "header2": false,
+      "infile1": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      },
+      "infile2": {
+        "values": [
+          {
+            "id": "f9cad7b01a472135932c95d1fc41ff39",
+            "src": "hda"
+          }
+        ]
+      },
+      "selected_input": "tabular"
+    },
+    "is_deep_learning": false
+  },
+  "tool_errors": null,
+  "tool_shed_repository": {
+    "changeset_revision": "f0ede473a7e8",
+    "name": "sklearn_model_fit",
+    "owner": "bgruening",
+    "tool_shed": "toolshed.g2.bx.psu.edu"
+  },
+  "version": "1.0.11.0",
+  "versions": [
+    "1.0.7.12",
+    "1.0.8.1",
+    "1.0.8.2",
+    "1.0.8.3",
+    "1.0.8.4",
+    "1.0.10.0",
+    "1.0.11.0"
+  ],
+  "warnings": null,
+  "xrefs": [
+    {
+      "type": "bio.tools",
+      "value": "scikit-learn"
+    }
+  ]
+}

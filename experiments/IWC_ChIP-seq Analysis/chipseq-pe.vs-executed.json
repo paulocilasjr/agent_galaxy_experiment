@@ -1,0 +1,259 @@
+{
+  "common_labels_count": 7,
+  "executed_invocation_id": "2ca0bcda7a418ad4",
+  "executed_step_count": 12,
+  "executed_steps": [
+    {
+      "job_count": 0,
+      "label": "PE fastq input",
+      "order": 0,
+      "tool_id": null,
+      "type": "input",
+      "workflow_step_id": "0ed9ddabf26a69cb"
+    },
+    {
+      "job_count": 0,
+      "label": "Percentage of bad quality bases per read",
+      "order": 1,
+      "tool_id": null,
+      "type": "input",
+      "workflow_step_id": "55f260b7390fb6d0"
+    },
+    {
+      "job_count": 0,
+      "label": "Reference genome",
+      "order": 2,
+      "tool_id": null,
+      "type": "input",
+      "workflow_step_id": "c5bd969e603d051f"
+    },
+    {
+      "job_count": 0,
+      "label": "Effective genome size",
+      "order": 3,
+      "tool_id": null,
+      "type": "input",
+      "workflow_step_id": "5d2e8ac52c7a37a5"
+    },
+    {
+      "job_count": 0,
+      "label": "Normalize profile",
+      "order": 4,
+      "tool_id": null,
+      "type": "input",
+      "workflow_step_id": "87df2c1604e2bf3a"
+    },
+    {
+      "job_count": 1,
+      "label": "Fastp (remove adapter and bad quality reads)",
+      "order": 5,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/1.0.1+galaxy2",
+      "type": "tool",
+      "workflow_step_id": "923741bb6a281014"
+    },
+    {
+      "job_count": 1,
+      "label": "Bowtie2 map on reference",
+      "order": 6,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.4+galaxy0",
+      "type": "tool",
+      "workflow_step_id": "71b747a875f7ab2d"
+    },
+    {
+      "job_count": 1,
+      "label": "filter MAPQ30 concordent pairs",
+      "order": 7,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1",
+      "type": "tool",
+      "workflow_step_id": "aee2149024dc6394"
+    },
+    {
+      "job_count": 1,
+      "label": "Call Peaks with MACS2",
+      "order": 8,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0",
+      "type": "tool",
+      "workflow_step_id": "904e751517a59596"
+    },
+    {
+      "job_count": 1,
+      "label": "summary of MACS2",
+      "order": 9,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy2",
+      "type": "tool",
+      "workflow_step_id": "f5fcd1b4c276b80f"
+    },
+    {
+      "job_count": 1,
+      "label": "Bigwig from MACS2",
+      "order": 10,
+      "tool_id": "wig_to_bigWig",
+      "type": "tool",
+      "workflow_step_id": "2ab1cab4f7f78197"
+    },
+    {
+      "job_count": 1,
+      "label": "MultiQC",
+      "order": 11,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3",
+      "type": "tool",
+      "workflow_step_id": "225fb0c2c885916d"
+    }
+  ],
+  "executed_workflow_id": "8628368f73fae991",
+  "local_name": "ChIP-seq Analysis: Paired-End Read Processing",
+  "local_release": "0.14",
+  "local_step_count": 13,
+  "local_steps": [
+    {
+      "label": "PE fastq input",
+      "order": 0,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "data_collection_input"
+    },
+    {
+      "label": "adapter_forward",
+      "order": 1,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "parameter_input"
+    },
+    {
+      "label": "adapter_reverse",
+      "order": 2,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "parameter_input"
+    },
+    {
+      "label": "reference_genome",
+      "order": 3,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "parameter_input"
+    },
+    {
+      "label": "effective_genome_size",
+      "order": 4,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "parameter_input"
+    },
+    {
+      "label": "normalize_profile",
+      "order": 5,
+      "tool_id": null,
+      "tool_version": null,
+      "type": "parameter_input"
+    },
+    {
+      "label": "Cutadapt (remove adapter + bad quality bases)",
+      "order": 6,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.0+galaxy0",
+      "tool_version": "5.0+galaxy0",
+      "type": "tool"
+    },
+    {
+      "label": "Bowtie2 map on reference",
+      "order": 7,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1",
+      "tool_version": "2.5.3+galaxy1",
+      "type": "tool"
+    },
+    {
+      "label": "filter MAPQ30 concordent pairs",
+      "order": 8,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1",
+      "tool_version": "1.8+galaxy1",
+      "type": "tool"
+    },
+    {
+      "label": "Call Peaks with MACS2",
+      "order": 9,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0",
+      "tool_version": "2.2.9.1+galaxy0",
+      "type": "tool"
+    },
+    {
+      "label": "summary of MACS2",
+      "order": 10,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy0",
+      "tool_version": "9.5+galaxy0",
+      "type": "tool"
+    },
+    {
+      "label": "Bigwig from MACS2",
+      "order": 11,
+      "tool_id": "wig_to_bigWig",
+      "tool_version": "1.1.1",
+      "type": "tool"
+    },
+    {
+      "label": "MultiQC",
+      "order": 12,
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3",
+      "tool_version": "1.27+galaxy3",
+      "type": "tool"
+    }
+  ],
+  "only_in_executed_labels": [
+    "Percentage of bad quality bases per read",
+    "Reference genome",
+    "Effective genome size",
+    "Normalize profile",
+    "Fastp (remove adapter and bad quality reads)"
+  ],
+  "only_in_local_labels": [
+    "adapter_forward",
+    "adapter_reverse",
+    "reference_genome",
+    "effective_genome_size",
+    "normalize_profile",
+    "Cutadapt (remove adapter + bad quality bases)"
+  ],
+  "tool_comparison_common_labels": [
+    {
+      "exec_tool_id": "wig_to_bigWig",
+      "label": "Bigwig from MACS2",
+      "local_tool_id": "wig_to_bigWig",
+      "local_tool_version": "1.1.1",
+      "same_tool": true
+    },
+    {
+      "exec_tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.4+galaxy0",
+      "label": "Bowtie2 map on reference",
+      "local_tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1",
+      "local_tool_version": "2.5.3+galaxy1",
+      "same_tool": false
+    },
+    {
+      "exec_tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0",
+      "label": "Call Peaks with MACS2",
+      "local_tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0",
+      "local_tool_version": "2.2.9.1+galaxy0",
+      "same_tool": true
+    },
+    {
+      "exec_tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3",
+      "label": "MultiQC",
+      "local_tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy3",
+      "local_tool_version": "1.27+galaxy3",
+      "same_tool": true
+    },
+    {
+      "exec_tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1",
+      "label": "filter MAPQ30 concordent pairs",
+      "local_tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtool_filter2/samtool_filter2/1.8+galaxy1",
+      "local_tool_version": "1.8+galaxy1",
+      "same_tool": true
+    },
+    {
+      "exec_tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy2",
+      "label": "summary of MACS2",
+      "local_tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.5+galaxy0",
+      "local_tool_version": "9.5+galaxy0",
+      "same_tool": false
+    }
+  ]
+}
