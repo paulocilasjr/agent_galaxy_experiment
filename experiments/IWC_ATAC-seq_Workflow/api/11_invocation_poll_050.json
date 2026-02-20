@@ -1,0 +1,72 @@
+{
+  "history_state_ids": {
+    "deferred": [],
+    "discarded": [],
+    "empty": [],
+    "error": [],
+    "failed_metadata": [],
+    "new": [
+      "f9cad7b01a472135e6bdee345d2dc8c4",
+      "f9cad7b01a4721357d788b71934d469e",
+      "f9cad7b01a4721350b7aa7f1a7a9c513",
+      "f9cad7b01a472135d0622c63810c4a46",
+      "f9cad7b01a472135a138b33ce61eebe4",
+      "f9cad7b01a47213576ccf6a8a0e9ac33",
+      "f9cad7b01a472135693106048b72dfb9",
+      "f9cad7b01a4721356b9c77b3db8004ec",
+      "f9cad7b01a4721351ab528709d011042",
+      "f9cad7b01a472135516a2034a0a42699",
+      "f9cad7b01a472135a6c0a372a611b3f6",
+      "f9cad7b01a47213579ecd1ff8c84b339",
+      "f9cad7b01a47213576b369648748fba8",
+      "f9cad7b01a4721356d3fdade567db1f1",
+      "f9cad7b01a4721353925be3315ed712d"
+    ],
+    "ok": [
+      "f9cad7b01a472135406a979cdc5fefd2",
+      "f9cad7b01a4721357d95bf1ba68e0675",
+      "f9cad7b01a47213504dd72e97813c927",
+      "f9cad7b01a4721359de589d7db8b88b3",
+      "f9cad7b01a472135cbeb02c7ff33b235",
+      "f9cad7b01a4721351cefa89767a4c7f8",
+      "f9cad7b01a472135ded8bdf5d65c9ac3",
+      "f9cad7b01a4721350464a9052d773b1d",
+      "f9cad7b01a4721357627a06352a5c4b0",
+      "f9cad7b01a47213544c75b85092406d0",
+      "f9cad7b01a472135d817ae671e4aa1d1",
+      "f9cad7b01a472135738ad4d2890875f3",
+      "f9cad7b01a472135e23e9b1b8fb03506",
+      "f9cad7b01a472135123f77821cdcd4ea",
+      "f9cad7b01a47213556fddd052dfc5377"
+    ],
+    "paused": [],
+    "queued": [],
+    "running": [
+      "f9cad7b01a47213570f0b99d97481cd2",
+      "f9cad7b01a472135d91e6b40e03692aa",
+      "f9cad7b01a4721354906a2202918d791",
+      "f9cad7b01a4721351b1ecd608798b6ac",
+      "f9cad7b01a472135a3ae997bd74231af",
+      "f9cad7b01a472135997b0ce00dfa28c5",
+      "f9cad7b01a47213524b1689b0234f053",
+      "f9cad7b01a4721359581fc6dec379993"
+    ],
+    "setting_metadata": [],
+    "upload": []
+  },
+  "invocation_id": "09aedfb38199c089",
+  "invocation_state": "ready",
+  "invocation_steps": 31,
+  "jobs_summary": {
+    "id": "09aedfb38199c089",
+    "model": "WorkflowInvocation",
+    "populated_state": "new",
+    "states": {
+      "new": 13,
+      "ok": 8,
+      "queued": 2,
+      "running": 1
+    }
+  },
+  "poll": 50
+}

@@ -1,0 +1,17 @@
+{
+  "datasets": [
+    {
+      "hid": 1,
+      "id": "f9cad7b01a472135406a979cdc5fefd2",
+      "name": "SRR891268_chr22_enriched_R1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "hid": 2,
+      "id": "f9cad7b01a4721357d95bf1ba68e0675",
+      "name": "SRR891268_chr22_enriched_R2.fastq.gz",
+      "state": "running"
+    }
+  ],
+  "poll": 5
+}

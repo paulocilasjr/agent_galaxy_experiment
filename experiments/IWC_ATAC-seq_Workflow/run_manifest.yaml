@@ -1,0 +1,22 @@
+experiment_name: IWC_ATAC-seq_Workflow
+created_utc: 2026-02-19T22:59:48Z
+status: completed
+galaxy_url: https://usegalaxy.org
+history_name: IWC_ATAC-seq
+history_id: bbd44e69cb8906b5f82e2be34946c688
+workflow_name_page: "ATAC-seq Analysis: Chromatin Accessibility Profiling"
+workflow_name_galaxy: "imported: ATACseq (release v1.0)"
+shared_workflow_id: 5d1208bd49f97aeb
+imported_workflow_id: 3c6701c2fd1648ba
+invocation_id: 09aedfb38199c089
+inputs:
+  read1_url: https://zenodo.org/record/3862793/files/SRR891268_chr22_enriched_R1.fastq.gz
+  read2_url: https://zenodo.org/record/3862793/files/SRR891268_chr22_enriched_R2.fastq.gz
+  reference_genome: hg19
+  effective_genome_size: 2700000000
+  bin_size: 1000
+artifacts:
+  workflow_file: experiments/IWC_ATAC-seq_Workflow/outputs/ATACseq_release_v1_0_imported.ga
+  mapping_stats: experiments/IWC_ATAC-seq_Workflow/outputs/mapping_stats.txt
+  narrowpeak: experiments/IWC_ATAC-seq_Workflow/outputs/macs2_narrowpeak.bed
+  multiqc: experiments/IWC_ATAC-seq_Workflow/outputs/multiqc_report.html

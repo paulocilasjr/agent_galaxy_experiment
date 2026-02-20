@@ -1,0 +1,434 @@
+{
+  "candidate_count": 81,
+  "candidates": [
+    {
+      "id": "afd7633a34d68704",
+      "name": "ATACseq (release v0.1)",
+      "owner": "iwc"
+    },
+    {
+      "id": "907aaf55487ddf43",
+      "name": "ATACseq (release v0.2)",
+      "owner": "iwc"
+    },
+    {
+      "id": "d4029ce1344e874a",
+      "name": "ATACseq (release v0.4)",
+      "owner": "iwc"
+    },
+    {
+      "id": "e42a07b777c9f9dc",
+      "name": "ATACseq (release v0.3)",
+      "owner": "iwc"
+    },
+    {
+      "id": "b5e8f4a0ff226921",
+      "name": "ATACseq (release v0.5)",
+      "owner": "iwc"
+    },
+    {
+      "id": "8a215695e7b57cf5",
+      "name": "ATACseq (release v0.5.1)",
+      "owner": "iwc"
+    },
+    {
+      "id": "b63d1e1024cc3295",
+      "name": "ATACseq (release v0.6)",
+      "owner": "iwc"
+    },
+    {
+      "id": "de29cd965a2e93d3",
+      "name": "ATACseq (release v0.9)",
+      "owner": "iwc"
+    },
+    {
+      "id": "e899acc664c8b808",
+      "name": "ATACseq (release v0.8)",
+      "owner": "iwc"
+    },
+    {
+      "id": "fcbe12fc4eaae12e",
+      "name": "ATACseq (release v0.7)",
+      "owner": "iwc"
+    },
+    {
+      "id": "0ebb1f5b6c9c8ab9",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "85bc37a59a6ea443",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "e0ec503626fa0d58",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "eafe4aa62a600e1d",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "52bde903adbbaf60",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "2cc5472ad7c039d1",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "6a174e7498434bd5",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "75fffbce810acaf3",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "ee3b8d7ba29da11c",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "52e2b69787ca7a17",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "96ae2544e22d34c5",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "d00ac64dcd07f91a",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "cd824d8631d6a55e",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "9eb29b71d7effefc",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "46e718fb8eeb4d54",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "59007e2bc9c807ee",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "dff3cf6921b3d4d6",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "a4a56efb37d845bf",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "17f3d7e52777d2e8",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "9e9a027e0c294a79",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "e58a87508a337b91",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "df24d76ebf13e3c1",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "cf3320614654adfe",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "af5d714396856e9a",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "97c20a819394e381",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "885f0e66fa6b8790",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "bb25ac3ba4863424",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "7fb4dae5daab0522",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "dbc650d226e89013",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "cbbd7e95041d9429",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "00bc4e99626da1ba",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "2b5346b94358df88",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "91806144e90637e8",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "8095deba606ebd5e",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "99ee567c092fb34c",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "472f73c3e81da1d9",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "ca36eebd59575df3",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "1e1d7fac7e241768",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "ea4c2defce2f5258",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "f0ee8bcd7c8fadca",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "a164d857439a126f",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "b1dc9cf054a63be5",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "c81833a367445f98",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "d903c7215a88c79f",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "adb86df9061dca2b",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "1250ec3ad6199cda",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "553125cd799e5982",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "527adadecbab2eb6",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "93cb976bd4ae546e",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "98a4b90f7fc2bfce",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "cd5f803c80875b9c",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "6db96a9c7e4b8d14",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "8bf608c6fd0dabd0",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "1ffc71df8eeed57e",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "60b9910b7bb69f47",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "e9ffad95baa43478",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "506acac8c6a58d5e",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "13a1fa4f6daf65cc",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "b78a75ae89ae4c79",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "dcf658333596d76a",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "9255c0c9017b139f",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "a99a938953be5fd6",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "88e10493f7e6b9d5",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "156e245e3d9f22ce",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "2957924403998f3a",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "7b9e17cb1d72d7e4",
+      "name": "ATACseq (release v0.16)",
+      "owner": "iwc"
+    },
+    {
+      "id": "336795e890851c21",
+      "name": "ATACseq (release v0.15)",
+      "owner": "iwc"
+    },
+    {
+      "id": "15ea806eaf077617",
+      "name": "ATACseq (release v0.14)",
+      "owner": "iwc"
+    },
+    {
+      "id": "3673a1ced343d0d0",
+      "name": "ATACseq (release v0.13)",
+      "owner": "iwc"
+    },
+    {
+      "id": "7c4a2339b17a8930",
+      "name": "ATACseq (release v0.17)",
+      "owner": "iwc"
+    },
+    {
+      "id": "5d1208bd49f97aeb",
+      "name": "ATACseq (release v1.0)",
+      "owner": "iwc"
+    }
+  ],
+  "selected": {
+    "annotations": [
+      "This workflow takes as input a collection of paired fastq. It will remove bad quality and adapters with cutadapt. Map with Bowtie2 end-to-end. Will remove reads on MT and unconcordant pairs and pairs with mapping quality below 30 and PCR duplicates. Will compute the pile-up on 5' +- 100bp. Will call peaks and count the number of reads falling in the 1kb region centered on the summit. Will compute 2 normalization for coverage: normalized by million reads and normalized by million reads in peaks. Will plot the number of reads for each fragment length."
+    ],
+    "create_time": "2024-12-05T00:14:54.239722",
+    "creator_deleted": false,
+    "deleted": false,
+    "hidden": false,
+    "id": "5d1208bd49f97aeb",
+    "importable": true,
+    "latest_workflow_id": "8d1b61a3b34d591d",
+    "latest_workflow_uuid": "38ea3fb6-5e60-452d-a310-237aa2d302d7",
+    "model_class": "StoredWorkflow",
+    "name": "ATACseq (release v1.0)",
+    "owner": "iwc",
+    "published": true,
+    "show_in_tool_panel": false,
+    "source_metadata": null,
+    "tags": [
+      "ATACseq"
+    ],
+    "update_time": "2025-04-25T14:08:14.642669",
+    "url": "/api/workflows/5d1208bd49f97aeb"
+  }
+}

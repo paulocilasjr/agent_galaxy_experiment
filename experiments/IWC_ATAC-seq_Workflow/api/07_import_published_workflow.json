@@ -1,0 +1,18 @@
+{
+  "create_time": "2026-02-19T23:00:37.194205",
+  "creator_deleted": false,
+  "deleted": false,
+  "hidden": false,
+  "id": "3c6701c2fd1648ba",
+  "importable": false,
+  "latest_workflow_id": 691048,
+  "latest_workflow_uuid": "31bd3ec2-3080-4d30-bc9d-4b58e733e14c",
+  "model_class": "StoredWorkflow",
+  "name": "imported: ATACseq (release v1.0)",
+  "published": false,
+  "tags": [
+    "ATACseq"
+  ],
+  "update_time": "2026-02-19T23:00:37.253954",
+  "url": "/api/workflows/3c6701c2fd1648ba"
+}

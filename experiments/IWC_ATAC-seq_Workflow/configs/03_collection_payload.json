@@ -1,0 +1,24 @@
+{
+  "collection_type": "list:paired",
+  "element_identifiers": [
+    {
+      "collection_type": "paired",
+      "element_identifiers": [
+        {
+          "id": "f9cad7b01a472135406a979cdc5fefd2",
+          "name": "forward",
+          "src": "hda"
+        },
+        {
+          "id": "f9cad7b01a4721357d95bf1ba68e0675",
+          "name": "reverse",
+          "src": "hda"
+        }
+      ],
+      "name": "SRR891268_chr22_enriched",
+      "src": "new_collection"
+    }
+  ],
+  "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+  "name": "SRR891268_chr22_enriched_list_paired"
+}

@@ -1,0 +1,13 @@
+{
+  "history": "hist_id=bbd44e69cb8906b5f82e2be34946c688",
+  "inputs": {
+    "PE fastq input": {
+      "id": "2a74605db3af17c0",
+      "src": "hdca"
+    },
+    "bin_size": 1000,
+    "effective_genome_size": 2700000000,
+    "reference_genome": "hg19"
+  },
+  "inputs_by": "name"
+}

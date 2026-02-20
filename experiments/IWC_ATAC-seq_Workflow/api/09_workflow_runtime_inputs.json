@@ -1,0 +1,50 @@
+[
+  {
+    "inputs": [
+      {
+        "description": "Should be a paired collection with ATAC-seq fastqs",
+        "name": "PE fastq input"
+      }
+    ],
+    "label": "PE fastq input",
+    "name": "Input dataset collection",
+    "order": 0,
+    "type": "data_collection_input"
+  },
+  {
+    "inputs": [
+      {
+        "description": "reference_genome",
+        "name": "reference_genome"
+      }
+    ],
+    "label": "reference_genome",
+    "name": "Input parameter",
+    "order": 1,
+    "type": "parameter_input"
+  },
+  {
+    "inputs": [
+      {
+        "description": "Used by macs2:\\nH. sapiens: 2700000000, M. musculus: 1870000000, D. melanogaster: 120000000, C. elegans: 90000000",
+        "name": "effective_genome_size"
+      }
+    ],
+    "label": "effective_genome_size",
+    "name": "Input parameter",
+    "order": 2,
+    "type": "parameter_input"
+  },
+  {
+    "inputs": [
+      {
+        "description": "Bin size for normalized bigwig (usually 50bp is sufficient)",
+        "name": "bin_size"
+      }
+    ],
+    "label": "bin_size",
+    "name": "Input parameter",
+    "order": 3,
+    "type": "parameter_input"
+  }
+]

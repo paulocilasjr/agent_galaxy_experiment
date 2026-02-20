@@ -1,0 +1,1 @@
+User requested creation of experiment directory `IWC_ATAC-seq_Workflow` and execution of the IWC workflow example `ATAC-seq Analysis: Chromatin Accessibility Profiling` using its example dataset from https://iwc.galaxyproject.org, with full records captured like other experiments.

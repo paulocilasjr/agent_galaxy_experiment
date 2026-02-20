@@ -1,0 +1,29 @@
+{
+  "history_state_ids": {
+    "deferred": [],
+    "discarded": [],
+    "empty": [],
+    "error": [],
+    "failed_metadata": [],
+    "new": [],
+    "ok": [
+      "f9cad7b01a472135406a979cdc5fefd2",
+      "f9cad7b01a4721357d95bf1ba68e0675"
+    ],
+    "paused": [],
+    "queued": [],
+    "running": [],
+    "setting_metadata": [],
+    "upload": []
+  },
+  "invocation_id": "09aedfb38199c089",
+  "invocation_state": "new",
+  "invocation_steps": 0,
+  "jobs_summary": {
+    "id": "09aedfb38199c089",
+    "model": "WorkflowInvocation",
+    "populated_state": "new",
+    "states": {}
+  },
+  "poll": 15
+}

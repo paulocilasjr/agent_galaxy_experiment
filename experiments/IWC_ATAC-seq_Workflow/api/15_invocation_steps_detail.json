@@ -1,0 +1,1044 @@
+[
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b565545d66082c391e",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 0,
+    "output_collections": {
+      "output": {
+        "id": "2a74605db3af17c0",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:09.753916",
+    "workflow_step_id": "2ce8e3d4b7c4f7ed",
+    "workflow_step_label": "PE fastq input",
+    "workflow_step_uuid": "cbe95003-c536-4c1d-9ab9-e455a3f160b7"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b511bb064163d10efd",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 1,
+    "output_collections": {},
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:09.753928",
+    "workflow_step_id": "5848738837383ad5",
+    "workflow_step_label": "reference_genome",
+    "workflow_step_uuid": "ffc97b32-76b8-48c3-b989-b91b23dd359f"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b511a41248887736cf",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 2,
+    "output_collections": {},
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:09.753940",
+    "workflow_step_id": "483c583dcad1900e",
+    "workflow_step_label": "effective_genome_size",
+    "workflow_step_uuid": "942fe569-f2aa-42ca-aca5-9e3195859b6f"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b534c8ab99e32de95c",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 3,
+    "output_collections": {},
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:09.753951",
+    "workflow_step_id": "e4486a859cc32f4c",
+    "workflow_step_label": "bin_size",
+    "workflow_step_uuid": "ac666bff-18b8-489c-b4cd-21ce022ef93d"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b535f5036544a6c59c",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:09.924232",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5f3bc12f6e2f2c86f",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/4.9+galaxy1",
+        "update_time": "2026-02-19T23:03:26.869847"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 4,
+    "output_collections": {
+      "out_pairs": {
+        "id": "4a6956e9275d46e2",
+        "src": "hdca"
+      },
+      "report": {
+        "id": "2dfc8908f300dfcd",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:10.082098",
+    "workflow_step_id": "f70a63c399bd4d56",
+    "workflow_step_label": "Cutadapt (remove adapter + bad quality bases)",
+    "workflow_step_uuid": "df2f5da9-2feb-46b7-b8a2-857418f83af5"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b58ab4c945728f7a36",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:10.197206",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b52d34a9b64a0199a5",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1",
+        "update_time": "2026-02-19T23:08:25.497434"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 5,
+    "output_collections": {
+      "mapping_stats": {
+        "id": "4f899b7aa9601051",
+        "src": "hdca"
+      },
+      "output": {
+        "id": "ce63c293ad0a990d",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:10.324503",
+    "workflow_step_id": "fa49a015471babae",
+    "workflow_step_label": "Bowtie2 map on reference",
+    "workflow_step_uuid": "5d1590cd-a0f2-4297-b31e-051adde01098"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5a4395b6bda7b0c8a",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:10.408770",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5fcce9f4431827a84",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.5.2+galaxy2",
+        "update_time": "2026-02-19T23:08:51.358670"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 6,
+    "output_collections": {
+      "out_file1": {
+        "id": "dafaef572ff3a692",
+        "src": "hdca"
+      },
+      "out_file2": {
+        "id": "e284d4bd6497fb1d",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:10.531414",
+    "workflow_step_id": "f79b5c430620908e",
+    "workflow_step_label": "filter MAPQ30 concordant pairs and not mitochondrial pairs",
+    "workflow_step_uuid": "e9538918-8a00-44ce-acef-760150d730a4"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5fae1b99f1e5c531f",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:10.622408",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5dbe0234fe4d7618a",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_idxstats/samtools_idxstats/2.0.5",
+        "update_time": "2026-02-19T23:08:40.814472"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 7,
+    "output_collections": {
+      "output": {
+        "id": "604792b64190c4c2",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:10.763241",
+    "workflow_step_id": "e26fbdc9f0c57057",
+    "workflow_step_label": "Get number of reads per chromosome",
+    "workflow_step_uuid": "8c01b1e7-e338-400b-835f-938d046732ad"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b512819db3209b54db",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:10.839466",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b53292451c8d90758e",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/3.1.1.0",
+        "update_time": "2026-02-19T23:09:14.034603"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 8,
+    "output_collections": {
+      "metrics_file": {
+        "id": "7b6d10ecb187a416",
+        "src": "hdca"
+      },
+      "outFile": {
+        "id": "430a5bb5a52fedc7",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:10.935495",
+    "workflow_step_id": "5881a9db8107b031",
+    "workflow_step_label": "remove PCR duplicates",
+    "workflow_step_uuid": "70c8483e-3da2-4f30-96a1-ab19cf15f133"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5a191f2a9105ab41a",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.000674",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b51b4010c8a0bfd62c",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.3+galaxy1",
+        "update_time": "2026-02-19T23:08:56.309759"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 9,
+    "output_collections": {
+      "outfile": {
+        "id": "8e790ec0c97c6a4e",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:11.090922",
+    "workflow_step_id": "dd359096e255ac16",
+    "workflow_step_label": "reads in chrM/MT for multiQC",
+    "workflow_step_uuid": "57a43cbc-c8bc-4030-aecf-57ee7faa724f"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5d89d14a2871da345",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.155596",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b564c6f8f28a83bd45",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_bamtobed/2.31.1+galaxy0",
+        "update_time": "2026-02-19T23:09:30.246273"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 10,
+    "output_collections": {
+      "output": {
+        "id": "be3236de4c960d8e",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:11.277137",
+    "workflow_step_id": "46ec618d666eeeea",
+    "workflow_step_label": "convert BAM to BED to improve peak calling",
+    "workflow_step_uuid": "856b82eb-8969-4149-9668-cff48adc0745"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5ee902698ad26c877",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.344381",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5363ecd9796c1f565",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/pe_histogram/pe_histogram/1.0.1",
+        "update_time": "2026-02-19T23:09:36.665763"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 11,
+    "output_collections": {
+      "output1": {
+        "id": "89dba132faa9d45a",
+        "src": "hdca"
+      },
+      "output2": {
+        "id": "4f5fcd41a598d4d9",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:11.444367",
+    "workflow_step_id": "64b180049b0dc0c7",
+    "workflow_step_label": "Compute fragment length histogram",
+    "workflow_step_uuid": "22a1ae19-e88c-4342-b67a-8f90e24ddc30"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b57e771ac1729146ff",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.511652",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5dd846815eb3055c4",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3",
+        "update_time": "2026-02-19T23:09:32.123984"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 12,
+    "output_collections": {
+      "outputcnt": {
+        "id": "3bd25a449a261573",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:11.620151",
+    "workflow_step_id": "c7db5ce51a157eb2",
+    "workflow_step_label": "number of reads",
+    "workflow_step_uuid": "73f4eb4c-3d58-4054-b80c-c17883e4ed34"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b511fd3d3b1c0c201c",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.730433",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5fc3e887fa5fc100d",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0",
+        "update_time": "2026-02-19T23:09:58.725500"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 13,
+    "output_collections": {
+      "output_control_lambda": {
+        "id": "9d6d39a842c61db7",
+        "src": "hdca"
+      },
+      "output_extra_files": {
+        "id": "54f5c5f5f08e1fad",
+        "src": "hdca"
+      },
+      "output_narrowpeaks": {
+        "id": "656242676519f50e",
+        "src": "hdca"
+      },
+      "output_summits": {
+        "id": "ac308205604153fc",
+        "src": "hdca"
+      },
+      "output_tabular": {
+        "id": "08b7565b2c6dcb07",
+        "src": "hdca"
+      },
+      "output_treat_pileup": {
+        "id": "d90dfd4578c3f7e4",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:11.872228",
+    "workflow_step_id": "0e9b72f7a615f4a3",
+    "workflow_step_label": "Call Peak with MACS2",
+    "workflow_step_uuid": "c5c3f8e3-e81c-45da-975a-116338685572"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5c96e6ba4fb48744c",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:11.933857",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b554a6b186827fc4ed",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1",
+        "update_time": "2026-02-19T23:10:18.922015"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 14,
+    "output_collections": {
+      "output": {
+        "id": "8a9dfd60599c2f37",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.013865",
+    "workflow_step_id": "cad4b01479178ba0",
+    "workflow_step_label": "remove comments lines",
+    "workflow_step_uuid": "cababf24-bdf6-4c76-898e-4dd41e9b6df3"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5e8385069c0ecb0e9",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.074019",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5babcc84df7e8f91b",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1",
+        "update_time": "2026-02-19T23:10:04.290774"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 15,
+    "output_collections": {
+      "out_file1": {
+        "id": "ef3844751c5c39d7",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.154500",
+    "workflow_step_id": "69ac9b054bd841d4",
+    "workflow_step_label": "compute 1/million reads",
+    "workflow_step_uuid": "60635426-b8d0-4f63-9a78-947dfe1fedcc"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5e2765d25100a5584",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.215485",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b54050faa5f9a5a2d0",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "wig_to_bigWig",
+        "update_time": "2026-02-19T23:10:38.659733"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 16,
+    "output_collections": {
+      "out_file1": {
+        "id": "9c9507684e12c415",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.321013",
+    "workflow_step_id": "e87ac8f93d84516c",
+    "workflow_step_label": "Bigwig from MACS2 (no norm)",
+    "workflow_step_uuid": "f15f3271-d101-4e78-b096-b77d1712274d"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5b2cb933f391ac8d3",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.384603",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b53fb91ae513ba482b",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_slopbed/2.31.1+galaxy0",
+        "update_time": "2026-02-19T23:10:34.724821"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 17,
+    "output_collections": {
+      "output": {
+        "id": "a919dfedf41d2992",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.494571",
+    "workflow_step_id": "272dde3a320ec788",
+    "workflow_step_label": "get summits +/-500kb",
+    "workflow_step_uuid": "a27137e6-c70c-4f83-bc61-e4ca35e8b677"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5ab6ef8b55db4bf76",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.567269",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b50642ced9c43558c5",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1",
+        "update_time": "2026-02-19T23:10:25.779287"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 18,
+    "output_collections": {
+      "output": {
+        "id": "00e5e066dfd9e8b1",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.695019",
+    "workflow_step_id": "a3d781e876f131cb",
+    "workflow_step_label": "summary of MACS2",
+    "workflow_step_uuid": "319baa01-0dc4-4b67-9b08-f1906a4154a5"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b54a9cfa2b59bdec71",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.766674",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b50b51dfeae4600ccd",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "param_value_from_file",
+        "update_time": "2026-02-19T23:10:26.720474"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 19,
+    "output_collections": {
+      "text_param": {
+        "id": "efe4c9fd40676c57",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:12.931086",
+    "workflow_step_id": "d5c29752739e81ff",
+    "workflow_step_label": "Convert 1/million reads to parameter",
+    "workflow_step_uuid": "47d6b447-dd0c-400c-8adf-bce6852916ac"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b554949bb6231aa1df",
+    "implicit_collection_jobs_id": null,
+    "job_id": "bbd44e69cb8906b563ca1d6558978da4",
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:13:19.383674",
+        "exit_code": null,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b563ca1d6558978da4",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "__APPLY_RULES__",
+        "update_time": "2026-02-19T23:13:19.411262"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 20,
+    "output_collections": {
+      "output": {
+        "id": "7a4b07cf3432771a",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:13:19.484532",
+    "workflow_step_id": "36fffeebaa6a160d",
+    "workflow_step_label": "Isolate each bigwig do normalize not average",
+    "workflow_step_uuid": "a15dfa3e-caf1-4bf4-a959-2fba479fb7e4"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b53216fbec173fda62",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:12.991508",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b56156314e593a8753",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_mergebed/2.31.1",
+        "update_time": "2026-02-19T23:10:52.228551"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 21,
+    "output_collections": {
+      "output": {
+        "id": "44c9eef5fc028b54",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:13.144830",
+    "workflow_step_id": "e0ede6d1019c7cd4",
+    "workflow_step_label": "Merge summits +/-500kb",
+    "workflow_step_uuid": "2841518b-ae43-4743-9ef4-8121cfda587a"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b554a194ae22926126",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:13:19.568839",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b56ee7a7c5ff823b50",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_bigwig_average/deeptools_bigwig_average/3.5.4+galaxy0",
+        "update_time": "2026-02-19T23:23:37.646753"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 22,
+    "output_collections": {
+      "outFileName": {
+        "id": "2441df36c1d4195c",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:13:19.694249",
+    "workflow_step_id": "71d0055403cb26c5",
+    "workflow_step_label": "normalize by million reads",
+    "workflow_step_uuid": "eae45535-e4da-4c2d-8d82-b60d44e448b4"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b539454dd3444dc8cb",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:13.322686",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b54e4a0c10ddb41c16",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_coveragebed/2.31.1+galaxy0",
+        "update_time": "2026-02-19T23:11:10.377458"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 23,
+    "output_collections": {
+      "output": {
+        "id": "f7f318860510c49b",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:13.557335",
+    "workflow_step_id": "1565d3d3a7be96d1",
+    "workflow_step_label": "Compute coverage on summits +/-500kb",
+    "workflow_step_uuid": "743fd875-721f-409f-8f20-5990f6c2f285"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5df859ae4af19a30d",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:13.638904",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5f6fe9a77407fa104",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.3+galaxy1",
+        "update_time": "2026-02-19T23:11:23.493381"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 24,
+    "output_collections": {
+      "outfile": {
+        "id": "6bb3c90de3705bbb",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:13.752434",
+    "workflow_step_id": "ba45f45238512eb6",
+    "workflow_step_label": "number of reads in peaks",
+    "workflow_step_uuid": "adf9efab-a572-4aa5-bc10-e914da4dec11"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5520d9213fc462ab1",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:13.817961",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b54c7a6406fe426f14",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1",
+        "update_time": "2026-02-19T23:11:46.965585"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 25,
+    "output_collections": {
+      "out_file1": {
+        "id": "6e22dd2ab23a465b",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:13.903466",
+    "workflow_step_id": "3f2ba98584e78446",
+    "workflow_step_label": "compute 1/million reads in peaks",
+    "workflow_step_uuid": "18629fdf-5c62-4df1-b090-964e3dc69c61"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b523ccc4d3df5098fa",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:13.982086",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b566b36d8309da3b0e",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "cat1",
+        "update_time": "2026-02-19T23:11:46.143523"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 26,
+    "output_collections": {
+      "out_file1": {
+        "id": "dbf5440e61ff2766",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:14.076847",
+    "workflow_step_id": "e4433d4e72881cfb",
+    "workflow_step_label": "Combine number of reads in peaks with total number of reads",
+    "workflow_step_uuid": "0c086b69-47fd-4dd4-8afd-dc5ea0722902"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b51c8a58e230ce7e4f",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:14.141136",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b51869263443d608fc",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "param_value_from_file",
+        "update_time": "2026-02-19T23:12:12.800023"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 27,
+    "output_collections": {
+      "text_param": {
+        "id": "1e3ea7d46a7b0da3",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:14.217932",
+    "workflow_step_id": "dd3298b96d5a10a6",
+    "workflow_step_label": "Convert 1/million reads in peaks to parameter",
+    "workflow_step_uuid": "85a733f6-c339-4a2f-8780-86c1be370727"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b53d17b11884bd4bf4",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:14.275641",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5b67379d1201309ba",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.3+galaxy1",
+        "update_time": "2026-02-19T23:12:00.991325"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 28,
+    "output_collections": {
+      "outfile": {
+        "id": "80b80b67b0ede186",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:03:14.533277",
+    "workflow_step_id": "dba8405c39633627",
+    "workflow_step_label": "reads in peaks multiQC",
+    "workflow_step_uuid": "fa970fb9-39ee-4df4-925b-3debc4219bf7"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5e6c6e59e15a17e15",
+    "implicit_collection_jobs_id": null,
+    "job_id": null,
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:13:19.768673",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5afaae21cdb769a1b",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_bigwig_average/deeptools_bigwig_average/3.5.4+galaxy0",
+        "update_time": "2026-02-19T23:24:13.873161"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 29,
+    "output_collections": {
+      "outFileName": {
+        "id": "52e9454ea81a5a6c",
+        "src": "hdca"
+      }
+    },
+    "outputs": {},
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:13:19.829490",
+    "workflow_step_id": "707424779ce6d154",
+    "workflow_step_label": "normalize by million reads in peaks",
+    "workflow_step_uuid": "94db0fc6-b507-4ecf-84ed-f918852c2a64"
+  },
+  {
+    "action": null,
+    "id": "bbd44e69cb8906b5c5f562344a01e5f3",
+    "implicit_collection_jobs_id": null,
+    "job_id": "bbd44e69cb8906b5c6b2cb56e63848ed",
+    "jobs": [
+      {
+        "create_time": "2026-02-19T23:03:14.512937",
+        "exit_code": 0,
+        "galaxy_version": "25.1",
+        "history_id": "bbd44e69cb8906b5f82e2be34946c688",
+        "id": "bbd44e69cb8906b5c6b2cb56e63848ed",
+        "model_class": "Job",
+        "state": "ok",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
+        "update_time": "2026-02-19T23:13:20.348709"
+      }
+    ],
+    "model_class": "WorkflowInvocationStep",
+    "order_index": 30,
+    "output_collections": {
+      "plots": {
+        "id": "d9750442434cd21c",
+        "src": "hdca"
+      }
+    },
+    "outputs": {
+      "html_report": {
+        "id": "f9cad7b01a4721356d3fdade567db1f1",
+        "src": "hda",
+        "uuid": "b0446b72-7462-4a22-8419-3e521377e672"
+      },
+      "stats": {
+        "id": "f9cad7b01a4721353925be3315ed712d",
+        "src": "hda",
+        "uuid": "ada83b8f-6ae9-458d-af5b-e1895ee4a4af"
+      }
+    },
+    "state": "scheduled",
+    "subworkflow_invocation_id": null,
+    "update_time": "2026-02-19T23:13:20.331684",
+    "workflow_step_id": "d68e1dcb2aef8aec",
+    "workflow_step_label": null,
+    "workflow_step_uuid": "a7d1feb3-3d0b-4b71-bc0e-89ecaf87f84c"
+  }
+]

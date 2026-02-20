@@ -1,0 +1,18 @@
+{
+  "errors": null,
+  "generate_time": "2026-02-19T23:24:24.930328",
+  "generate_version": "25.1",
+  "histories": null,
+  "history_dataset_collections": null,
+  "history_datasets": null,
+  "id": "bbd44e69cb8906b5e516c3c8c5ca050de2686eeccde1d656",
+  "invocation_markdown": "\n# Workflow Execution Summary of imported: ATACseq (release v1.0)\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs(invocation_id=09aedfb38199c089)\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs(invocation_id=09aedfb38199c089)\n```\n\n## Workflow\n```galaxy\nworkflow_display(invocation_id=09aedfb38199c089)\n```\n",
+  "invocations": null,
+  "jobs": null,
+  "markdown": "\n# Workflow Execution Summary of imported: ATACseq (release v1.0)\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs(invocation_id=09aedfb38199c089)\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs(invocation_id=09aedfb38199c089)\n```\n\n## Workflow\n```galaxy\nworkflow_display(invocation_id=09aedfb38199c089)\n```\n",
+  "model_class": "Report",
+  "render_format": "markdown",
+  "title": "imported: ATACseq (release v1.0)",
+  "username": "lyra-jr",
+  "workflows": null
+}
