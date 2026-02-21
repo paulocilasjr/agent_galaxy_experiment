@@ -1,0 +1,11 @@
+{
+  "create_time": "2026-02-21T04:20:57.604601",
+  "history_id": "bbd44e69cb8906b5df7a3d59f43cb8e8",
+  "id": "259a867f3185c8a2",
+  "landing_uuid": null,
+  "model_class": "WorkflowInvocation",
+  "state": "new",
+  "update_time": "2026-02-21T04:20:57.604609",
+  "uuid": "b87b4b84-0edc-11f1-b94c-bc24110164aa",
+  "workflow_id": "679eb3cc6338c440"
+}

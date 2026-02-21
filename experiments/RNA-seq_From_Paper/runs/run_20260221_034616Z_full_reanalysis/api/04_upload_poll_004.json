@@ -1,0 +1,200 @@
+{
+  "datasets": [
+    {
+      "id": "f9cad7b01a4721356a914ad1b12e21a8",
+      "name": "SRR22376027_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135cef775e815fdb426",
+      "name": "SRR22376027_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135850ef32bc89362e2",
+      "name": "SRR22376028_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135f3782b13eb4ac310",
+      "name": "SRR22376028_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721350d7da3d6ee559218",
+      "name": "SRR22376029_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721358cac932742a51611",
+      "name": "SRR22376029_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721359e36cbed0c21c536",
+      "name": "SRR22376030_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721350d50fbcb9dd905ba",
+      "name": "SRR22376030_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135d4a9e6e58396d532",
+      "name": "SRR22376031_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135721db7edbb09bd6b",
+      "name": "SRR22376031_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721355646145898c98b3b",
+      "name": "SRR22376032_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213544886d30f950c24c",
+      "name": "SRR22376032_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135c3e0f44cd9d53161",
+      "name": "SRR28790270_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721352f77b15a3748129a",
+      "name": "SRR28790270_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213556a38db4a4458b6a",
+      "name": "SRR28790272_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135a2cbf9aa0f90e86f",
+      "name": "SRR28790272_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135c64c598a43920b38",
+      "name": "SRR28790274_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721353ed7b7be319958ac",
+      "name": "SRR28790274_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135276d0272f9264891",
+      "name": "SRR28790276_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213518a5b8789e1b5ab7",
+      "name": "SRR28790276_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721352a21149ef1750a59",
+      "name": "SRR28790278_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721359f7196688274629f",
+      "name": "SRR28790278_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135675368e8b3e0e7db",
+      "name": "SRR28790280_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721350879489f837c47ae",
+      "name": "SRR28790280_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135f40d11dab58b00b8",
+      "name": "SRR28791430_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135f5bbb4e48951f2d8",
+      "name": "SRR28791430_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135a1ce69f8de2823e0",
+      "name": "SRR28791431_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135a23236d897d839fa",
+      "name": "SRR28791431_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135c5a3e575923f44f0",
+      "name": "SRR28791432_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135521fd7a8fab43866",
+      "name": "SRR28791432_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213508f29b3405dde6a6",
+      "name": "SRR28791433_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135447c3a47c1261c9b",
+      "name": "SRR28791433_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721355e96ec9845a527fd",
+      "name": "SRR28791434_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721356e694a8a1dd10c34",
+      "name": "SRR28791434_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213552c5391b513ebb8a",
+      "name": "SRR28791437_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135b6f71eb7c051a995",
+      "name": "SRR28791437_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135cbafddb964026375",
+      "name": "SRR28791438_1.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721355251ef309c6ab36a",
+      "name": "SRR28791438_2.fastq.gz",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135630471be68b952aa",
+      "name": "GCA_002759435.3_Cand_auris_B8441_V3_genomic.gtf.gz",
+      "state": "running"
+    }
+  ],
+  "poll": 4
+}

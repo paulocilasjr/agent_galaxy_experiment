@@ -1,0 +1,49 @@
+{
+  "implicit_collections": [],
+  "jobs": [
+    {
+      "create_time": "2026-02-21T04:22:23.644995",
+      "exit_code": null,
+      "galaxy_version": "25.1",
+      "history_id": "bbd44e69cb8906b5e47de057429e73bb",
+      "id": "bbd44e69cb8906b5b14a7a6e7abc6201",
+      "model_class": "Job",
+      "state": "new",
+      "tool_id": "upload1",
+      "tool_version": "1.1.7",
+      "update_time": "2026-02-21T04:22:23.667974"
+    }
+  ],
+  "output_collections": [],
+  "outputs": [
+    {
+      "create_time": "2026-02-21T04:22:23.617918",
+      "data_type": "galaxy.datatypes.data.Data",
+      "deleted": false,
+      "file_ext": "auto",
+      "file_size": 0,
+      "genome_build": "?",
+      "hda_ldda": "hda",
+      "hid": 1,
+      "history_content_type": "dataset",
+      "history_id": "bbd44e69cb8906b5e47de057429e73bb",
+      "id": "f9cad7b01a47213566858160fe688ae3",
+      "metadata_dbkey": "?",
+      "misc_blurb": null,
+      "misc_info": null,
+      "model_class": "HistoryDatasetAssociation",
+      "name": "SRR22376027_counts.tsv",
+      "output_name": "output0",
+      "peek": null,
+      "purged": false,
+      "state": "queued",
+      "tags": [],
+      "update_time": "2026-02-21T04:22:23.617928",
+      "uuid": "ffb13679-53db-4609-8a8c-9ff2226a763a",
+      "validated_state": "unknown",
+      "validated_state_message": null,
+      "visible": true
+    }
+  ],
+  "produces_entry_points": false
+}

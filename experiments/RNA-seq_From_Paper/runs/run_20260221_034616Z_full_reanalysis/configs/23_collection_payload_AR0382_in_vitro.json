@@ -1,0 +1,22 @@
+{
+  "collection_type": "list",
+  "element_identifiers": [
+    {
+      "id": "f9cad7b01a47213532c50942f21ff099",
+      "name": "SRR28790270",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a472135cc5a67ecd67f153a",
+      "name": "SRR28790272",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a4721353921e72697c1d1cc",
+      "name": "SRR28790274",
+      "src": "hda"
+    }
+  ],
+  "history_id": "bbd44e69cb8906b5df7a3d59f43cb8e8",
+  "name": "AR0382_in_vitro_counts"
+}

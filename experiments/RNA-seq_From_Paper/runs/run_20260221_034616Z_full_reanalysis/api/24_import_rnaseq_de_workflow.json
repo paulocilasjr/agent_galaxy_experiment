@@ -1,0 +1,24 @@
+{
+  "annotations": [
+    "Identifies differentially expressed genes between exactly two experimental conditions from count tables. The workflow performs statistical testing, applies filters based on adjusted p-value and log2 fold change thresholds, and generates publication-quality visualizations including volcano plots, MA plots, and heatmaps. Takes two collections of count tables as input and produces filtered gene lists and interactive plots for interpreting expression differences. Optimal for simple two-condition experimental designs."
+  ],
+  "create_time": "2026-02-21T04:20:55.165340",
+  "creator_deleted": false,
+  "deleted": false,
+  "hidden": false,
+  "id": "e9c09fbed6040527",
+  "importable": false,
+  "latest_workflow_id": 691314,
+  "latest_workflow_uuid": "29701572-b069-41c9-ab9a-c8ff060d38ed",
+  "model_class": "StoredWorkflow",
+  "name": "RNA-Seq Differential Expression Analysis with Visualization",
+  "number_of_steps": 23,
+  "owner": "lyra-jr",
+  "published": false,
+  "tags": [
+    "transcriptomics",
+    "RNAseq"
+  ],
+  "update_time": "2026-02-21T04:20:55.420724",
+  "url": "/api/workflows/e9c09fbed6040527"
+}

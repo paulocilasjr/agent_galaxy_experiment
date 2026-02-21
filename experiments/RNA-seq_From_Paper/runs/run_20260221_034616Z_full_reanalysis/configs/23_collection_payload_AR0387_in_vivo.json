@@ -1,0 +1,27 @@
+{
+  "collection_type": "list",
+  "element_identifiers": [
+    {
+      "id": "f9cad7b01a472135bf857ca115d188f2",
+      "name": "SRR28791433",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a472135cc6c9bd8a4541099",
+      "name": "SRR28791434",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a472135573ecf8169068087",
+      "name": "SRR28791437",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a4721353f5e7e41cc400a77",
+      "name": "SRR28791438",
+      "src": "hda"
+    }
+  ],
+  "history_id": "bbd44e69cb8906b5df7a3d59f43cb8e8",
+  "name": "AR0387_in_vivo_counts"
+}

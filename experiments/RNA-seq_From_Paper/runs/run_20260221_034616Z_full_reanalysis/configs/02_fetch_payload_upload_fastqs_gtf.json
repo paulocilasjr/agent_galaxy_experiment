@@ -1,0 +1,285 @@
+{
+  "history_id": "bbd44e69cb8906b56aaf5df50847fc01",
+  "targets": [
+    {
+      "destination": {
+        "type": "hdas"
+      },
+      "elements": [
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376027_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/027/SRR22376027/SRR22376027_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376027_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/027/SRR22376027/SRR22376027_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376028_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/028/SRR22376028/SRR22376028_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376028_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/028/SRR22376028/SRR22376028_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376029_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/029/SRR22376029/SRR22376029_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376029_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/029/SRR22376029/SRR22376029_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376030_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/030/SRR22376030/SRR22376030_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376030_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/030/SRR22376030/SRR22376030_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376031_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/031/SRR22376031/SRR22376031_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376031_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/031/SRR22376031/SRR22376031_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376032_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/032/SRR22376032/SRR22376032_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR22376032_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR223/032/SRR22376032/SRR22376032_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790270_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/070/SRR28790270/SRR28790270_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790270_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/070/SRR28790270/SRR28790270_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790272_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/072/SRR28790272/SRR28790272_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790272_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/072/SRR28790272/SRR28790272_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790274_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/074/SRR28790274/SRR28790274_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790274_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/074/SRR28790274/SRR28790274_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790276_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/076/SRR28790276/SRR28790276_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790276_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/076/SRR28790276/SRR28790276_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790278_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/078/SRR28790278/SRR28790278_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790278_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/078/SRR28790278/SRR28790278_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790280_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/080/SRR28790280/SRR28790280_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28790280_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/080/SRR28790280/SRR28790280_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791430_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/030/SRR28791430/SRR28791430_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791430_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/030/SRR28791430/SRR28791430_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791431_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/031/SRR28791431/SRR28791431_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791431_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/031/SRR28791431/SRR28791431_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791432_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/032/SRR28791432/SRR28791432_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791432_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/032/SRR28791432/SRR28791432_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791433_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/033/SRR28791433/SRR28791433_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791433_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/033/SRR28791433/SRR28791433_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791434_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/034/SRR28791434/SRR28791434_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791434_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/034/SRR28791434/SRR28791434_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791437_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/037/SRR28791437/SRR28791437_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791437_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/037/SRR28791437/SRR28791437_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791438_1.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/038/SRR28791438/SRR28791438_1.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "fastqsanger.gz",
+          "name": "SRR28791438_2.fastq.gz",
+          "src": "url",
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR287/038/SRR28791438/SRR28791438_2.fastq.gz"
+        },
+        {
+          "dbkey": "?",
+          "ext": "gtf.gz",
+          "name": "GCA_002759435.3_Cand_auris_B8441_V3_genomic.gtf.gz",
+          "src": "url",
+          "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/759/435/GCA_002759435.3_Cand_auris_B8441_V3/GCA_002759435.3_Cand_auris_B8441_V3_genomic.gtf.gz"
+        }
+      ]
+    }
+  ]
+}

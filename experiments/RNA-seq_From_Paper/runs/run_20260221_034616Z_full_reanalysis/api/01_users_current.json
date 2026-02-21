@@ -1,0 +1,15 @@
+{
+  "deleted": false,
+  "email": "paulocilas.moraislyra@moffitt.org",
+  "id": "92401dda9a0b9e33",
+  "is_admin": false,
+  "nice_total_disk_usage": "137.7 GB",
+  "preferences": {},
+  "preferred_object_store_id": null,
+  "purged": false,
+  "quota": "250.0 GB",
+  "quota_bytes": 268435456000,
+  "quota_percent": 55.0,
+  "total_disk_usage": 147905341606.0,
+  "username": "lyra-jr"
+}

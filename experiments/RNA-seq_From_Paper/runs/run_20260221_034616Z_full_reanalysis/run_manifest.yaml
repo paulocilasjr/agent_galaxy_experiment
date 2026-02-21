@@ -1,0 +1,14 @@
+experiment_id: RNA-seq_From_Paper
+run_id: run_20260221_034616Z_full_reanalysis
+created_utc: 2026-02-21T03:46:16Z
+status: in_progress
+dataset_alias: "prjna904261_prjna1086003"
+tool_name: ""
+tool_id: ""
+tool_version: ""
+history_name: ""
+history_id: ""
+base_run_id: ""
+inputs: {}
+outputs: {}
+notes: ""

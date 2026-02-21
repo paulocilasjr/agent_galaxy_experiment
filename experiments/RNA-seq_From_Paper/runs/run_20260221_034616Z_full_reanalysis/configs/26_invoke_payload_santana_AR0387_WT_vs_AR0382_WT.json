@@ -1,0 +1,21 @@
+{
+  "history": "hist_id=bbd44e69cb8906b5df7a3d59f43cb8e8",
+  "inputs": {
+    "Adjusted p-value threshold": 0.05,
+    "Count files have header": false,
+    "Counts from changed condition": {
+      "id": "f85d025715885538",
+      "src": "hdca"
+    },
+    "Counts from reference condition": {
+      "id": "e026669b5bfe90c9",
+      "src": "hdca"
+    },
+    "Gene Annotaton": {
+      "id": "f9cad7b01a4721355249e865545bf764",
+      "src": "hda"
+    },
+    "log2 fold change threshold": 1.0
+  },
+  "inputs_by": "name"
+}

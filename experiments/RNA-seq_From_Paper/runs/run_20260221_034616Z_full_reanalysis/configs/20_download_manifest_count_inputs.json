@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "name": "SRR22376027_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376027_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a472135839f6aba28e14b4d/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR22376028_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376028_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a4721357948a31d72ead3e4/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR22376029_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376029_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a472135d47590d3dfdd8998/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR22376030_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376030_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a47213529cc42d5ef3efac3/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR22376031_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376031_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a4721352391cc0e3811e368/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR22376032_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR22376032_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5db3aaed71bf2d1f1/contents/f9cad7b01a47213591221e4b6f3eafc5/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790270_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790270_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a47213536dad3ab719e2798/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790272_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790272_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a47213507fad9e3c895b967/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790274_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790274_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a47213501e4f21612bc975b/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790276_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790276_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a4721353dec8b5735f1860c/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790278_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790278_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a4721358483fe9162a6712a/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28790280_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28790280_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a47213577e9eeadcd451a0d/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791430_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791430_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135c5baf644277fc974/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791431_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791431_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a4721351ed14018a0ab2eb7/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791432_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791432_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a4721356643ca8eef8da196/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791433_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791433_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135332205af055089ae/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791434_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791434_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135f3554823b538e917/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791437_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791437_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135ba99249e5426401d/display?to_ext=tabular"
+    },
+    {
+      "name": "SRR28791438_counts.tsv",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/SRR28791438_counts.tsv",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135110eeb2772e6d872/display?to_ext=tabular"
+    },
+    {
+      "name": "GCA_002759435.3_Cand_auris_B8441_V3.ncbiGene.gtf.gz",
+      "path": "experiments/RNA-seq_From_Paper/runs/run_20260221_034616Z_full_reanalysis/inputs/count_based/GCA_002759435.3_Cand_auris_B8441_V3.ncbiGene.gtf.gz",
+      "source_url": "https://usegalaxy.org/api/histories/bbd44e69cb8906b5a2336651a2753df4/contents/f9cad7b01a472135d39caf31137cbae0/display"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "id": "f9cad7b01a47213566858160fe688ae3",
+      "name": "SRR22376027_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135eb26c678de208ac4",
+      "name": "SRR22376028_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135a3ff168703cc9303",
+      "name": "SRR22376029_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a47213526fdbd0c6505ee9f",
+      "name": "SRR22376030_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135fe419e0f6a3faba0",
+      "name": "SRR22376031_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a4721355243e385f15d0dd1",
+      "name": "SRR22376032_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a4721351530027a52cc4e7f",
+      "name": "SRR28790270_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135e7cb99c1acb799e4",
+      "name": "SRR28790272_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135f0c99dfacd1283fa",
+      "name": "SRR28790274_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135605dff1a1459d5b9",
+      "name": "SRR28790276_counts.tsv",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721357c52b6963b22bef5",
+      "name": "SRR28790278_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a47213548eff23809d6d820",
+      "name": "SRR28790280_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135251b2d3f8a4bf0a6",
+      "name": "SRR28791430_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135a23c34e733388845",
+      "name": "SRR28791431_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a4721353ad299a2b45081b5",
+      "name": "SRR28791432_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a47213501f6735a8b491fce",
+      "name": "SRR28791433_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a4721351fbb707c0652434a",
+      "name": "SRR28791434_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135746814af98f271de",
+      "name": "SRR28791437_counts.tsv",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a47213570de35cd8de9803f",
+      "name": "SRR28791438_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a4721353205c20bf0270f26",
+      "name": "GCA_002759435.3_Cand_auris_B8441_V3.ncbiGene.gtf.gz",
+      "state": "ok"
+    }
+  ],
+  "poll": 15
+}

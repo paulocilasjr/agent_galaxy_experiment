@@ -1,0 +1,17 @@
+{
+  "collection_type": "list",
+  "element_identifiers": [
+    {
+      "id": "f9cad7b01a4721359cf6ce629109ba3a",
+      "name": "SRR22376027",
+      "src": "hda"
+    },
+    {
+      "id": "f9cad7b01a4721355332ba2ae02b61b6",
+      "name": "SRR22376028",
+      "src": "hda"
+    }
+  ],
+  "history_id": "bbd44e69cb8906b5df7a3d59f43cb8e8",
+  "name": "tnSWI1_counts"
+}
