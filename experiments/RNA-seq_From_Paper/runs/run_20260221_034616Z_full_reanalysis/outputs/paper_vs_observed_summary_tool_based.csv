@@ -1,0 +1,5 @@
+comparison_key,study,changed_label,reference_label,observed_deg_count_thresholded,published_deg_count_thresholded,observed_scf1_log2fc,published_scf1_log2fc,delta_scf1_log2fc,observed_als4112_log2fc,published_als4112_log2fc,delta_als4112_log2fc,published_r2,published_direction_agreement_pct,published_mapped_genes
+santana_tnSWI1_vs_AR0382_WT,Santana et al. 2023,tnSWI1,AR0382_WT,250,,-6.8171283762745,-6.68,-0.13712837627450014,,,,0.94,99.0,203
+santana_AR0387_WT_vs_AR0382_WT,Santana et al. 2023,AR0387_WT,AR0382_WT,195,,-7.34628167084277,-7.25,-0.09628167084277006,,,,0.89,97.0,165
+wang_AR0382_in_vitro_vs_AR0387_in_vitro,Wang et al. 2024,AR0382_in_vitro,AR0387_in_vitro,73,76,8.66891252958882,8.61,0.058912529588820206,,5.07,,0.98,100.0,
+wang_AR0382_in_vivo_vs_AR0387_in_vivo,Wang et al. 2024,AR0382_in_vivo,AR0387_in_vivo,259,259,4.52531699402796,4.47,0.055316994027959865,,2.56,,0.9998,100.0,

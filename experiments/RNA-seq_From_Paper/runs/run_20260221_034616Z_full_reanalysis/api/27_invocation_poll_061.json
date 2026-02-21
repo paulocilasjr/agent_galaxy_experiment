@@ -1,0 +1,68 @@
+{
+  "invocations": [
+    {
+      "comparison_key": "santana_tnSWI1_vs_AR0382_WT",
+      "done": false,
+      "invocation_id": "64a67cc53bf1a711",
+      "invocation_state": "ready",
+      "jobs_summary": {
+        "id": "64a67cc53bf1a711",
+        "model": "WorkflowInvocation",
+        "populated_state": "new",
+        "states": {
+          "new": 2,
+          "ok": 7,
+          "running": 1
+        }
+      }
+    },
+    {
+      "comparison_key": "santana_AR0387_WT_vs_AR0382_WT",
+      "done": false,
+      "invocation_id": "bee5ab5c03e97cb3",
+      "invocation_state": "ready",
+      "jobs_summary": {
+        "id": "bee5ab5c03e97cb3",
+        "model": "WorkflowInvocation",
+        "populated_state": "new",
+        "states": {
+          "new": 5,
+          "ok": 4,
+          "running": 1
+        }
+      }
+    },
+    {
+      "comparison_key": "wang_AR0382_in_vitro_vs_AR0387_in_vitro",
+      "done": false,
+      "invocation_id": "a02989680f93481d",
+      "invocation_state": "ready",
+      "jobs_summary": {
+        "id": "a02989680f93481d",
+        "model": "WorkflowInvocation",
+        "populated_state": "new",
+        "states": {
+          "new": 5,
+          "ok": 5
+        }
+      }
+    },
+    {
+      "comparison_key": "wang_AR0382_in_vivo_vs_AR0387_in_vivo",
+      "done": false,
+      "invocation_id": "259a867f3185c8a2",
+      "invocation_state": "ready",
+      "jobs_summary": {
+        "id": "259a867f3185c8a2",
+        "model": "WorkflowInvocation",
+        "populated_state": "new",
+        "states": {
+          "new": 6,
+          "ok": 1,
+          "running": 3
+        }
+      }
+    }
+  ],
+  "poll": 61
+}

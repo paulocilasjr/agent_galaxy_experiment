@@ -1,0 +1,13 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a472135dd68ab65b5eb21f9",
+      "misc_info": "null device \n          1 \nR version 4.5.2 (2025-10-31)\nPlatform: x86_64-conda-linux-gnu\nRunning under: Debian GNU/Linux 12 (bookworm)\n\nMatrix products: default\nBLAS/LAPACK: /usr/local/lib/libopenblasp-r0.3.30.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_C",
+      "name": "Volcano Plot on dataset 24: PDF",
+      "output_name": "plot",
+      "state": "ok"
+    }
+  ],
+  "poll": 9,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/4.0.1+galaxy0"
+}

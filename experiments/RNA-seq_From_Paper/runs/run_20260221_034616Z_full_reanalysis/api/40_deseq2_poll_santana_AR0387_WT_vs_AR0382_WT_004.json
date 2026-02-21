@@ -1,0 +1,27 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a472135ef15f9d8b198ece8",
+      "misc_info": null,
+      "name": "DESeq2 result file on dataset 3-6",
+      "output_name": "deseq_out",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135f7181ee288f3db96",
+      "misc_info": null,
+      "name": "DESeq2 plots on dataset 3-6",
+      "output_name": "plots",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721353c3a124275559544",
+      "misc_info": null,
+      "name": "Normalized counts file on dataset 3-6",
+      "output_name": "counts_out",
+      "state": "queued"
+    }
+  ],
+  "poll": 4,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy2"
+}

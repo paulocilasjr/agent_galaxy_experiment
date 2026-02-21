@@ -1,0 +1,55 @@
+{
+  "implicit_collections": [],
+  "jobs": [
+    {
+      "create_time": "2026-02-21T04:59:17.920053",
+      "exit_code": null,
+      "galaxy_version": "25.1",
+      "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+      "id": "bbd44e69cb8906b5a44367038239cd11",
+      "model_class": "Job",
+      "state": "new",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deg_annotate/deg_annotate/1.1.0+galaxy1",
+      "tool_version": "1.1.0+galaxy1",
+      "update_time": "2026-02-21T04:59:17.945367"
+    }
+  ],
+  "output_collections": [],
+  "outputs": [
+    {
+      "create_time": "2026-02-21T04:59:17.928935",
+      "data_type": "galaxy.datatypes.tabular.Tabular",
+      "deleted": false,
+      "file_ext": "tabular",
+      "file_size": 0,
+      "genome_build": "?",
+      "hda_ldda": "hda",
+      "hid": 43,
+      "history_content_type": "dataset",
+      "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+      "id": "f9cad7b01a472135a1edbd5932d4a775",
+      "metadata_column_names": [],
+      "metadata_column_types": [],
+      "metadata_columns": 0,
+      "metadata_comment_lines": 0,
+      "metadata_data_lines": 0,
+      "metadata_dbkey": "?",
+      "metadata_delimiter": "\t",
+      "misc_blurb": "queued",
+      "misc_info": null,
+      "model_class": "HistoryDatasetAssociation",
+      "name": "Annotate DESeq2/DEXSeq output tables on dataset 20 and 39",
+      "output_name": "output",
+      "peek": null,
+      "purged": false,
+      "state": "new",
+      "tags": [],
+      "update_time": "2026-02-21T04:59:17.928950",
+      "uuid": "89a1736f-f516-444e-8e3b-2898a21cf330",
+      "validated_state": "unknown",
+      "validated_state_message": null,
+      "visible": true
+    }
+  ],
+  "produces_entry_points": false
+}

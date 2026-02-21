@@ -1,0 +1,13 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a47213577bcf14f130a4597",
+      "misc_info": "DE(X)Seq output file     : /jetstream2/scratch/main/jobs/74806870/inputs/dataset_743c4514-29d4-4fa3-bf19-0a1e378fe008.dat\nInput file type          : degseq\nAnnotation file          : /jetstream2/scratch/main/jobs/74806870/inputs/dataset_2e8a6823-b37e-4ab",
+      "name": "Annotate DESeq2/DEXSeq output tables on dataset 20 and 31",
+      "output_name": "output",
+      "state": "ok"
+    }
+  ],
+  "poll": 6,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deg_annotate/deg_annotate/1.1.0+galaxy1"
+}

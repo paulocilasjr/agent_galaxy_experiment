@@ -1,13 +1,13 @@
 experiment_id: RNA-seq_From_Paper
 run_id: run_20260221_034616Z_full_reanalysis
 created_utc: 2026-02-21T03:46:16Z
-status: in_progress
+status: completed
 dataset_alias: "prjna904261_prjna1086003"
-tool_name: ""
-tool_id: ""
-tool_version: ""
-history_name: ""
-history_id: ""
+tool_name: "DESeq2 + deg_annotate + volcanoplot (workflow-equivalent)"
+tool_id: "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy2"
+tool_version: "2.11.40.8+galaxy2"
+history_name: "RNA-seq_From_Paper_tool_based_20260221_044329Z"
+history_id: "bbd44e69cb8906b5a20b7aa8c26f841e"
 base_run_id: ""
 inputs: {}
 outputs: {}

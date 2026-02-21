@@ -1,0 +1,38 @@
+{
+  "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+  "history_name": "RNA-seq_From_Paper_tool_based_20260221_044329Z",
+  "records": [
+    {
+      "annotated_result_id": "f9cad7b01a4721351ace3702ff1ab716",
+      "comparison_key": "santana_tnSWI1_vs_AR0382_WT",
+      "deseq2_counts_id": "f9cad7b01a472135e497d476e2620f77",
+      "deseq2_plots_id": "f9cad7b01a472135822b77b4e315b8a7",
+      "deseq2_result_id": "f9cad7b01a472135553be7063680dea7",
+      "volcano_plot_id": "f9cad7b01a472135dd68ab65b5eb21f9"
+    },
+    {
+      "annotated_result_id": "f9cad7b01a472135ad5d7bab19518c8c",
+      "comparison_key": "santana_AR0387_WT_vs_AR0382_WT",
+      "deseq2_counts_id": "f9cad7b01a4721353c3a124275559544",
+      "deseq2_plots_id": "f9cad7b01a472135f7181ee288f3db96",
+      "deseq2_result_id": "f9cad7b01a472135ef15f9d8b198ece8",
+      "volcano_plot_id": "f9cad7b01a472135e8c9a6d46c4be4f9"
+    },
+    {
+      "annotated_result_id": "f9cad7b01a47213577bcf14f130a4597",
+      "comparison_key": "wang_AR0382_in_vitro_vs_AR0387_in_vitro",
+      "deseq2_counts_id": "f9cad7b01a472135a54d03647d626f76",
+      "deseq2_plots_id": "f9cad7b01a472135f4306970c39f89a8",
+      "deseq2_result_id": "f9cad7b01a472135641b0aa1c8f2c550",
+      "volcano_plot_id": "f9cad7b01a4721352613b9cfd18db327"
+    },
+    {
+      "annotated_result_id": "f9cad7b01a472135c064c14b48bb5855",
+      "comparison_key": "wang_AR0382_in_vivo_vs_AR0387_in_vivo",
+      "deseq2_counts_id": "f9cad7b01a47213518a6ce5cf7ad46fa",
+      "deseq2_plots_id": "f9cad7b01a4721355df636cd986b2e18",
+      "deseq2_result_id": "f9cad7b01a4721351444b0ef9902a787",
+      "volcano_plot_id": "f9cad7b01a4721354ce2f0845d0cff71"
+    }
+  ]
+}

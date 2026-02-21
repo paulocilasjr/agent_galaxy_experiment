@@ -1,0 +1,12 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a472135a1edbd5932d4a775",
+      "misc_info": null,
+      "name": "Annotate DESeq2/DEXSeq output tables on dataset 20 and 39",
+      "output_name": "output",
+      "state": "new"
+    }
+  ],
+  "poll": 1
+}

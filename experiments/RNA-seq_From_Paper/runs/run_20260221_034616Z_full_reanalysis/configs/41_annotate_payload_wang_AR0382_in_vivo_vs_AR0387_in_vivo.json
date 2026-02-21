@@ -1,0 +1,19 @@
+{
+  "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+  "inputs": {
+    "advanced_parameters|gff_attributes": "gene_biotype, gene_name",
+    "advanced_parameters|gff_feature_attribute": "gene_id",
+    "advanced_parameters|gff_feature_type": "exon",
+    "advanced_parameters|gff_transcript_attribute": "transcript_id",
+    "annotation": {
+      "id": "f9cad7b01a472135c1d581f7b128035c",
+      "src": "hda"
+    },
+    "input_table": {
+      "id": "f9cad7b01a4721351444b0ef9902a787",
+      "src": "hda"
+    },
+    "mode": "degseq"
+  },
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deg_annotate/deg_annotate/1.1.0+galaxy1"
+}

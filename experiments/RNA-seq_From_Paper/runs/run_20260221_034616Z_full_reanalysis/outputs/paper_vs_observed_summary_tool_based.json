@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "changed_label": "tnSWI1",
+      "comparison_key": "santana_tnSWI1_vs_AR0382_WT",
+      "delta_als4112_log2fc": null,
+      "delta_scf1_log2fc": -0.13712837627450014,
+      "observed_als4112_log2fc": null,
+      "observed_deg_count_thresholded": 250,
+      "observed_scf1_log2fc": -6.8171283762745,
+      "published_als4112_log2fc": null,
+      "published_deg_count_thresholded": null,
+      "published_direction_agreement_pct": 99.0,
+      "published_mapped_genes": 203,
+      "published_r2": 0.94,
+      "published_scf1_log2fc": -6.68,
+      "reference_label": "AR0382_WT",
+      "study": "Santana et al. 2023"
+    },
+    {
+      "changed_label": "AR0387_WT",
+      "comparison_key": "santana_AR0387_WT_vs_AR0382_WT",
+      "delta_als4112_log2fc": null,
+      "delta_scf1_log2fc": -0.09628167084277006,
+      "observed_als4112_log2fc": null,
+      "observed_deg_count_thresholded": 195,
+      "observed_scf1_log2fc": -7.34628167084277,
+      "published_als4112_log2fc": null,
+      "published_deg_count_thresholded": null,
+      "published_direction_agreement_pct": 97.0,
+      "published_mapped_genes": 165,
+      "published_r2": 0.89,
+      "published_scf1_log2fc": -7.25,
+      "reference_label": "AR0382_WT",
+      "study": "Santana et al. 2023"
+    },
+    {
+      "changed_label": "AR0382_in_vitro",
+      "comparison_key": "wang_AR0382_in_vitro_vs_AR0387_in_vitro",
+      "delta_als4112_log2fc": null,
+      "delta_scf1_log2fc": 0.058912529588820206,
+      "observed_als4112_log2fc": null,
+      "observed_deg_count_thresholded": 73,
+      "observed_scf1_log2fc": 8.66891252958882,
+      "published_als4112_log2fc": 5.07,
+      "published_deg_count_thresholded": 76,
+      "published_direction_agreement_pct": 100.0,
+      "published_mapped_genes": null,
+      "published_r2": 0.98,
+      "published_scf1_log2fc": 8.61,
+      "reference_label": "AR0387_in_vitro",
+      "study": "Wang et al. 2024"
+    },
+    {
+      "changed_label": "AR0382_in_vivo",
+      "comparison_key": "wang_AR0382_in_vivo_vs_AR0387_in_vivo",
+      "delta_als4112_log2fc": null,
+      "delta_scf1_log2fc": 0.055316994027959865,
+      "observed_als4112_log2fc": null,
+      "observed_deg_count_thresholded": 259,
+      "observed_scf1_log2fc": 4.52531699402796,
+      "published_als4112_log2fc": 2.56,
+      "published_deg_count_thresholded": 259,
+      "published_direction_agreement_pct": 100.0,
+      "published_mapped_genes": null,
+      "published_r2": 0.9998,
+      "published_scf1_log2fc": 4.47,
+      "reference_label": "AR0387_in_vivo",
+      "study": "Wang et al. 2024"
+    }
+  ]
+}

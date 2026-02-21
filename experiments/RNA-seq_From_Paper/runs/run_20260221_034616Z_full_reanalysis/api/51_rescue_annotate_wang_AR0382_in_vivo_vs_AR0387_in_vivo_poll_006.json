@@ -1,0 +1,12 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a472135a1edbd5932d4a775",
+      "misc_info": "DE(X)Seq output file     : /jetstream2/scratch/main/jobs/74806905/inputs/dataset_66820ed2-b3db-45ff-94cc-4d909ff12ee9.dat\nInput file type          : degseq\nAnnotation file          : /jetstream2/scratch/main/jobs/74806905/inputs/dataset_2e8a6823-b37e-4ab",
+      "name": "Annotate DESeq2/DEXSeq output tables on dataset 20 and 39",
+      "output_name": "output",
+      "state": "ok"
+    }
+  ],
+  "poll": 6
+}

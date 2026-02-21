@@ -1,0 +1,26 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a47213554b62511b34600c6",
+      "misc_info": null,
+      "name": "DESeq2 result file on dataset 13-19",
+      "output_name": "deseq_out",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721352eded15a68e9b67f",
+      "misc_info": null,
+      "name": "DESeq2 plots on dataset 13-19",
+      "output_name": "plots",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a4721354754d374bb7baa9f",
+      "misc_info": null,
+      "name": "Normalized counts file on dataset 13-19",
+      "output_name": "counts_out",
+      "state": "running"
+    }
+  ],
+  "poll": 3
+}

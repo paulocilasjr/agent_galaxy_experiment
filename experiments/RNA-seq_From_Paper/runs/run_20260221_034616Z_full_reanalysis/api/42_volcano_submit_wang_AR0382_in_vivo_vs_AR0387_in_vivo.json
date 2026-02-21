@@ -1,0 +1,57 @@
+{
+  "implicit_collections": [],
+  "jobs": [
+    {
+      "create_time": "2026-02-21T05:07:17.612287",
+      "exit_code": null,
+      "galaxy_version": "25.1",
+      "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+      "id": "bbd44e69cb8906b54ec23354a79725ff",
+      "model_class": "Job",
+      "state": "new",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/4.0.1+galaxy0",
+      "tool_version": "4.0.1+galaxy0",
+      "update_time": "2026-02-21T05:07:17.652804"
+    }
+  ],
+  "output_collections": [],
+  "outputs": [
+    {
+      "create_time": "2026-02-21T05:07:17.623933",
+      "data_type": "galaxy.datatypes.images.Pdf",
+      "deleted": false,
+      "file_ext": "pdf",
+      "file_size": 0,
+      "genome_build": "?",
+      "hda_ldda": "hda",
+      "hid": 44,
+      "history_content_type": "dataset",
+      "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+      "id": "f9cad7b01a4721354ce2f0845d0cff71",
+      "metadata_axes": null,
+      "metadata_channels": null,
+      "metadata_dbkey": "?",
+      "metadata_depth": null,
+      "metadata_dtype": null,
+      "metadata_frames": null,
+      "metadata_height": null,
+      "metadata_num_unique_values": null,
+      "metadata_width": null,
+      "misc_blurb": "queued",
+      "misc_info": null,
+      "model_class": "HistoryDatasetAssociation",
+      "name": "Volcano Plot on dataset 42: PDF",
+      "output_name": "plot",
+      "peek": null,
+      "purged": false,
+      "state": "new",
+      "tags": [],
+      "update_time": "2026-02-21T05:07:17.623947",
+      "uuid": "06fca378-d278-4a61-84a2-cbf8f776fd44",
+      "validated_state": "unknown",
+      "validated_state_message": null,
+      "visible": true
+    }
+  ],
+  "produces_entry_points": false
+}

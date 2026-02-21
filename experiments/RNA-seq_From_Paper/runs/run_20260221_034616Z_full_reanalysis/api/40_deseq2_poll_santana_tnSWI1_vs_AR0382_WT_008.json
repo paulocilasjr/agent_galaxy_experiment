@@ -1,0 +1,27 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a472135553be7063680dea7",
+      "misc_info": "primary factor: DEFactor \n\n---------------------\nNo size factor was used\nDESeq2 run information\n\nsample table:\n                         DEFactor\nSRR22376031_counts.tsv BaseFactor\nSRR22376032_counts.tsv BaseFactor\nSRR22376027_counts.tsv MainFactor\nSRR2237",
+      "name": "DESeq2 result file on dataset 1, 2, and others",
+      "output_name": "deseq_out",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135822b77b4e315b8a7",
+      "misc_info": "primary factor: DEFactor \n\n---------------------\nNo size factor was used\nDESeq2 run information\n\nsample table:\n                         DEFactor\nSRR22376031_counts.tsv BaseFactor\nSRR22376032_counts.tsv BaseFactor\nSRR22376027_counts.tsv MainFactor\nSRR2237",
+      "name": "DESeq2 plots on dataset 1, 2, and others",
+      "output_name": "plots",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135e497d476e2620f77",
+      "misc_info": "primary factor: DEFactor \n\n---------------------\nNo size factor was used\nDESeq2 run information\n\nsample table:\n                         DEFactor\nSRR22376031_counts.tsv BaseFactor\nSRR22376032_counts.tsv BaseFactor\nSRR22376027_counts.tsv MainFactor\nSRR2237",
+      "name": "Normalized counts file on dataset 1, 2, and others",
+      "output_name": "counts_out",
+      "state": "ok"
+    }
+  ],
+  "poll": 8,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy2"
+}

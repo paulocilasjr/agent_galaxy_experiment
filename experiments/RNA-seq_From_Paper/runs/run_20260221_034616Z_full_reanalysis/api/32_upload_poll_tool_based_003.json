@@ -1,0 +1,105 @@
+{
+  "datasets": [
+    {
+      "id": "f9cad7b01a4721357f18f12a248662a9",
+      "name": "SRR22376027_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721354485ffa1c4424fbc",
+      "name": "SRR22376028_counts.tsv",
+      "state": "ok"
+    },
+    {
+      "id": "f9cad7b01a472135611249e9f428027b",
+      "name": "SRR22376029_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213585c8b98599176f5c",
+      "name": "SRR22376030_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135d10400fa0dbbf420",
+      "name": "SRR22376031_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213517df0815c7742282",
+      "name": "SRR22376032_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721352cf178f9b6611d86",
+      "name": "SRR28790270_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135ce117ddf35fe8154",
+      "name": "SRR28790272_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721356a036442ee55c1a8",
+      "name": "SRR28790274_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135ecd393e701c81287",
+      "name": "SRR28790276_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213547dad57fdec25525",
+      "name": "SRR28790278_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721359377d2b3c863a4ee",
+      "name": "SRR28790280_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721353726eb72a16349f6",
+      "name": "SRR28791430_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213530ea696b17aadc56",
+      "name": "SRR28791431_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a4721355ca84f5c3ddda033",
+      "name": "SRR28791432_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213526776c045ee9d729",
+      "name": "SRR28791433_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135aa86be92b21c4d10",
+      "name": "SRR28791434_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a47213555b3ff89bd5d1459",
+      "name": "SRR28791437_counts.tsv",
+      "state": "queued"
+    },
+    {
+      "id": "f9cad7b01a472135c9832f22f52cc84a",
+      "name": "SRR28791438_counts.tsv",
+      "state": "running"
+    },
+    {
+      "id": "f9cad7b01a472135c1d581f7b128035c",
+      "name": "GCA_002759435.3_Cand_auris_B8441_V3.ncbiGene.gtf.gz",
+      "state": "queued"
+    }
+  ],
+  "poll": 3
+}

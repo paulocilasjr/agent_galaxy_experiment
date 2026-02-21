@@ -1,0 +1,13 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a4721351ace3702ff1ab716",
+      "misc_info": "DE(X)Seq output file     : /corral4/main/objects/d/1/2/dataset_d125e32b-f513-47b6-8802-53dc3785cf39.dat\nInput file type          : degseq\nAnnotation file          : /corral4/main/objects/2/e/8/dataset_2e8a6823-b37e-4ab3-820a-a9966f96ea89.dat\nFeature type",
+      "name": "Annotate DESeq2/DEXSeq output tables on dataset 20 and 21",
+      "output_name": "output",
+      "state": "ok"
+    }
+  ],
+  "poll": 8,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deg_annotate/deg_annotate/1.1.0+galaxy1"
+}

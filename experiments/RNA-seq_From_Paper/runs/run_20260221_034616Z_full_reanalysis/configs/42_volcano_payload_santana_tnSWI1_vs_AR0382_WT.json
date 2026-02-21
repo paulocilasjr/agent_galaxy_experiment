@@ -1,0 +1,22 @@
+{
+  "history_id": "bbd44e69cb8906b5a20b7aa8c26f841e",
+  "inputs": {
+    "input": {
+      "id": "f9cad7b01a4721351ace3702ff1ab716",
+      "src": "hda"
+    },
+    "labels|label_select": "signif",
+    "labels|top_num": 10,
+    "lfc_thresh": 1.0,
+    "out_options|rscript_out": false,
+    "plot_options|boxes": false,
+    "plot_options|legend_labs": "Down,Not Sig,Up",
+    "signif_thresh": 0.05,
+    "with_header|fdr_col": "7",
+    "with_header|header": "no",
+    "with_header|label_col": "13",
+    "with_header|lfc_col": "3",
+    "with_header|pval_col": "6"
+  },
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/4.0.1+galaxy0"
+}

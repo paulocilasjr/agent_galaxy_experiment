@@ -1,0 +1,13 @@
+{
+  "outputs": [
+    {
+      "id": "f9cad7b01a4721352613b9cfd18db327",
+      "misc_info": null,
+      "name": "Volcano Plot on dataset 34: PDF",
+      "output_name": "plot",
+      "state": "running"
+    }
+  ],
+  "poll": 15,
+  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/4.0.1+galaxy0"
+}
