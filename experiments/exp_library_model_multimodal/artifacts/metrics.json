@@ -1,0 +1,104 @@
+{
+  "image_feature_count_per_sample": 72,
+  "model": "RandomForestClassifier",
+  "tabular_feature_count": 35,
+  "target_col": "target",
+  "test": {
+    "accuracy": 0.7985074626865671,
+    "balanced_accuracy": 0.5909090909090909,
+    "classification_report": {
+      "0": {
+        "f1-score": 0.8820960698689956,
+        "precision": 0.7890625,
+        "recall": 1.0,
+        "support": 101.0
+      },
+      "1": {
+        "f1-score": 0.3076923076923077,
+        "precision": 1.0,
+        "recall": 0.18181818181818182,
+        "support": 33.0
+      },
+      "accuracy": 0.7985074626865671,
+      "macro avg": {
+        "f1-score": 0.5948941887806516,
+        "precision": 0.89453125,
+        "recall": 0.5909090909090909,
+        "support": 134.0
+      },
+      "weighted avg": {
+        "f1-score": 0.7406384269448859,
+        "precision": 0.8410097947761194,
+        "recall": 0.7985074626865671,
+        "support": 134.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        101,
+        0
+      ],
+      [
+        27,
+        6
+      ]
+    ],
+    "f1": 0.3076923076923077,
+    "pr_auc": 0.6649326958903052,
+    "precision": 1.0,
+    "recall": 0.18181818181818182,
+    "roc_auc": 0.7608760876087609
+  },
+  "test_positive_rate": 0.2462686567164179,
+  "test_rows": 134,
+  "threshold": 0.5,
+  "total_feature_count": 107,
+  "train": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "classification_report": {
+      "0": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 416.0
+      },
+      "1": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 117.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 533.0
+      },
+      "weighted avg": {
+        "f1-score": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "support": 533.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        416,
+        0
+      ],
+      [
+        0,
+        117
+      ]
+    ],
+    "f1": 1.0,
+    "pr_auc": 0.9999999999999998,
+    "precision": 1.0,
+    "recall": 1.0,
+    "roc_auc": 1.0
+  },
+  "train_positive_rate": 0.21951219512195122,
+  "train_rows": 533
+}
