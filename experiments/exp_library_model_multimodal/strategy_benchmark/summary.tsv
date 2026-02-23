@@ -1,0 +1,4 @@
+strategy	model	model_strategy	train_roc_auc	test_roc_auc	train_pr_auc	test_pr_auc	text_features	total_features
+stack_char35_et1500	StackedExtraTreesTextLR	stacked_et_text	0.6715976331360947	0.7926792679267928	0.5287577893323419	0.6894981161880924	3645	3752
+stack_word12_et1500	StackedExtraTreesTextLR	stacked_et_text	0.6653928336620645	0.7917791779177917	0.5245268682206934	0.683229722877979	757	864
+tri_logistic	LogisticRegressionTriModal	tri_logistic	0.9107700525969756	0.7695769576957695	0.7876153342557805	0.5947889961029384	757	864

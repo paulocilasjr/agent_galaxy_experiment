@@ -20,8 +20,11 @@ import numpy as np
 import pandas as pd
 import requests
 from PIL import Image
-from sklearn.ensemble import RandomForestClassifier
+from scipy import sparse
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
     average_precision_score,
@@ -35,6 +38,7 @@ from sklearn.metrics import (
     roc_auc_score,
     roc_curve,
 )
+from sklearn.model_selection import StratifiedKFold
 
 
 TRAIN_URL = "https://zenodo.org/records/17933596/files/HANCOCK_train_split.csv"
@@ -180,6 +184,24 @@ def parse_args() -> argparse.Namespace:
         help="CD8 image path column.",
     )
     parser.add_argument(
+        "--text-col",
+        type=str,
+        default="icd_codes",
+        help="Free-text column used for text modality features.",
+    )
+    parser.add_argument(
+        "--text-max-features",
+        type=int,
+        default=5000,
+        help="Max TF-IDF vocabulary size.",
+    )
+    parser.add_argument(
+        "--text-ngram-max",
+        type=int,
+        default=2,
+        help="Maximum n-gram size for TF-IDF text features.",
+    )
+    parser.add_argument(
         "--image-size",
         type=int,
         default=96,
@@ -206,6 +228,60 @@ def parse_args() -> argparse.Namespace:
             "Image feature mode: 'metadata_fast' uses ZIP-entry metadata only "
             "(fast); 'pixels' reads/decompresses image bytes (slow/heavy)."
         ),
+    )
+    parser.add_argument(
+        "--model-strategy",
+        type=str,
+        choices=["tri_logistic", "stacked_et_text"],
+        default="stacked_et_text",
+        help=(
+            "Model strategy: 'tri_logistic' trains one logistic model on concatenated "
+            "numeric+image+text; 'stacked_et_text' stacks an ExtraTrees numeric+image "
+            "base model with a text logistic base model."
+        ),
+    )
+    parser.add_argument(
+        "--stack-cv-folds",
+        type=int,
+        default=5,
+        help="Number of CV folds used to build out-of-fold stack features.",
+    )
+    parser.add_argument(
+        "--et-estimators",
+        type=int,
+        default=1500,
+        help="Number of trees for the ExtraTrees base model in stacked strategy.",
+    )
+    parser.add_argument(
+        "--et-max-features",
+        type=str,
+        default="sqrt",
+        help="ExtraTrees max_features setting (e.g., 'sqrt', 'log2', or float string).",
+    )
+    parser.add_argument(
+        "--stack-text-analyzer",
+        type=str,
+        choices=["word", "char", "char_wb"],
+        default="char_wb",
+        help="Analyzer for text base model in stacked strategy.",
+    )
+    parser.add_argument(
+        "--stack-text-ngram-min",
+        type=int,
+        default=3,
+        help="Minimum n-gram size for stacked strategy text vectorizer.",
+    )
+    parser.add_argument(
+        "--stack-text-ngram-max",
+        type=int,
+        default=5,
+        help="Maximum n-gram size for stacked strategy text vectorizer.",
+    )
+    parser.add_argument(
+        "--stack-text-max-features",
+        type=int,
+        default=5000,
+        help="Max TF-IDF features for stacked strategy text vectorizer.",
     )
     parser.add_argument(
         "--force-redownload",
@@ -350,6 +426,47 @@ def normalize_image_ref(value: object) -> str:
     return Path(text).name
 
 
+def parse_et_max_features(value: str) -> str | float:
+    if value in {"sqrt", "log2"}:
+        return value
+    try:
+        parsed = float(value)
+    except ValueError as exc:
+        raise ValueError(
+            f"Unsupported --et-max-features value '{value}'. Use sqrt/log2 or numeric float."
+        ) from exc
+    if parsed <= 0.0:
+        raise ValueError("--et-max-features numeric value must be > 0")
+    return parsed
+
+
+def build_text_features(
+    train_text: list[str],
+    test_text: list[str],
+    *,
+    analyzer: str,
+    ngram_min: int,
+    ngram_max: int,
+    max_features: int,
+) -> tuple[sparse.csr_matrix, sparse.csr_matrix, TfidfVectorizer]:
+    low = max(1, int(ngram_min))
+    high = max(low, int(ngram_max))
+    vectorizer_kwargs: dict[str, object] = {
+        "lowercase": True,
+        "strip_accents": "unicode",
+        "analyzer": analyzer,
+        "ngram_range": (low, high),
+        "max_features": int(max_features),
+    }
+    if analyzer == "word":
+        vectorizer_kwargs["token_pattern"] = r"(?u)\b\w+\b"
+
+    vectorizer = TfidfVectorizer(**vectorizer_kwargs)
+    x_train = vectorizer.fit_transform(train_text).tocsr().astype(np.float32)
+    x_test = vectorizer.transform(test_text).tocsr().astype(np.float32)
+    return x_train, x_test, vectorizer
+
+
 def compute_split_metrics(
     y_true: np.ndarray,
     y_prob: np.ndarray,
@@ -435,7 +552,7 @@ def main() -> None:
     train_df = pd.read_csv(train_csv)
     test_df = pd.read_csv(test_csv)
 
-    required_cols = [args.target_col, args.cd3_col, args.cd8_col]
+    required_cols = [args.target_col, args.cd3_col, args.cd8_col, args.text_col]
     ensure_required_columns(train_df, required_cols, "train_df")
     ensure_required_columns(test_df, required_cols, "test_df")
 
@@ -446,9 +563,9 @@ def main() -> None:
         args.target_col,
         args.cd3_col,
         args.cd8_col,
+        args.text_col,
         "patient_id",
         "split",
-        "icd_codes",
     }
     tabular_cols = [
         c
@@ -535,37 +652,160 @@ def main() -> None:
 
     x_img_train = assemble_image_matrix(train_df)
     x_img_test = assemble_image_matrix(test_df)
-    x_train = np.hstack([x_tab_train, x_img_train]).astype(np.float32)
-    x_test = np.hstack([x_tab_test, x_img_test]).astype(np.float32)
-    print(f"[data] Multimodal train matrix: {x_train.shape}, test matrix: {x_test.shape}")
+    x_num_train = np.hstack([x_tab_train, x_img_train]).astype(np.float32)
+    x_num_test = np.hstack([x_tab_test, x_img_test]).astype(np.float32)
+
+    text_train = train_df[args.text_col].fillna("").astype(str).tolist()
+    text_test = test_df[args.text_col].fillna("").astype(str).tolist()
+    print(f"[data] Numeric multimodal block: train {x_num_train.shape}, test {x_num_test.shape}")
 
     imputer = SimpleImputer(strategy="median")
-    x_train_imp = imputer.fit_transform(x_train)
-    x_test_imp = imputer.transform(x_test)
+    x_num_train_imp = imputer.fit_transform(x_num_train)
+    x_num_test_imp = imputer.transform(x_num_test)
 
-    model = RandomForestClassifier(
-        n_estimators=600,
-        min_samples_leaf=2,
-        random_state=42,
-        n_jobs=-1,
-        class_weight="balanced_subsample",
-    )
-    model.fit(x_train_imp, y_train)
+    stack_feature_count = 0
+    strategy_details: dict[str, object] = {}
 
-    p_train = model.predict_proba(x_train_imp)[:, 1]
-    p_test = model.predict_proba(x_test_imp)[:, 1]
+    if args.model_strategy == "tri_logistic":
+        x_text_train, x_text_test, _ = build_text_features(
+            train_text=text_train,
+            test_text=text_test,
+            analyzer="word",
+            ngram_min=1,
+            ngram_max=args.text_ngram_max,
+            max_features=args.text_max_features,
+        )
+        print(f"[data] Text TF-IDF block: train {x_text_train.shape}, test {x_text_test.shape}")
+
+        x_train = sparse.hstack(
+            [
+                sparse.csr_matrix(x_num_train_imp.astype(np.float32)),
+                x_text_train,
+            ],
+            format="csr",
+        )
+        x_test = sparse.hstack(
+            [
+                sparse.csr_matrix(x_num_test_imp.astype(np.float32)),
+                x_text_test,
+            ],
+            format="csr",
+        )
+        print(f"[data] Tri-modal matrix: train {x_train.shape}, test {x_test.shape}")
+
+        model = LogisticRegression(
+            solver="liblinear",
+            C=1.0,
+            max_iter=2000,
+            class_weight="balanced",
+            random_state=42,
+        )
+        model.fit(x_train, y_train)
+
+        p_train = model.predict_proba(x_train)[:, 1]
+        p_test = model.predict_proba(x_test)[:, 1]
+        model_name = "LogisticRegressionTriModal"
+        total_feature_count = int(x_train.shape[1])
+        strategy_details = {
+            "text_analyzer": "word",
+            "text_ngram_min": 1,
+            "text_ngram_max": int(args.text_ngram_max),
+            "text_max_features": int(args.text_max_features),
+        }
+    elif args.model_strategy == "stacked_et_text":
+        x_text_train, x_text_test, _ = build_text_features(
+            train_text=text_train,
+            test_text=text_test,
+            analyzer=args.stack_text_analyzer,
+            ngram_min=args.stack_text_ngram_min,
+            ngram_max=args.stack_text_ngram_max,
+            max_features=args.stack_text_max_features,
+        )
+        print(f"[data] Text TF-IDF block: train {x_text_train.shape}, test {x_text_test.shape}")
+
+        folds = max(2, int(args.stack_cv_folds))
+        et_max_features = parse_et_max_features(args.et_max_features)
+        splitter = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42)
+
+        oof_num_img = np.zeros(len(y_train), dtype=np.float32)
+        oof_text = np.zeros(len(y_train), dtype=np.float32)
+        test_num_img_folds: list[np.ndarray] = []
+        test_text_folds: list[np.ndarray] = []
+
+        for fold_idx, (idx_fit, idx_val) in enumerate(splitter.split(x_num_train_imp, y_train), start=1):
+            print(f"[stack] Fold {fold_idx}/{folds}")
+            model_num_img = ExtraTreesClassifier(
+                n_estimators=int(args.et_estimators),
+                max_features=et_max_features,
+                class_weight="balanced",
+                random_state=100 + fold_idx,
+                n_jobs=-1,
+            )
+            model_num_img.fit(x_num_train_imp[idx_fit], y_train[idx_fit])
+            oof_num_img[idx_val] = model_num_img.predict_proba(x_num_train_imp[idx_val])[:, 1]
+            test_num_img_folds.append(model_num_img.predict_proba(x_num_test_imp)[:, 1])
+
+            model_text = LogisticRegression(
+                solver="liblinear",
+                C=1.0,
+                max_iter=2000,
+                class_weight="balanced",
+                random_state=200 + fold_idx,
+            )
+            model_text.fit(x_text_train[idx_fit], y_train[idx_fit])
+            oof_text[idx_val] = model_text.predict_proba(x_text_train[idx_val])[:, 1]
+            test_text_folds.append(model_text.predict_proba(x_text_test)[:, 1])
+
+        x_stack_train = np.column_stack([oof_num_img, oof_text]).astype(np.float32)
+        x_stack_test = np.column_stack(
+            [
+                np.mean(np.vstack(test_num_img_folds), axis=0),
+                np.mean(np.vstack(test_text_folds), axis=0),
+            ]
+        ).astype(np.float32)
+        stack_feature_count = int(x_stack_train.shape[1])
+
+        model = LogisticRegression(
+            solver="liblinear",
+            C=1.0,
+            max_iter=2000,
+            class_weight="balanced",
+            random_state=42,
+        )
+        model.fit(x_stack_train, y_train)
+
+        p_train = model.predict_proba(x_stack_train)[:, 1]
+        p_test = model.predict_proba(x_stack_test)[:, 1]
+        model_name = "StackedExtraTreesTextLR"
+        total_feature_count = int(x_num_train_imp.shape[1] + x_text_train.shape[1])
+        strategy_details = {
+            "stack_cv_folds": folds,
+            "et_estimators": int(args.et_estimators),
+            "et_max_features": args.et_max_features,
+            "text_analyzer": args.stack_text_analyzer,
+            "text_ngram_min": int(args.stack_text_ngram_min),
+            "text_ngram_max": int(args.stack_text_ngram_max),
+            "text_max_features": int(args.stack_text_max_features),
+        }
+    else:
+        raise ValueError(f"Unsupported model strategy: {args.model_strategy}")
 
     train_metrics = compute_split_metrics(y_train, p_train, args.threshold)
     test_metrics = compute_split_metrics(y_test, p_test, args.threshold)
 
     metrics = {
-        "model": "RandomForestClassifier",
+        "model": model_name,
+        "model_strategy": args.model_strategy,
         "target_col": args.target_col,
+        "text_col": args.text_col,
         "train_rows": int(len(y_train)),
         "test_rows": int(len(y_test)),
         "tabular_feature_count": int(len(tabular_cols)),
         "image_feature_count_per_sample": int(x_img_train.shape[1]),
-        "total_feature_count": int(x_train.shape[1]),
+        "text_feature_count": int(x_text_train.shape[1]),
+        "total_feature_count": total_feature_count,
+        "stack_feature_count": stack_feature_count,
+        "strategy_details": strategy_details,
         "threshold": float(args.threshold),
         "train": train_metrics,
         "test": test_metrics,
