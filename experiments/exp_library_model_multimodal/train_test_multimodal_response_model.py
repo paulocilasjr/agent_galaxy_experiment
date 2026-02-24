@@ -7,7 +7,6 @@ import argparse
 import io
 import json
 import pickle
-import re
 import zipfile
 from collections import OrderedDict
 from pathlib import Path
@@ -222,12 +221,47 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--image-feature-mode",
         type=str,
-        choices=["metadata_fast", "pixels"],
-        default="metadata_fast",
+        choices=["pixels", "patient_embeddings"],
+        default="pixels",
         help=(
-            "Image feature mode: 'metadata_fast' uses ZIP-entry metadata only "
-            "(fast); 'pixels' reads/decompresses image bytes (slow/heavy)."
+            "Image feature mode: 'pixels' reads raw image bytes; "
+            "'patient_embeddings' loads patient-linked image embeddings."
         ),
+    )
+    parser.add_argument(
+        "--patient-id-col",
+        type=str,
+        default="patient_id",
+        help="Patient ID column used to link patient-level image embeddings.",
+    )
+    parser.add_argument(
+        "--patient-embeddings-path",
+        type=Path,
+        default=None,
+        help=(
+            "CSV/TSV file with image embeddings linked by patient ID. "
+            "Required when --image-feature-mode patient_embeddings."
+        ),
+    )
+    parser.add_argument(
+        "--embedding-col-prefix",
+        type=str,
+        default="img_emb_",
+        help="Prefix for numeric embedding columns in --patient-embeddings-path.",
+    )
+    parser.add_argument(
+        "--embedding-vector-col",
+        type=str,
+        default="image_embedding",
+        help=(
+            "Fallback embedding column containing serialized vectors (space/comma-separated "
+            "or bracketed list) when prefixed embedding columns are not present."
+        ),
+    )
+    parser.add_argument(
+        "--allow-missing-patient-embeddings",
+        action="store_true",
+        help="Allow missing patient IDs in embedding file and fill zeros.",
     )
     parser.add_argument(
         "--model-strategy",
@@ -349,57 +383,132 @@ def image_features_from_bytes(image_bytes: bytes, image_size: int, hist_bins: in
     return np.concatenate([stats, hist]).astype(np.float32)
 
 
-def image_features_from_zipinfo(image_name: str, info: zipfile.ZipInfo) -> np.ndarray:
-    # Lightweight image modality features derived from ZIP metadata + filename structure.
-    size_mb = float(info.file_size) / (1024.0 * 1024.0)
-    comp_mb = float(info.compress_size) / (1024.0 * 1024.0)
-    comp_ratio = float(info.compress_size) / max(float(info.file_size), 1.0)
-    crc_norm = float(info.CRC & 0xFFFFFFFF) / float(2**32)
-    name_len = float(len(image_name))
-    digit_count = float(sum(ch.isdigit() for ch in image_name))
+def normalize_patient_id(value: object) -> str:
+    text = str(value).strip()
+    if not text or text.lower() == "nan":
+        raise ValueError(f"Invalid patient ID: {value!r}")
+    if text.endswith(".0") and text[:-2].isdigit():
+        return text[:-2]
+    return text
 
-    is_cd3 = 1.0 if "_CD3_" in image_name else 0.0
-    is_cd8 = 1.0 if "_CD8_" in image_name else 0.0
 
-    block = x = y = patient = 0.0
-    m = re.search(r"block(\d+)_x(\d+)_y(\d+)_patient(\d+)", image_name, flags=re.IGNORECASE)
-    if m:
-        block = float(m.group(1))
-        x = float(m.group(2))
-        y = float(m.group(3))
-        patient = float(m.group(4))
+def parse_embedding_vector(value: object) -> np.ndarray:
+    if isinstance(value, np.ndarray):
+        vector = value.astype(np.float32).ravel()
+    elif isinstance(value, (list, tuple)):
+        vector = np.asarray(value, dtype=np.float32).ravel()
+    else:
+        text = str(value).strip()
+        if not text or text.lower() == "nan":
+            raise ValueError(f"Invalid serialized embedding value: {value!r}")
+        if text.startswith("[") and text.endswith("]"):
+            text = text[1:-1]
+        text = text.replace(",", " ")
+        vector = np.fromstring(text, sep=" ", dtype=np.float32)
+    if vector.size == 0:
+        raise ValueError(f"Could not parse embedding vector from value: {value!r}")
+    return vector.astype(np.float32)
 
-    year, month, day, hour, minute, second = info.date_time
-    year_norm = float(year - 2000)
-    month_norm = float(month)
-    day_norm = float(day)
-    hour_norm = float(hour)
-    minute_norm = float(minute)
-    second_norm = float(second)
 
-    return np.array(
-        [
-            size_mb,
-            comp_mb,
-            comp_ratio,
-            crc_norm,
-            name_len,
-            digit_count,
-            block,
-            x,
-            y,
-            patient,
-            is_cd3,
-            is_cd8,
-            year_norm,
-            month_norm,
-            day_norm,
-            hour_norm,
-            minute_norm,
-            second_norm,
-        ],
-        dtype=np.float32,
-    )
+def load_patient_embedding_map(
+    path: Path,
+    *,
+    patient_id_col: str,
+    embedding_col_prefix: str,
+    embedding_vector_col: str,
+) -> tuple[dict[str, np.ndarray], int]:
+    if not path.exists():
+        raise FileNotFoundError(f"Patient embedding file not found: {path}")
+
+    suffix = path.suffix.lower()
+    if suffix == ".csv":
+        df = pd.read_csv(path)
+    elif suffix in {".tsv", ".txt"}:
+        df = pd.read_csv(path, sep="\t")
+    else:
+        raise ValueError(f"Unsupported embedding file format '{suffix}'. Use CSV or TSV.")
+
+    if patient_id_col not in df.columns:
+        raise ValueError(
+            f"Embedding file {path} must contain patient ID column '{patient_id_col}'."
+        )
+
+    prefixed_columns = [c for c in df.columns if c.startswith(embedding_col_prefix)]
+    if prefixed_columns:
+        embedding_matrix = df[prefixed_columns].apply(pd.to_numeric, errors="coerce").to_numpy(
+            dtype=np.float32
+        )
+        embedding_matrix = np.nan_to_num(
+            embedding_matrix, nan=0.0, posinf=0.0, neginf=0.0
+        ).astype(np.float32)
+    elif embedding_vector_col in df.columns:
+        vectors = [parse_embedding_vector(v) for v in df[embedding_vector_col].tolist()]
+        embedding_dim = vectors[0].shape[0]
+        for idx, vec in enumerate(vectors):
+            if vec.shape[0] != embedding_dim:
+                raise ValueError(
+                    f"Embedding vector length mismatch at row {idx}: "
+                    f"expected {embedding_dim}, got {vec.shape[0]}"
+                )
+        embedding_matrix = np.vstack(vectors).astype(np.float32)
+    else:
+        raise ValueError(
+            f"Embedding file {path} must contain either columns prefixed by "
+            f"'{embedding_col_prefix}' or vector column '{embedding_vector_col}'."
+        )
+
+    patient_ids = [normalize_patient_id(v) for v in df[patient_id_col].tolist()]
+    grouped_embeddings: dict[str, list[np.ndarray]] = {}
+    for patient_id, vector in zip(patient_ids, embedding_matrix):
+        grouped_embeddings.setdefault(patient_id, []).append(vector)
+
+    if not grouped_embeddings:
+        raise ValueError(f"No patient embeddings loaded from: {path}")
+
+    embedding_map = {
+        patient_id: np.mean(np.vstack(vectors), axis=0).astype(np.float32)
+        for patient_id, vectors in grouped_embeddings.items()
+    }
+    embedding_dim = int(next(iter(embedding_map.values())).shape[0])
+    return embedding_map, embedding_dim
+
+
+def assemble_patient_embedding_matrix(
+    df: pd.DataFrame,
+    *,
+    patient_id_col: str,
+    embedding_map: dict[str, np.ndarray],
+    embedding_dim: int,
+    allow_missing: bool,
+) -> np.ndarray:
+    rows: list[np.ndarray] = []
+    missing: list[str] = []
+    default_vector = np.zeros(embedding_dim, dtype=np.float32)
+
+    for value in df[patient_id_col].tolist():
+        patient_id = normalize_patient_id(value)
+        vector = embedding_map.get(patient_id)
+        if vector is None:
+            missing.append(patient_id)
+            rows.append(default_vector.copy())
+        else:
+            rows.append(vector)
+
+    if missing and not allow_missing:
+        unique_missing = sorted(set(missing))
+        examples = unique_missing[:10]
+        raise ValueError(
+            f"Missing embeddings for {len(unique_missing)} patient IDs "
+            f"(examples: {examples})."
+        )
+    if missing:
+        unique_missing = sorted(set(missing))
+        print(
+            f"[embeddings] Warning: missing embeddings for {len(unique_missing)} patients "
+            f"(examples: {unique_missing[:10]}). Using zero-vector placeholders."
+        )
+
+    return np.vstack(rows).astype(np.float32)
 
 
 def build_basename_lookup(zip_file: zipfile.ZipFile) -> dict[str, str]:
@@ -544,7 +653,6 @@ def main() -> None:
 
     train_csv = args.data_dir / "HANCOCK_train_split.csv"
     test_csv = args.data_dir / "HANCOCK_test_split.csv"
-    feature_cache_path = args.data_dir / f"image_feature_cache_{args.image_feature_mode}.pkl"
 
     download_if_needed(TRAIN_URL, train_csv, force=args.force_redownload)
     download_if_needed(TEST_URL, test_csv, force=args.force_redownload)
@@ -552,7 +660,13 @@ def main() -> None:
     train_df = pd.read_csv(train_csv)
     test_df = pd.read_csv(test_csv)
 
-    required_cols = [args.target_col, args.cd3_col, args.cd8_col, args.text_col]
+    required_cols = [args.target_col, args.text_col]
+    if args.image_feature_mode == "pixels":
+        required_cols.extend([args.cd3_col, args.cd8_col])
+    elif args.image_feature_mode == "patient_embeddings":
+        required_cols.append(args.patient_id_col)
+    else:
+        raise ValueError(f"Unsupported image feature mode: {args.image_feature_mode}")
     ensure_required_columns(train_df, required_cols, "train_df")
     ensure_required_columns(test_df, required_cols, "test_df")
 
@@ -561,12 +675,12 @@ def main() -> None:
 
     excluded = {
         args.target_col,
-        args.cd3_col,
-        args.cd8_col,
         args.text_col,
-        "patient_id",
         "split",
     }
+    for optional_col in [args.cd3_col, args.cd8_col, args.patient_id_col]:
+        if optional_col in train_df.columns:
+            excluded.add(optional_col)
     tabular_cols = [
         c
         for c in train_df.columns
@@ -578,86 +692,110 @@ def main() -> None:
     x_tab_test = test_tab.to_numpy(dtype=np.float32)
     print(f"[data] Tabular features: {len(tabular_cols)} columns")
 
-    required_images = set(train_df[args.cd3_col].map(normalize_image_ref))
-    required_images |= set(train_df[args.cd8_col].map(normalize_image_ref))
-    required_images |= set(test_df[args.cd3_col].map(normalize_image_ref))
-    required_images |= set(test_df[args.cd8_col].map(normalize_image_ref))
-    print(f"[data] Unique required images from CSVs: {len(required_images)}")
+    if args.image_feature_mode == "pixels":
+        feature_cache_path = args.data_dir / "image_feature_cache_pixels.pkl"
+        required_images = set(train_df[args.cd3_col].map(normalize_image_ref))
+        required_images |= set(train_df[args.cd8_col].map(normalize_image_ref))
+        required_images |= set(test_df[args.cd3_col].map(normalize_image_ref))
+        required_images |= set(test_df[args.cd8_col].map(normalize_image_ref))
+        print(f"[data] Unique required images from CSVs: {len(required_images)}")
 
-    if feature_cache_path.exists():
-        with feature_cache_path.open("rb") as fh:
-            image_feature_cache: dict[str, np.ndarray] = pickle.load(fh)
-        print(f"[cache] Loaded cached image features: {len(image_feature_cache)}")
-    else:
-        image_feature_cache = {}
+        if feature_cache_path.exists():
+            with feature_cache_path.open("rb") as fh:
+                image_feature_cache: dict[str, np.ndarray] = pickle.load(fh)
+            print(f"[cache] Loaded cached image features: {len(image_feature_cache)}")
+        else:
+            image_feature_cache = {}
 
-    missing_images = sorted([name for name in required_images if name not in image_feature_cache])
-    if missing_images:
-        print(
-            f"[images] Need to build features for {len(missing_images)} images from remote ZIP "
-            f"(mode={args.image_feature_mode})"
-        )
-        with HTTPRangeReader(IMAGE_ZIP_URL) as reader:
-            with zipfile.ZipFile(reader) as zip_file:
-                basename_lookup = build_basename_lookup(zip_file)
-                unresolved = [name for name in missing_images if name not in basename_lookup]
-                if unresolved:
-                    if args.image_feature_mode == "pixels":
+        missing_images = sorted([name for name in required_images if name not in image_feature_cache])
+        if missing_images:
+            print(f"[images] Need to build pixel features for {len(missing_images)} images from remote ZIP")
+            with HTTPRangeReader(IMAGE_ZIP_URL) as reader:
+                with zipfile.ZipFile(reader) as zip_file:
+                    basename_lookup = build_basename_lookup(zip_file)
+                    unresolved = [name for name in missing_images if name not in basename_lookup]
+                    if unresolved:
                         feature_dim = 13 + int(args.hist_bins)
-                    else:
-                        feature_dim = 18
-                    placeholder = np.zeros(feature_dim, dtype=np.float32)
-                    print(
-                        f"[images] Warning: {len(unresolved)} image names not present in ZIP "
-                        f"(examples: {unresolved[:5]}). Using zero-feature placeholders."
-                    )
-                    for name in unresolved:
-                        image_feature_cache[name] = placeholder.copy()
-                    missing_images = [name for name in missing_images if name in basename_lookup]
-                for idx, basename in enumerate(missing_images, start=1):
-                    member = basename_lookup[basename]
-                    if args.image_feature_mode == "pixels":
+                        placeholder = np.zeros(feature_dim, dtype=np.float32)
+                        print(
+                            f"[images] Warning: {len(unresolved)} image names not present in ZIP "
+                            f"(examples: {unresolved[:5]}). Using zero-feature placeholders."
+                        )
+                        for name in unresolved:
+                            image_feature_cache[name] = placeholder.copy()
+                        missing_images = [name for name in missing_images if name in basename_lookup]
+                    for idx, basename in enumerate(missing_images, start=1):
+                        member = basename_lookup[basename]
                         image_bytes = zip_file.read(member)
                         image_feature_cache[basename] = image_features_from_bytes(
                             image_bytes=image_bytes,
                             image_size=args.image_size,
                             hist_bins=args.hist_bins,
                         )
-                    else:
-                        info = zip_file.getinfo(member)
-                        image_feature_cache[basename] = image_features_from_zipinfo(
-                            image_name=basename,
-                            info=info,
-                        )
-                    if idx % 100 == 0 or idx == len(missing_images):
-                        print(f"[images] Processed {idx}/{len(missing_images)}")
-        with feature_cache_path.open("wb") as fh:
-            pickle.dump(image_feature_cache, fh)
-        print(f"[cache] Saved image feature cache to {feature_cache_path}")
+                        if idx % 100 == 0 or idx == len(missing_images):
+                            print(f"[images] Processed {idx}/{len(missing_images)}")
+            with feature_cache_path.open("wb") as fh:
+                pickle.dump(image_feature_cache, fh)
+            print(f"[cache] Saved image feature cache to {feature_cache_path}")
+        else:
+            print("[images] All required image features already cached")
+
+        def assemble_pixel_image_matrix(df: pd.DataFrame) -> np.ndarray:
+            rows = []
+            for _, row in df.iterrows():
+                cd3_name = normalize_image_ref(row[args.cd3_col])
+                cd8_name = normalize_image_ref(row[args.cd8_col])
+                f_cd3 = image_feature_cache[cd3_name]
+                f_cd8 = image_feature_cache[cd8_name]
+                merged = np.concatenate([f_cd3, f_cd8, f_cd3 - f_cd8, np.abs(f_cd3 - f_cd8)]).astype(
+                    np.float32
+                )
+                rows.append(merged)
+            return np.vstack(rows)
+
+        x_img_train = assemble_pixel_image_matrix(train_df)
+        x_img_test = assemble_pixel_image_matrix(test_df)
+        image_input_description = "raw_pixels_from_zip"
     else:
-        print("[images] All required image features already cached")
-
-    def assemble_image_matrix(df: pd.DataFrame) -> np.ndarray:
-        rows = []
-        for _, row in df.iterrows():
-            cd3_name = normalize_image_ref(row[args.cd3_col])
-            cd8_name = normalize_image_ref(row[args.cd8_col])
-            f_cd3 = image_feature_cache[cd3_name]
-            f_cd8 = image_feature_cache[cd8_name]
-            merged = np.concatenate([f_cd3, f_cd8, f_cd3 - f_cd8, np.abs(f_cd3 - f_cd8)]).astype(
-                np.float32
+        if args.patient_embeddings_path is None:
+            raise ValueError(
+                "--patient-embeddings-path is required when --image-feature-mode patient_embeddings"
             )
-            rows.append(merged)
-        return np.vstack(rows)
+        embedding_map, embedding_dim = load_patient_embedding_map(
+            args.patient_embeddings_path,
+            patient_id_col=args.patient_id_col,
+            embedding_col_prefix=args.embedding_col_prefix,
+            embedding_vector_col=args.embedding_vector_col,
+        )
+        print(
+            f"[embeddings] Loaded {len(embedding_map)} patient embeddings with dimension {embedding_dim} "
+            f"from {args.patient_embeddings_path}"
+        )
+        x_img_train = assemble_patient_embedding_matrix(
+            train_df,
+            patient_id_col=args.patient_id_col,
+            embedding_map=embedding_map,
+            embedding_dim=embedding_dim,
+            allow_missing=args.allow_missing_patient_embeddings,
+        )
+        x_img_test = assemble_patient_embedding_matrix(
+            test_df,
+            patient_id_col=args.patient_id_col,
+            embedding_map=embedding_map,
+            embedding_dim=embedding_dim,
+            allow_missing=args.allow_missing_patient_embeddings,
+        )
+        image_input_description = f"patient_embeddings::{args.patient_embeddings_path}"
 
-    x_img_train = assemble_image_matrix(train_df)
-    x_img_test = assemble_image_matrix(test_df)
     x_num_train = np.hstack([x_tab_train, x_img_train]).astype(np.float32)
     x_num_test = np.hstack([x_tab_test, x_img_test]).astype(np.float32)
 
     text_train = train_df[args.text_col].fillna("").astype(str).tolist()
     text_test = test_df[args.text_col].fillna("").astype(str).tolist()
-    print(f"[data] Numeric multimodal block: train {x_num_train.shape}, test {x_num_test.shape}")
+    print(
+        f"[data] Numeric multimodal block: train {x_num_train.shape}, test {x_num_test.shape} "
+        f"(image mode={args.image_feature_mode})"
+    )
 
     imputer = SimpleImputer(strategy="median")
     x_num_train_imp = imputer.fit_transform(x_num_train)
@@ -790,12 +928,19 @@ def main() -> None:
     else:
         raise ValueError(f"Unsupported model strategy: {args.model_strategy}")
 
+    strategy_details["image_feature_mode"] = args.image_feature_mode
+    strategy_details["image_input"] = image_input_description
+    if args.image_feature_mode == "patient_embeddings":
+        strategy_details["patient_id_col"] = args.patient_id_col
+        strategy_details["patient_embeddings_path"] = str(args.patient_embeddings_path)
+
     train_metrics = compute_split_metrics(y_train, p_train, args.threshold)
     test_metrics = compute_split_metrics(y_test, p_test, args.threshold)
 
     metrics = {
         "model": model_name,
         "model_strategy": args.model_strategy,
+        "image_feature_mode": args.image_feature_mode,
         "target_col": args.target_col,
         "text_col": args.text_col,
         "train_rows": int(len(y_train)),
